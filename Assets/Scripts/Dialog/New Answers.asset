@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ee1e7313eb247040b3f362e9d884f07, type: 3}
   m_Name: New Answers
   m_EditorClassIdentifier: 
-  dialogId: 0
-  answerButtons: []
+  dialogId: 2
+  answerButtons:
+  - {fileID: 7431139951183970950, guid: 23e857c8d1a3e434cbd86be2153ee887, type: 3}
+  - {fileID: 7061979291710193446, guid: c5c4bf711a754ff47b063c13c8c61de5, type: 3}
