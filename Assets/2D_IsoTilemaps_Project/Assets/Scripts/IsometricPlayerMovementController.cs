@@ -11,11 +11,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public GameObject movementCamera;
 
 
-    Rigidbody rbody;
+    Rigidbody2D rbody;
 
     private void Awake()
     {
-        rbody = GetComponent<Rigidbody>();
+        rbody = GetComponent<Rigidbody2D>();
         
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
     }
@@ -27,11 +27,11 @@ public class IsometricPlayerMovementController : MonoBehaviour
         Vector3 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
-        Vector3 inputVector = new Vector3(horizontalInput, 0, verticalInput * 2f);
-        //inputVector = Vector3.ClampMagnitude(inputVector, 1);
+        Vector3 inputVector = new Vector3(horizontalInput, verticalInput, 0);
+        inputVector = Vector3.ClampMagnitude(inputVector, 1);
         Vector3 movement = inputVector * movementSpeed;
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
-        isoRenderer.SetDirection(new Vector2(movement.x, movement.z));
+        isoRenderer.SetDirection(movement);
         rbody.MovePosition(newPos);
 
        
