@@ -39,7 +39,6 @@ public class DialogSystem : MonoBehaviour
                 if(contextMenu.activeSelf == true) return;
                 foreach(Answers ans in answers){
                     if(currentDialog == ans.dialogId){
-                        Debug.Log("matched");
                         contextMenu.SetActive(true);
                         foreach(GameObject answerButton in ans.answerButtons){
                             Instantiate(answerButton, contextMenu.transform);
@@ -89,7 +88,6 @@ public class DialogSystem : MonoBehaviour
     IEnumerator Scrolling(){
         isScrolling = true;
         int currentChar = 0;
-        Debug.Log(currentDialog);
         while(currentChar < dialogs[currentDialog].text.Length){
             text.text = dialogs[currentDialog].text.Substring(0, currentChar);
             yield return new WaitForSeconds(1f / charactersPerSecond);
