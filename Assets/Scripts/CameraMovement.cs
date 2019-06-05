@@ -13,7 +13,7 @@ public class CameraMovement : MonoBehaviour
 
     
 
-
+    Vector3 velocity;
     void Start()
     {
         startingPosition = transform.position;
@@ -25,7 +25,7 @@ public class CameraMovement : MonoBehaviour
         if(targetToFollow != null)
         {
             targetPosition = new Vector3(targetToFollow.transform.position.x, targetToFollow.transform.position.y, transform.position.z);
-            Vector3 velocity = (targetPosition - startingPosition) * moveSpeed;
+            //Vector3 velocity = (targetPosition - startingPosition) * moveSpeed;
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
 
             
