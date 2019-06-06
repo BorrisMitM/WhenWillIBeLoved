@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6ee1e7313eb247040b3f362e9d884f07, type: 3}
-  m_Name: New Answers
+  m_Name: New Answers 2
   m_EditorClassIdentifier: 
-  dialogId: 6
+  dialogId: 17
   answerButtons:
-  - {fileID: 7431139951183970950, guid: 23e857c8d1a3e434cbd86be2153ee887, type: 3}
-  - {fileID: 7061979291710193446, guid: c5c4bf711a754ff47b063c13c8c61de5, type: 3}
+  - {fileID: 7061979291710193446, guid: 33c420f8a44b4f040a30c4c134e76a80, type: 3}
+  - {fileID: 7061979291710193446, guid: b21a26f396b54cd4e888a5cf5c04d4cb, type: 3}

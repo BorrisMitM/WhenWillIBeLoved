@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7431139951183970950, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_Name
-      value: Button Variant
+      value: Button Variant 3
       objectReference: {fileID: 0}
     - target: {fileID: 7143744647750859309, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
@@ -117,35 +117,45 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2238228353871814856, guid: 23e857c8d1a3e434cbd86be2153ee887,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -16.3
+      objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_text
-      value: Sure am, mylady. Are you?
+      value: BECAUSE I DON'T THINK YOU'RE HAPPY.
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
+        type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 21
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e857c8d1a3e434cbd86be2153ee887, type: 3}

@@ -8,4 +8,8 @@ public class RiddlePanel : MonoBehaviour
     public void Activate(){
         transform.GetChild(0).gameObject.SetActive(true);
     }
+    private void Update() {
+        if(Input.GetKeyDown(KeyCode.Space) && transform.GetChild(0).gameObject.activeSelf)
+            transform.GetChild(0).gameObject.SetActive(false);
+    }
 }

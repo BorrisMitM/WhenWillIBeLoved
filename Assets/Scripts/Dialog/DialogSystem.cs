@@ -19,6 +19,8 @@ public class DialogSystem : MonoBehaviour
     private int charactersPerSecond = 7;
     [SerializeField]
     private GameObject panel;
+    [SerializeField]
+    private int firstDialogEnd = 11;
     private int currentDialog = 0;
     bool isScrolling = false;
     Coroutine scrollingCo;
@@ -40,6 +42,8 @@ public class DialogSystem : MonoBehaviour
                 foreach(Answers ans in answers){
                     if(currentDialog == ans.dialogId){
                         contextMenu.SetActive(true);
+                        foreach(Transform child in contextMenu.transform)
+                            Destroy(child.gameObject);
                         foreach(GameObject answerButton in ans.answerButtons){
                             Instantiate(answerButton, contextMenu.transform);
                         }
@@ -59,8 +63,9 @@ public class DialogSystem : MonoBehaviour
     }
     public void StartScroll(){
         if(scrollingCo != null) return;
-        if(dialogs.Length == 0 || currentDialog >= dialogs.Length){
+        if(dialogs.Length == 0 || currentDialog >= dialogs.Length || currentDialog == firstDialogEnd){
             DeactivateDialog();
+            if(firstDialogEnd == currentDialog) firstDialogEnd = -1;
             return;
         }
         portrait.sprite = dialogs[currentDialog].portrait;

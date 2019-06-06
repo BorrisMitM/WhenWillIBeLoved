@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 7431139951183970950, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_Name
-      value: Button Variant
+      value: Button Variant 4
       objectReference: {fileID: 0}
     - target: {fileID: 7143744647750859309, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
@@ -120,7 +120,7 @@ PrefabInstance:
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_text
-      value: Sure am, mylady. Are you?
+      value: Nevermind that, actually.
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
@@ -130,22 +130,22 @@ PrefabInstance:
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_firstOverflowCharacterIndex
-      value: 21
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5275226560128621973, guid: 23e857c8d1a3e434cbd86be2153ee887,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23e857c8d1a3e434cbd86be2153ee887, type: 3}
