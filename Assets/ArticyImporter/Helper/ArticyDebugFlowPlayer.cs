@@ -63,6 +63,7 @@ public class ArticyDebugFlowPlayer : MonoBehaviour, IArticyFlowPlayerCallbacks
 			technicalNameLabel.text = string.Empty;
 
 			var articyObj = aObject as IArticyObject;
+			
 			if(articyObj != null)
 			{
 				idLabel.text = articyObj.Id.ToHex();
