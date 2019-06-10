@@ -688,6 +688,7 @@ MonoBehaviour:
   contextMenu: {fileID: 4815045399093957190}
   charactersPerSecond: 12
   panel: {fileID: 6109593111678443646}
+  firstDialogEnd: 11
   portrait: {fileID: 6109593112012923320}
 --- !u!114 &29503819835478484
 MonoBehaviour:
@@ -701,6 +702,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0997abc37a06df4f83988f684811843, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  branchPrefab: {fileID: 0}
+  displayNameLabel: {fileID: 0}
+  textLabel: {fileID: 0}
+  branchLayoutPanel: {fileID: 0}
+  portrait: {fileID: 0}
 --- !u!114 &8792198163828861900
 MonoBehaviour:
   m_ObjectHideFlags: 0

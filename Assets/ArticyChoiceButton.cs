@@ -1,27 +1,29 @@
-﻿
-using Articy.Unity.Interfaces;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Articy.Unity;
-
-public class ArticyDebugBranch : MonoBehaviour
+using Articy.Unity.Interfaces;
+using TMPro;
+public class ArticyChoiceButton : MonoBehaviour
 {
 	// the unity ui button text, so we can assign in code different labels.
-	private Text dialogText;
+	private TextMeshProUGUI dialogText;
 	// the branch identifier, so we can tell the processor which way it should continue to traverse our flow when the user clicked this button
 	private Branch branch;
 	// the processor itself.
 	private ArticyFlowPlayer processor;
 
-	/// Called when the button is created to represent a single branch out of possible many. This is important to give the ui button the branch that is used to follow along if the user pressed the button in the ui
+	/// Called when the button is created to represent a single branch out of possible many. 
+    // This is important to give the ui button the branch that is used to follow along if the user pressed the button in the ui
 	public void AssignBranch(ArticyFlowPlayer aProcessor, Branch aBranch)
 	{
 		// You would usually do this in the inspector in the button itself, but its so important for the correct functionalty
 		// we placed it here to show you what happened when the button is pressed by the user.
-		GetComponentInChildren<Button>().onClick.AddListener(OnBranchSelected);
+		GetComponent<Button>().onClick.AddListener(OnBranchSelected);
 
 		// we find the text component in our children, this should be the label of the button, unless you changed the button somewhat, then you need to take care of selecting the proper text.
-		dialogText = GetComponentInChildren<Text>();
+		dialogText = GetComponentInChildren<TextMeshProUGUI>();
 
 		// store for later use
 		branch = aBranch;
