@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Articy.Unity.Constraints;
+using Articy.ManiacManfred;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     string currentScene;
+    public Articy.ManiacManfred.GlobalVariables.GameState gameState;
+
     private void Awake() {
         if(instance == null)
             instance = this;
@@ -16,7 +18,7 @@ public class GameManager : MonoBehaviour
         }
     }
     public void LoadScene(string sceneName){
-        if(currentScene != "")
+        if(currentScene != null)
             SceneManager.UnloadSceneAsync(currentScene);
         currentScene = sceneName;
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
