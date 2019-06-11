@@ -18,16 +18,29 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	// the main text label, used to show the text of the current paused on node
 	public TextMeshProUGUI textLabel;
 
+	private string wholeText;
+
 	// the ui target for our vertical list of branch buttons
 	public RectTransform branchLayoutPanel;
 
 	// the preview image ui element. A simple 64x64 image that will show the articy preview image or speaker, depending on the current pause.
 	public Image portrait;
+
+	[Header("Scrolling")]
+	[SerializeField]
+	private int charactersPerSecond = 20;
     ArticyFlowPlayer flowPlayer;
     Branch singleBranch;
+
+	Coroutine scrollingCo;
+
+	List<Branch> branches;
+
+	bool isScrolling;
     // Start is called before the first frame update
     void Start()
     {
+		branches = new List<Branch>();
         flowPlayer = GetComponent<ArticyFlowPlayer>();
         ClearAllBranches();
         if (flowPlayer != null && flowPlayer.StartOn == null)
@@ -35,10 +48,15 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	
     }
     private void Update() {
-        if(Input.GetButtonDown("Submit") && singleBranch != null){
-            Branch thisBranch = singleBranch;
-            flowPlayer.Play(singleBranch);
-            if(singleBranch == thisBranch) singleBranch = null;
+        if(Input.GetButtonDown("Submit")){
+			if(isScrolling){
+				EndScroll();
+			}
+			else if(singleBranch != null){
+				Branch thisBranch = singleBranch;
+				flowPlayer.Play(singleBranch);
+				if(singleBranch == thisBranch) singleBranch = null;
+			}
         }
     }
 
@@ -61,12 +79,13 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         // if it has the property we use it to show the text in our main text label.
 		var modelWithText = aObject as IObjectWithText;
 		if (modelWithText != null)
-			textLabel.text = modelWithText.Text;
+			wholeText = modelWithText.Text;
 		else
-			textLabel.text = string.Empty;
+			wholeText = string.Empty;
 
 		// this will make sure that we find a proper preview image to show in our ui.
 		ExtractCurrentPausePreviewImage(aObject);
+		StartScroll();
     }
     
 	// called everytime the flow player encounteres multiple branches, or paused on a node and want to tell us how to continue.
@@ -78,28 +97,13 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         if(aBranches.Count <= 1){
              branchLayoutPanel.gameObject.SetActive(false);
              singleBranch = aBranches[0];
+			 branches = new List<Branch>();
              return;
-        }
-        else if(!branchLayoutPanel.gameObject.activeSelf) branchLayoutPanel.gameObject.SetActive(true);
-		// for every branch provided by the flow player, we will create a button in our vertical list
-		foreach (var branch in aBranches)
-		{
-			// if the branch is invalid, because a script evaluated to false, we don't create a button.
-			if (!branch.IsValid) continue;
-			// we create a our button prefab and parent it to our vertical list
-			var btn = Instantiate(branchPrefab);
-			var rect = btn.GetComponent<RectTransform>();
-			rect.SetParent(branchLayoutPanel, false);
-
-			// here we make sure to get the Branch component from our button, either by referencing an already existing one, or by adding it.
-			var branchBtn = btn.GetComponent<ArticyChoiceButton>();
-			if(branchBtn == null)
-				branchBtn = btn.AddComponent<ArticyChoiceButton>();
-
-			// this will assign the flowplayer and branch and will create a proper label for the button.
-			branchBtn.AssignBranch(flowPlayer, branch);
+        }else{
+			foreach(Branch branch in aBranches)
+				branches.Add(branch);
 		}
-        StartCoroutine(SetEventSystem());
+    	
     }
     
 	// convenience method to clear everything underneath our branch layout panel, this should only be our dynamically created branch buttons.
@@ -155,4 +159,55 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         yield return null;
         FindObjectOfType<EventSystem>().SetSelectedGameObject(branchLayoutPanel.GetChild(0).gameObject);
     }
+
+	IEnumerator Scrolling(){
+		if(isScrolling == true) yield break;
+        isScrolling = true;
+        int currentChar = 0;
+        while(currentChar < wholeText.Length){
+            textLabel.text = wholeText.Substring(0, currentChar);
+            yield return new WaitForSeconds(1f / charactersPerSecond);
+            currentChar++;
+        }
+        EndScroll();
+    }
+
+	public void StartScroll(){
+        if(scrollingCo != null) return;
+        scrollingCo = StartCoroutine(Scrolling());
+    }
+
+    private void EndScroll()
+    {
+        if(scrollingCo!=null) 
+            StopCoroutine(scrollingCo);
+        scrollingCo = null;
+        textLabel.text = wholeText;
+        isScrolling = false;
+		EnableContextMenu();
+    }
+
+	private void EnableContextMenu(){
+		if(singleBranch != null) return;
+		if(!branchLayoutPanel.gameObject.activeSelf) branchLayoutPanel.gameObject.SetActive(true);
+		// for every branch provided by the flow player, we will create a button in our vertical list
+		foreach (var branch in branches)
+		{
+			// if the branch is invalid, because a script evaluated to false, we don't create a button.
+			if (!branch.IsValid) continue;
+			// we create a our button prefab and parent it to our vertical list
+			var btn = Instantiate(branchPrefab);
+			var rect = btn.GetComponent<RectTransform>();
+			rect.SetParent(branchLayoutPanel, false);
+
+			// here we make sure to get the Branch component from our button, either by referencing an already existing one, or by adding it.
+			var branchBtn = btn.GetComponent<ArticyChoiceButton>();
+			if(branchBtn == null)
+				branchBtn = btn.AddComponent<ArticyChoiceButton>();
+
+			// this will assign the flowplayer and branch and will create a proper label for the button.
+			branchBtn.AssignBranch(flowPlayer, branch);
+		}
+        StartCoroutine(SetEventSystem());
+	}
 }

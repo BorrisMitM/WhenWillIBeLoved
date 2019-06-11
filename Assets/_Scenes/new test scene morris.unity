@@ -750,6 +750,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4815045399093957190, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6109593113096063728, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: dialogs.Array.size
@@ -931,11 +936,6 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseOn
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4815045399093957190, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4676031269227734728, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
