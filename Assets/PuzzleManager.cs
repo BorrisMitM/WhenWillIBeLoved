@@ -23,6 +23,25 @@ public class PuzzleManager : MonoBehaviour
 
         Debug.Log("Win!");
     }
+
+    [ContextMenu("Restart")]
+    public void Restart()
+    {
+        foreach(Node node in nodes)
+        {
+            LineRenderer[] lineRenderers = node.GetComponentsInChildren<LineRenderer>();
+
+            for (int i = lineRenderers.Length-1; i >= 0; i--)
+            {
+                Destroy(lineRenderers[i].gameObject);
+
+            }
+
+            node.connectedNodes = new List<Node>();
+            node.UpdateText();
+
+        }
+    }
    
 
     // Update is called once per frame

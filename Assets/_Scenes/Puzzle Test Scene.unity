@@ -477,6 +477,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1821719749520845340, guid: 346d1fdf8fbf3644ba75f7c5a257d4ed,
+        type: 3}
+      propertyPath: maxConnections
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1268252012810298901, guid: 346d1fdf8fbf3644ba75f7c5a257d4ed,
         type: 3}
       propertyPath: m_textInfo.characterCount
