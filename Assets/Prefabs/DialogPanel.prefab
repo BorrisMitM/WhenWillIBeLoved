@@ -707,6 +707,7 @@ MonoBehaviour:
   textLabel: {fileID: 0}
   branchLayoutPanel: {fileID: 0}
   portrait: {fileID: 0}
+  charactersPerSecond: 20
 --- !u!114 &8792198163828861900
 MonoBehaviour:
   m_ObjectHideFlags: 0

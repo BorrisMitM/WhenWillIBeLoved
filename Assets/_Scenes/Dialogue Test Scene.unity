@@ -881,11 +881,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 137.1
       objectReference: {fileID: 0}
-    - target: {fileID: 6109593111678443644, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 29503819835478484, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_Enabled
@@ -917,6 +912,16 @@ PrefabInstance:
       propertyPath: displayNameLabel
       value: 
       objectReference: {fileID: 1775846760}
+    - target: {fileID: 29503819835478484, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: scrollingType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 29503819835478484, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: charactersPerSecond
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 8792198163828861900, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_Enabled
@@ -936,6 +941,11 @@ PrefabInstance:
         type: 3}
       propertyPath: pauseOn
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111678443644, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4676031269227734728, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}

@@ -7,6 +7,8 @@ using Articy.Unity.Utils;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using System;
+
 [RequireComponent(typeof(ArticyFlowPlayer))]
 public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
@@ -18,8 +20,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	// the main text label, used to show the text of the current paused on node
 	public TextMeshProUGUI textLabel;
 
-	private string wholeText;
-
 	// the ui target for our vertical list of branch buttons
 	public RectTransform branchLayoutPanel;
 
@@ -29,6 +29,9 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	[Header("Scrolling")]
 	[SerializeField]
 	private int charactersPerSecond = 20;
+
+    public enum ScrollingType {TypeWriter, FadeIn}
+    [SerializeField] private ScrollingType scrollingType;
     ArticyFlowPlayer flowPlayer;
     Branch singleBranch;
 
@@ -60,7 +63,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 			}
         }
     }
-
+    #region DirectArticyStuff
     // This is called everytime the flow player reaches and object of interest.
     public void OnFlowPlayerPaused(IFlowObject aObject)
     {
@@ -80,9 +83,9 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         // if it has the property we use it to show the text in our main text label.
 		var modelWithText = aObject as IObjectWithText;
 		if (modelWithText != null)
-			wholeText = modelWithText.Text;
+			textLabel.text = modelWithText.Text;
 		else
-			wholeText = string.Empty;
+            textLabel.text = string.Empty;
 
 		// this will make sure that we find a proper preview image to show in our ui.
 		ExtractCurrentPausePreviewImage(aObject);
@@ -154,61 +157,162 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 		}
 	}
 
+    private void EnableContextMenu()
+    {
+        if (singleBranch != null) return;
+        if (!branchLayoutPanel.gameObject.activeSelf) branchLayoutPanel.gameObject.SetActive(true);
+        // for every branch provided by the flow player, we will create a button in our vertical list
+        foreach (var branch in branches)
+        {
+            // if the branch is invalid, because a script evaluated to false, we don't create a button.
+            if (!branch.IsValid) continue;
+            // we create a our button prefab and parent it to our vertical list
+            var btn = Instantiate(branchPrefab);
+            var rect = btn.GetComponent<RectTransform>();
+            rect.SetParent(branchLayoutPanel, false);
+
+            // here we make sure to get the Branch component from our button, either by referencing an already existing one, or by adding it.
+            var branchBtn = btn.GetComponent<ArticyChoiceButton>();
+            if (branchBtn == null)
+                branchBtn = btn.AddComponent<ArticyChoiceButton>();
+
+            // this will assign the flowplayer and branch and will create a proper label for the button.
+            branchBtn.AssignBranch(flowPlayer, branch);
+        }
+        StartCoroutine(SetEventSystem());
+    }
+
     IEnumerator SetEventSystem(){ 
         // assign first button to eventmanager for keyboard/controller controls
         FindObjectOfType<EventSystem>().SetSelectedGameObject(null);
         yield return null;
         FindObjectOfType<EventSystem>().SetSelectedGameObject(branchLayoutPanel.GetChild(0).gameObject);
     }
+    #endregion
 
-	IEnumerator Scrolling(){
+    #region Scrolling
+
+    public void StartScroll()
+    {
+        if (scrollingCo != null) return;
+        switch (scrollingType)
+        {
+            case ScrollingType.TypeWriter:
+                scrollingCo = StartCoroutine(ScrollingTypeWriter());
+                break;
+            case ScrollingType.FadeIn:
+                scrollingCo = StartCoroutine(ScrollingFadeIn());
+                break;
+        }
+    }
+    
+
+    IEnumerator ScrollingTypeWriter(){
 		if(isScrolling == true) yield break;
         isScrolling = true;
+        textLabel.ForceMeshUpdate();
         int currentChar = 0;
-        while(currentChar < wholeText.Length){
-            textLabel.text = wholeText.Substring(0, currentChar);
-            yield return new WaitForSeconds(1f / charactersPerSecond);
+        while (currentChar < textLabel.textInfo.characterCount)
+        {
+            textLabel.maxVisibleCharacters = currentChar;
             currentChar++;
+            yield return new WaitForSeconds(1f / charactersPerSecond);
         }
         EndScroll();
     }
-
-	public void StartScroll(){
-        if(scrollingCo != null) return;
-        scrollingCo = StartCoroutine(Scrolling());
-    }
-
+    
     private void EndScroll()
     {
         if(scrollingCo!=null) 
             StopCoroutine(scrollingCo);
         scrollingCo = null;
-        textLabel.text = wholeText;
+        textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
+        textLabel.ForceMeshUpdate();
         isScrolling = false;
 		EnableContextMenu();
     }
 
-	private void EnableContextMenu(){
-		if(singleBranch != null) return;
-		if(!branchLayoutPanel.gameObject.activeSelf) branchLayoutPanel.gameObject.SetActive(true);
-		// for every branch provided by the flow player, we will create a button in our vertical list
-		foreach (var branch in branches)
-		{
-			// if the branch is invalid, because a script evaluated to false, we don't create a button.
-			if (!branch.IsValid) continue;
-			// we create a our button prefab and parent it to our vertical list
-			var btn = Instantiate(branchPrefab);
-			var rect = btn.GetComponent<RectTransform>();
-			rect.SetParent(branchLayoutPanel, false);
+    IEnumerator ScrollingFadeIn()
+    {
 
-			// here we make sure to get the Branch component from our button, either by referencing an already existing one, or by adding it.
-			var branchBtn = btn.GetComponent<ArticyChoiceButton>();
-			if(branchBtn == null)
-				branchBtn = btn.AddComponent<ArticyChoiceButton>();
+        if (isScrolling == true) yield break;
+        isScrolling = true;
+        // Need to force the text object to be generated so we have valid data to work with right from the start.
+        textLabel.ForceMeshUpdate();
 
-			// this will assign the flowplayer and branch and will create a proper label for the button.
-			branchBtn.AssignBranch(flowPlayer, branch);
-		}
-        StartCoroutine(SetEventSystem());
-	}
+
+        TMP_TextInfo textInfo = textLabel.textInfo;
+        Color32[] newVertexColors;
+
+        int currentCharacter = 0;
+        int startingCharacterRange = currentCharacter;
+
+        for (int i = 0; i < textLabel.textInfo.characterCount; i++)
+        {
+            int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
+
+            // Get the vertex colors of the mesh used by this text element (character or sprite).
+            Color32[] vertexColors = textInfo.meshInfo[materialIndex].colors32;
+
+            // Get the index of the first vertex used by this text element.
+            int vertexIndex = textInfo.characterInfo[i].vertexIndex;
+
+            // Set new alpha values.
+            vertexColors[vertexIndex + 0].a = 0;
+            vertexColors[vertexIndex + 1].a = 0;
+            vertexColors[vertexIndex + 2].a = 0;
+            vertexColors[vertexIndex + 3].a = 0;
+        }
+
+        textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+        while (true)
+        {
+            int characterCount = textInfo.characterCount;
+
+            // Spread should not exceed the number of characters.
+            byte fadeSteps = (byte)Mathf.Max(1, 255 / 10);
+
+
+            for (int i = startingCharacterRange; i < currentCharacter + 1; i++)
+            {
+                // Skip characters that are not visible
+                // if (!textInfo.characterInfo[i].isVisible) continue;
+
+                // Get the index of the material used by the current character.
+                int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
+
+                // Get the vertex colors of the mesh used by this text element (character or sprite).
+                newVertexColors = textInfo.meshInfo[materialIndex].colors32;
+
+                // Get the index of the first vertex used by this text element.
+                int vertexIndex = textInfo.characterInfo[i].vertexIndex;
+
+                // Get the current character's alpha value.
+                byte alpha = (byte)Mathf.Clamp(newVertexColors[vertexIndex].a + fadeSteps, 0, 255);
+                // Set new alpha values.
+                newVertexColors[vertexIndex + 0].a = alpha;
+                newVertexColors[vertexIndex + 1].a = alpha;
+                newVertexColors[vertexIndex + 2].a = alpha;
+                newVertexColors[vertexIndex + 3].a = alpha;
+
+                if (alpha == 255)
+                {
+                    startingCharacterRange += 1;
+                    if (startingCharacterRange == characterCount)
+                    {
+                        // Update mesh vertex data one last time.
+                        textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+                        EndScroll();
+                    }
+                }
+            }
+            // Upload the changed vertex colors to the Mesh.
+            textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+
+            if (currentCharacter + 1 < characterCount) currentCharacter += 1;
+            yield return new WaitForSeconds(1f / charactersPerSecond);
+        }
+    }
+    #endregion
+
 }
