@@ -36,7 +36,7 @@ public class PushPuzzleBlock : MonoBehaviour
     {
         touchingEndTiles++;
         if (touchingEndTiles >= length)
-            Debug.Log("Win");
+            GetComponentInParent<ChangeGlobalVariable>().SetBool(true);
     }
     [ExecuteInEditMode]
     [ContextMenu("AdjustSize")]

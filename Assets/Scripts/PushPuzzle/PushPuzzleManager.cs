@@ -30,6 +30,10 @@ public class PushPuzzleManager : MonoBehaviour
     [ContextMenu("SpawnWalls")]
     public void SpawnWalls()
     {
+        BoxCollider2D[] oldColliders = GetComponents<BoxCollider2D>();
+        for(int i = oldColliders.Length - 1; i >= 0; i--){
+            Destroy(oldColliders[i]);
+        }
         BoxCollider2D wall = gameObject.AddComponent<BoxCollider2D>();
         wall.offset = new Vector2(xSize / 2f + 0.25f, 0f);
         wall.size = new Vector2(.5f, ySize);

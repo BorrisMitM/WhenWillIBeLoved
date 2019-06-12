@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Articy.ManiacManfred;
+using Articy.Unity;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     string currentScene;
-    public Articy.ManiacManfred.GlobalVariables.GameState gameState;
 
     private void Awake() {
         if(instance == null)

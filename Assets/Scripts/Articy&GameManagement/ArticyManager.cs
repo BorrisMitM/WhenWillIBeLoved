@@ -45,7 +45,8 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         ClearAllBranches();
         if (flowPlayer != null && flowPlayer.StartOn == null)
 			textLabel.text = "<color=green>No object selected in the flow player. Navigate to the ArticyflowPlayer and choose a StartOn node.</color>";
-	
+		
+        ArticyDatabase.DefaultGlobalVariables.SetVariableByString("GameState.dialogue_beforeLobby", true);
     }
     private void Update() {
         if(Input.GetButtonDown("Submit")){

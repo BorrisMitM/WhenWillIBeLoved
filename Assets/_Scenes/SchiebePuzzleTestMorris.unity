@@ -203,6 +203,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &198226375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3263928718830845175, guid: 9fe04bb4162678345996537647ee2b32,
+    type: 3}
+  m_PrefabInstance: {fileID: 3263928718302079511}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &198226376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 198226375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c25c4bad590434459668b96ced783de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  variableToChange: awake
+  variableChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &316872279
 GameObject:
   m_ObjectHideFlags: 0
