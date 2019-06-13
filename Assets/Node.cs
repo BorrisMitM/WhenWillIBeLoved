@@ -38,7 +38,7 @@ public class Node : MonoBehaviour
 
     }
 
-    void UpdateText()
+    public void UpdateText()
     {
         counterText.text = (maxConnections - connectedNodes.Count).ToString();
     }
