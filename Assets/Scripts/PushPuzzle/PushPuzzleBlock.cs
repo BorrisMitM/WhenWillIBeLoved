@@ -58,7 +58,7 @@ public class PushPuzzleBlock : MonoBehaviour
             if (length % 2 == 1)
                 yPos = Mathf.Round(transform.position.y - 0.5f) + 0.5f;
             else yPos = Mathf.Round(transform.position.y);
-            transform.position = new Vector3(Mathf.Round(transform.position.x - 0.5f) + 0.5f, yPos, -2f);
+            transform.localPosition = new Vector3(Mathf.Round(transform.position.x - 0.5f) + 0.5f, yPos, -2f);
         }
         else
         {
@@ -66,7 +66,7 @@ public class PushPuzzleBlock : MonoBehaviour
             if (length % 2 == 1)
                 xPos = Mathf.Round(transform.position.x - 0.5f) + 0.5f;
             else xPos = Mathf.Round(transform.position.x);
-            transform.position = new Vector3(xPos, Mathf.Round(transform.position.y - 0.5f) + 0.5f, -2f);
+            transform.localPosition = new Vector3(xPos, Mathf.Round(transform.position.y - 0.5f) + 0.5f, -2f);
         }
     }
 }
