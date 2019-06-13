@@ -6,8 +6,13 @@ using Articy.ManiacManfred;
 using Articy.Unity;
 public class GameManager : MonoBehaviour
 {
+    
     public static GameManager instance;
     string currentScene;
+
+    public bool puzzleActive;
+
+
 
     private void Awake() {
         if(instance == null)
@@ -22,5 +27,9 @@ public class GameManager : MonoBehaviour
             SceneManager.UnloadSceneAsync(currentScene);
         currentScene = sceneName;
         SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
+
+
     }
+
+
 }

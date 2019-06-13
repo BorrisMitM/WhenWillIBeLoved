@@ -22,6 +22,8 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (GameManager.instance.puzzleActive) return;
+
         if(targetToFollow != null)
         {
             targetPosition = new Vector3(targetToFollow.transform.position.x, targetToFollow.transform.position.y, transform.position.z);
