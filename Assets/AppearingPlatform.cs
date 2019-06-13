@@ -59,19 +59,25 @@ public class AppearingPlatform : MonoBehaviour
     private void Appear(bool appear)
     {
         platform.SetActive(appear);
-        blockingCollider.SetActive(!appear);
+        if(appear)
+        StartCoroutine(FadeIn(appear));
+        else blockingCollider.SetActive(true);
     }
 
-    IEnumerator FadeIn(){
-        float startTime = Time.time + fadeInDuration;
+    IEnumerator FadeIn(bool appear){
+        float startTime = Time.time;
         SpriteRenderer[] sprites = GetComponentsInChildren<SpriteRenderer>();
-        while(Time.time < startTime){
-            float alpha = Mathf.Lerp(0f, 1f, (Time.time - startTime) / fadeInDuration);
+        while(Time.time < startTime + fadeInDuration){
+            float alpha = appear ? Mathf.Lerp(0f, 1f, (Time.time - startTime) / fadeInDuration) : Mathf.Lerp(1f, 0f, (Time.time - startTime) / fadeInDuration);
             foreach(SpriteRenderer sprite in sprites){
                 sprite.color = new Color(sprite.color.r,sprite.color.g,sprite.color.b, alpha);
             }
-            yield return null;
+            yield return new WaitForSeconds(0.05f);
         }
+        foreach(SpriteRenderer sprite in sprites){
+            sprite.color = new Color(sprite.color.r,sprite.color.g,sprite.color.b, 1f);
+        }
+        blockingCollider.SetActive(!appear);
     }
 }
 
