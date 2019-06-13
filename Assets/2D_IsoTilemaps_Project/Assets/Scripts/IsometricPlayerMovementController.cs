@@ -24,6 +24,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (GameManager.instance.puzzleActive)
+        {
+            isoRenderer.SetDirection(new Vector2(0, 0));
+            return;
+        }
+
         Vector3 currentPos = rbody.position;
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
