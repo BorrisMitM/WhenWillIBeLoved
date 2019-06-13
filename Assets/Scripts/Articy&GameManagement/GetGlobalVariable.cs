@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Articy.Unity;
-public class GetGlobalVariable : MonoBehaviour
+public class GetGlobalVariable
 {
     public static bool Bool(string variableName){
         return ArticyDatabase.DefaultGlobalVariables.GetVariableByString<bool>(variableName);

@@ -33,7 +33,5 @@ public class IsometricPlayerMovementController : MonoBehaviour
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
         isoRenderer.SetDirection(movement);
         rbody.MovePosition(newPos);
-
-       
     }
 }
