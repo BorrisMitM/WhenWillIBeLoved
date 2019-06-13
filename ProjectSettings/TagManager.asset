@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Dot
   layers:
   - Default
   - TransparentFX
@@ -38,8 +39,17 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: backGround
+    uniqueID: 4144036935
+    locked: 0
+  - name: floor
+    uniqueID: 2880548987
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: puzzleWindow
+    uniqueID: 357707467
     locked: 0
   - name: puzzleLayer
     uniqueID: 1429048049
