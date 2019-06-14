@@ -10,6 +10,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     public GameObject movementCamera;
 
+    public float moveOffset;
 
     Rigidbody2D rbody;
 
@@ -31,7 +32,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         }
 
         Vector3 currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal");
+        float horizontalInput = Input.GetAxis("Horizontal")*moveOffset;
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputVector = new Vector3(horizontalInput, verticalInput, 0);
         inputVector = Vector3.ClampMagnitude(inputVector, 1);
