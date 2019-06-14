@@ -10,6 +10,10 @@ public class CameraMovement : MonoBehaviour
 
     public float moveSpeed;
     public float smoothTime;
+    [SerializeField] private float leftBorder;
+    [SerializeField] private float rightBorder;
+    [SerializeField] private float topBorder;
+    [SerializeField] private float botBorder;
 
     
 
@@ -26,7 +30,10 @@ public class CameraMovement : MonoBehaviour
 
         if(targetToFollow != null)
         {
-            targetPosition = new Vector3(targetToFollow.transform.position.x, targetToFollow.transform.position.y, transform.position.z);
+            targetPosition = new Vector3(Mathf.Clamp(targetToFollow.transform.position.x, leftBorder, rightBorder), 
+                                         Mathf.Clamp(targetToFollow.transform.position.y, botBorder, topBorder), 
+                                         transform.position.z);
+                                         
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }
     }
