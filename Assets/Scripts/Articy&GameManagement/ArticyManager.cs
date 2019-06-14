@@ -35,10 +35,8 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     ArticyFlowPlayer flowPlayer;
     Branch singleBranch;
 
-	Coroutine scrollingCo;
-
 	List<Branch> branches;
-
+    public bool buttonPressed = false;
 	bool isScrolling;
     // Start is called before the first frame update
     void Start()
@@ -49,8 +47,8 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (flowPlayer != null && flowPlayer.StartOn == null)
 			textLabel.text = "<color=green>No object selected in the flow player. Navigate to the ArticyflowPlayer and choose a StartOn node.</color>";
     }
-    private void Update() {
-        if(Input.GetButtonDown("Submit")){
+    private void LateUpdate() {
+        if(Input.GetButtonDown("Submit") && !buttonPressed){
 			if(isScrolling){
 				EndScroll();
 			}
@@ -60,6 +58,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 				if(singleBranch == thisBranch) singleBranch = null;
 			}
         }
+        if(buttonPressed) buttonPressed = false;
     }
     #region DirectArticyStuff
     // This is called everytime the flow player reaches and object of interest.
@@ -192,14 +191,14 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void StartScroll()
     {
-        if (scrollingCo != null) return;
+        Debug.Log("startScroll");
         switch (scrollingType)
         {
             case ScrollingType.TypeWriter:
-                scrollingCo = StartCoroutine(ScrollingTypeWriter());
+                StartCoroutine(ScrollingTypeWriter());
                 break;
             case ScrollingType.FadeIn:
-                scrollingCo = StartCoroutine(ScrollingFadeInAlt());
+                StartCoroutine(ScrollingFadeInAlt());
                 break;
         }
     }
@@ -212,18 +211,53 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         int currentChar = 0;
         while (currentChar < textLabel.textInfo.characterCount)
         {
+            if(!isScrolling) yield break;
             textLabel.maxVisibleCharacters = currentChar;
             currentChar++;
             yield return new WaitForSeconds(1f / charactersPerSecond);
         }
         EndScroll();
     }
-    
+    IEnumerator ScrollingFadeInAllt(){
+		if (isScrolling == true) yield break;
+        isScrolling = true;
+        // Need to force the text object to be generated so we have valid data to work with right from the start.
+        textLabel.ForceMeshUpdate();
+        yield return null;
+
+        TMP_TextInfo textInfo = textLabel.textInfo;
+        Color32[] newVertexColors;
+
+        for (int i = 0; i < textLabel.textInfo.characterCount; i++)
+        {
+            int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
+
+            // Get the vertex colors of the mesh used by this text element (character or sprite).
+            Color32[] vertexColors = textInfo.meshInfo[materialIndex].colors32;
+
+            // Get the index of the first vertex used by this text element.
+            int vertexIndex = textInfo.characterInfo[i].vertexIndex;
+
+            // Set new alpha values.
+            vertexColors[vertexIndex + 0].a = 0;
+            vertexColors[vertexIndex + 1].a = 0;
+            vertexColors[vertexIndex + 2].a = 0;
+            vertexColors[vertexIndex + 3].a = 0;
+        }
+        textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+        int currentChar = 0;
+        while (currentChar < textLabel.textInfo.characterCount)
+        {
+            //StartCoroutine(FadeIn(currentChar));
+            currentChar++;
+            yield return new WaitForSeconds(1f / charactersPerSecond);
+        }
+        EndScroll();
+    }
+
     private void EndScroll()
     {
-        if(scrollingCo!=null) 
-            StopCoroutine(scrollingCo);
-        scrollingCo = null;
+        Debug.Log("endScroll");
         textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
         textLabel.ForceMeshUpdate();
         isScrolling = false;
@@ -231,18 +265,15 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
 
     IEnumerator ScrollingFadeInAlt(){
+        //yield return null;
         if (isScrolling == true) yield break;
         isScrolling = true;
         // Need to force the text object to be generated so we have valid data to work with right from the start.
         textLabel.ForceMeshUpdate();
-
-
+        textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
+        yield return null;
         TMP_TextInfo textInfo = textLabel.textInfo;
         Color32[] newVertexColors;
-
-        int currentCharacter = 0;
-        int startingCharacterRange = currentCharacter;
-
         for (int i = 0; i < textLabel.textInfo.characterCount; i++)
         {
             int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
@@ -262,21 +293,20 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
         List<int> currentlyFadingIn = new List<int>();
         int fadeInAmount = 5;
-        byte fadeSteps = (byte)Mathf.Max(1, 255 / 3);
+        byte fadeSteps = (byte)Mathf.Max(1, 255 / fadeInAmount);
         int counter = 0;
-        while(true){
+        while(isScrolling){
             if(currentlyFadingIn.Count < fadeInAmount){
-                currentlyFadingIn.Add(counter);
+                if (textInfo.characterInfo[counter].isVisible)
+                    currentlyFadingIn.Add(counter);
                 counter++;
             }
-            bool first = true;
             foreach(int i in currentlyFadingIn)
-            Debug.Log("_____________");
+                Debug.Log(i);
+            Debug.Log("_______");
             for (int it = currentlyFadingIn.Count - 1; it >= 0; it--){
                 int i = currentlyFadingIn[it];
                 
-                // Skip characters that are not visible
-                if (!textInfo.characterInfo[i].isVisible) continue;
                 // Get the index of the material used by the current character.
                 int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
 
@@ -293,18 +323,17 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
                 newVertexColors[vertexIndex + 1].a = alpha;
                 newVertexColors[vertexIndex + 2].a = alpha;
                 newVertexColors[vertexIndex + 3].a = alpha;
-                if(first){
-                    // Debug.Log("character " + currentlyFadingIn[it]);
-                    // Debug.Log("alpha " + alpha);
+                if(it == 0){
                     if(alpha == 255){ 
                         currentlyFadingIn.Remove(i);
-                        if(currentlyFadingIn.Count == 0) EndScroll();
+                        if(currentlyFadingIn.Count == 0) {
+                            EndScroll();
+                        }
                     }
-                    first = false;
                 }
             }
             textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
-            yield return new WaitForSeconds(1/charactersPerSecond);
+            yield return null;
         }
     }
     IEnumerator ScrollingFadeIn()

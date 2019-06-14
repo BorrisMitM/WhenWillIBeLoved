@@ -82,5 +82,6 @@ public class ArticyChoiceButton : MonoBehaviour
 	{
 		// by giving the processor the branch assigned to the button on creation, the processor knows where to continue the flow
 		processor.Play(branch);
+		GetComponentInParent<ArticyManager>().buttonPressed = true;
 	}
 }
