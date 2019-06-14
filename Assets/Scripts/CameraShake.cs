@@ -24,7 +24,7 @@ public class CameraShake : MonoBehaviour
 
         }
 
-        transform.localPosition = originalPos;
+        transform.localPosition = Vector3.zero;
     }
 
 
