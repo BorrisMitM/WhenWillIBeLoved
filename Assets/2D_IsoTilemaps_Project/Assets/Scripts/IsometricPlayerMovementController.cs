@@ -8,8 +8,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public float movementSpeed = 1f;
     IsometricCharacterRenderer isoRenderer;
 
-    public GameObject movementCamera;
-
     public float moveOffset;
 
     Rigidbody2D rbody;

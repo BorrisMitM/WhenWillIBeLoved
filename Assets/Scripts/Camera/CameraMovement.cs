@@ -8,6 +8,8 @@ public class CameraMovement : MonoBehaviour
     public Transform targetToFollow;
     private Vector3 targetPosition;
 
+    public CameraShake cameraShaker;
+
     public float moveSpeed;
     public float smoothTime;
     [SerializeField] private float leftBorder;
@@ -21,9 +23,17 @@ public class CameraMovement : MonoBehaviour
     void Start()
     {
         startingPosition = transform.position;
+        cameraShaker = GetComponentInChildren<CameraShake>();
     }
 
-    // Update is called once per frame
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.E))
+        {
+            StartCoroutine(cameraShaker.ShakeCamera(.15f, .4f));
+        }
+    }
+
     void LateUpdate()
     {
         if (GameManager.instance.puzzleActive) return;
