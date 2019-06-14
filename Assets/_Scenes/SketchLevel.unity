@@ -2068,9 +2068,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1210758019}
   blockingCollider: {fileID: 635000179}
-  changeOn: 0
-  limit: 0
-  variableToAppearOn: 
+  changeOn: 3
+  limit: 6
+  variableToAppearOn: GameState.lock_number
   fadeInDuration: 1
 --- !u!1 &1303014730
 GameObject:
