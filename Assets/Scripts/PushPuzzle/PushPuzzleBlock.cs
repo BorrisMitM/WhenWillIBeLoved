@@ -69,4 +69,9 @@ public class PushPuzzleBlock : MonoBehaviour
             transform.localPosition = new Vector3(xPos, Mathf.Round(transform.localPosition.y - 0.5f) + 0.5f, -2f);
         }
     }
+
+    private void OnValidate() {
+        AdjustSize();
+        Align();
+    }
 }
