@@ -30,12 +30,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6109593111678443645}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.9000244, y: -0.000015258789}
-  m_SizeDelta: {x: -53.1, y: -58.1}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 120.8, y: -0.000015258789}
+  m_SizeDelta: {x: -449, y: 201.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &594995486
 CanvasRenderer:
@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -104,12 +104,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6109593111678443645}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0050278, y: 0.0000076293945}
-  m_SizeDelta: {x: 1153.8, y: 259.8}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 118.29999, y: -1.35}
+  m_SizeDelta: {x: -376.69995, y: 259.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1853642886
 CanvasRenderer:
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.1792453, g: 0.16825384, b: 0.16825384, a: 0.85490197}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6109593111678443645
 RectTransform:
   m_ObjectHideFlags: 0
@@ -292,16 +292,16 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6109593112012923321}
-  - {fileID: 6109593111974834088}
   - {fileID: 1853642884}
   - {fileID: 594995484}
+  - {fileID: 6109593111974834088}
   m_Father: {fileID: 6109593113096063729}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 144.3, y: 187}
-  m_SizeDelta: {x: -446.2, y: 259.8}
+  m_AnchoredPosition: {x: 0, y: 187}
+  m_SizeDelta: {x: 0, y: 259.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6109593111678443634
 CanvasRenderer:
@@ -341,11 +341,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6109593111678443645}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 556.9, y: -129.9}
+  m_AnchoredPosition: {x: 896, y: -131.25}
   m_SizeDelta: {x: 1052.9, y: 201.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6109593111974834094
@@ -442,7 +442,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 18.085913, y: 17.742857, z: -33.659134, w: 15.825142}
+  m_margin: {x: 18.085913, y: 17.742857, z: -45.23486, w: 15.825142}
   m_textInfo:
     textComponent: {fileID: 6109593111974834095}
     characterCount: 0
@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -171, y: -128.55}
+  m_AnchoredPosition: {x: 151.2, y: -129.9}
   m_SizeDelta: {x: 262.4, y: 257.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6109593112012923327
@@ -606,6 +606,7 @@ MonoBehaviour:
     type: 3}
   textLabel: {fileID: 6109593111974834095}
   branchLayoutPanel: {fileID: 8857788245078864300}
+  panel: {fileID: 6109593111678443646}
   portrait: {fileID: 6109593112012923320}
   charactersPerSecond: 60
   scrollingType: 0
@@ -629,7 +630,7 @@ MonoBehaviour:
   startOn:
     instanceId: 0
     referencingMode: 0
-    lowId: 317
+    lowId: 603
     highId: 16777216
   pauseOn: 7
   ignoreInvalidBranches: 1

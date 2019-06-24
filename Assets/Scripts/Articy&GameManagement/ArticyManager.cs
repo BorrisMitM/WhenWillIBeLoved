@@ -21,6 +21,9 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	// the ui target for our vertical list of branch buttons
 	public RectTransform branchLayoutPanel;
 
+    public GameObject panel;
+    private bool isActive = false;
+
 	// the preview image ui element. A simple 64x64 image that will show the articy preview image or speaker, depending on the current pause.
 	public Image portrait;
 
@@ -37,6 +40,20 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     public bool buttonPressed = false;
 	bool isScrolling;
     // Start is called before the first frame update
+
+    public void StartDialog(){
+        if(isActive) return;
+        panel.SetActive(true);
+        GameManager.instance.puzzleActive = true;
+        isActive = true;
+        StartScroll();
+    }
+
+    public void EndDialog(){
+        panel.SetActive(false);
+        GameManager.instance.puzzleActive = false;
+        isActive = false;
+    }
     void Start()
     {
 		branches = new List<Branch>();
@@ -73,11 +90,13 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 		if (modelWithText != null)
 			textLabel.text = modelWithText.Text;
 		else
-            textLabel.text = string.Empty;
+            EndDialog();
+            //textLabel.text = string.Empty;
 
 		// this will make sure that we find a proper preview image to show in our ui.
 		ExtractCurrentPausePreviewImage(aObject);
-		StartScroll();
+        if(isActive)
+		    StartScroll();
     }
     
 	// called everytime the flow player encounteres multiple branches, or paused on a node and want to tell us how to continue.

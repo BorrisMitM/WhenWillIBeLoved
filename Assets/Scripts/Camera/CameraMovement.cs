@@ -30,10 +30,10 @@ public class CameraMovement : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.E))
-        {
-            StartCoroutine(cameraShaker.ShakeCamera(.15f, .4f));
-        }
+        // if(Input.GetKey(KeyCode.E))
+        // {
+        //     StartCoroutine(cameraShaker.ShakeCamera(.15f, .4f));
+        // }
     }
 
     void LateUpdate()
