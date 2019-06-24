@@ -24,7 +24,7 @@ public class SoundManager : MonoBehaviour
     {
         foreach (SoundContainer soundContainer in soundContainers)
         {
-            
+            if(GetGlobalVariable.Int(soundContainer.emotionMeterString) > 0) return;
         }
     }
 }

@@ -15,8 +15,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     [Header("UI")]
 	// a prefab used to instantiate a branch
 	public GameObject branchPrefab;
-	// the display name label, used to show the name of the current paused on node
-	public TextMeshProUGUI displayNameLabel;
 	// the main text label, used to show the text of the current paused on node
 	public TextMeshProUGUI textLabel;
 
@@ -68,13 +66,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 		{
 			IArticyObject articyObj = aObject as IArticyObject;	
 		}
-		// To show the displayname in the ui of the current node
-		IObjectWithDisplayName modelWithDisplayName = aObject as IObjectWithDisplayName;
-		if (modelWithDisplayName != null)
-			displayNameLabel.text = modelWithDisplayName.DisplayName;
-		else
-			displayNameLabel.text = string.Empty;
-
 		// To show text in the ui of the current node
 		// we just check if it has a text property by using the object property interfaces, 
         // if it has the property we use it to show the text in our main text label.
@@ -99,6 +90,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
              branchLayoutPanel.gameObject.SetActive(false);
              singleBranch = aBranches[0];
 			 branches = new List<Branch>();
+             if(textLabel.text.Length <= 0) flowPlayer.Play(singleBranch);
              return;
         }else{
 			foreach(Branch branch in aBranches)
@@ -191,7 +183,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void StartScroll()
     {
-        Debug.Log("startScroll");
         switch (scrollingType)
         {
             case ScrollingType.TypeWriter:
@@ -257,7 +248,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private void EndScroll()
     {
-        Debug.Log("endScroll");
         textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
         textLabel.ForceMeshUpdate();
         isScrolling = false;
@@ -301,9 +291,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
                     currentlyFadingIn.Add(counter);
                 counter++;
             }
-            foreach(int i in currentlyFadingIn)
-                Debug.Log(i);
-            Debug.Log("_______");
             for (int it = currentlyFadingIn.Count - 1; it >= 0; it--){
                 int i = currentlyFadingIn[it];
                 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Articy.ManiacManfred;
+using Articy.Side_Effects;
 using Articy.Unity;
 public class GameManager : MonoBehaviour
 {

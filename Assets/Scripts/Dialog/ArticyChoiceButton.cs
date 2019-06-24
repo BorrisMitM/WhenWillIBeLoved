@@ -30,7 +30,7 @@ public class ArticyChoiceButton : MonoBehaviour
 		processor = aProcessor;
 
 		// a nice debug aid, if we show all branches (valid or invalid) we can identify branches that shouldn't be allowed because of our scripts
-		dialogText.color = aBranch.IsValid ? Color.black : Color.red;
+		//dialogText.color = aBranch.IsValid ? Color.black : Color.red;
 
 		var target = aBranch.Target;
 		dialogText.text = "";
