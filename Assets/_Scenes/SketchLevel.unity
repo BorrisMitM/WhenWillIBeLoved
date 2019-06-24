@@ -294,9 +294,9 @@ MonoBehaviour:
   moveSpeed: 1
   smoothTime: 0.05
   leftBorder: -6.1
-  rightBorder: 2.9
-  topBorder: 0.5
-  botBorder: -8.5
+  rightBorder: 7.71
+  topBorder: 4.57
+  botBorder: -6.06
 --- !u!1 &206532361
 GameObject:
   m_ObjectHideFlags: 0
