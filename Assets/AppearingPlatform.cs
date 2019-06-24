@@ -14,8 +14,10 @@ public class AppearingPlatform : MonoBehaviour
     public int limit;
     [SerializeField] private string variableToAppearOn;
     [SerializeField] private float fadeInDuration = 1f;
+    [SerializeField] private float shakeMagnitude = .4f;
     private bool triggered = false;
-
+    private CameraMovement camMove;
+    private CameraShake camShake;
     private void Start() {
         switch(changeOn){
             case ChangeOn.boolTrue : 
@@ -32,7 +34,8 @@ public class AppearingPlatform : MonoBehaviour
                         break;
         }
         Appear(triggered);
-        
+        camMove = FindObjectOfType<CameraMovement>();
+        camShake = FindObjectOfType<CameraShake>();
     }
     // Update is called once per frame
     void Update()
@@ -59,8 +62,11 @@ public class AppearingPlatform : MonoBehaviour
     private void Appear(bool appear)
     {
         platform.SetActive(appear);
-        if(appear)
-        StartCoroutine(FadeIn(appear));
+        if(appear){
+            camMove.platformToFocus = platform.transform;
+            StartCoroutine(camShake.ShakeCamera(fadeInDuration, shakeMagnitude));
+            StartCoroutine(FadeIn(appear));
+        }
         else blockingCollider.SetActive(true);
     }
 
@@ -78,6 +84,7 @@ public class AppearingPlatform : MonoBehaviour
             sprite.color = new Color(sprite.color.r,sprite.color.g,sprite.color.b, 1f);
         }
         blockingCollider.SetActive(!appear);
+        camMove.platformToFocus = null;
     }
 }
 

@@ -289,10 +289,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetToFollow: {fileID: 4408118}
+  platformToFocus: {fileID: 0}
   cameraShaker: {fileID: 2003568705}
   moveSpeed: 1
   smoothTime: 0.05
-  leftBorder: -11
+  leftBorder: -6.1
   rightBorder: 2.9
   topBorder: 0.5
   botBorder: -8.5
@@ -739,8 +740,9 @@ MonoBehaviour:
   blockingCollider: {fileID: 342008412}
   changeOn: 0
   limit: 0
-  variableToAppearOn: GameState.book_read
+  variableToAppearOn: GlobalVariables.EmiliaKids
   fadeInDuration: 1
+  shakeMagnitude: 0.4
 --- !u!1 &732074333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2122,8 +2124,9 @@ MonoBehaviour:
   blockingCollider: {fileID: 635000179}
   changeOn: 3
   limit: 6
-  variableToAppearOn: GameState.lock_number
+  variableToAppearOn: GlobalVariables.EmiliaLeaving
   fadeInDuration: 1
+  shakeMagnitude: 0.4
 --- !u!1 &1303014730
 GameObject:
   m_ObjectHideFlags: 0
@@ -3499,12 +3502,12 @@ PrefabInstance:
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.29
+      value: -1.24
       objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.8547
+      value: -0.28
       objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
@@ -4374,8 +4377,9 @@ MonoBehaviour:
   blockingCollider: {fileID: 1334823164}
   changeOn: 0
   limit: 0
-  variableToAppearOn: GameState.awake
+  variableToAppearOn: GlobalVariables.EmiliaHometown
   fadeInDuration: 1
+  shakeMagnitude: 0.1
 --- !u!1 &1818967601
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,7 +4633,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934524027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.0446467, y: -2.2187696, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 298176385}

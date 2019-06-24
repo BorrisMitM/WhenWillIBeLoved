@@ -6,6 +6,8 @@ public class CameraMovement : MonoBehaviour
 {
     private Vector3 startingPosition;
     public Transform targetToFollow;
+    [HideInInspector]
+    public Transform platformToFocus;
     private Vector3 targetPosition;
 
     public CameraShake cameraShaker;
@@ -37,8 +39,14 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         if (GameManager.instance.puzzleActive) return;
-
-        if(targetToFollow != null)
+        if(platformToFocus != null){
+            targetPosition = new Vector3(Mathf.Clamp(platformToFocus.transform.position.x, leftBorder, rightBorder), 
+                                         Mathf.Clamp(platformToFocus.transform.position.y, botBorder, topBorder), 
+                                         transform.position.z);
+                                         
+            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+        }
+        else if(targetToFollow != null)
         {
             targetPosition = new Vector3(Mathf.Clamp(targetToFollow.transform.position.x, leftBorder, rightBorder), 
                                          Mathf.Clamp(targetToFollow.transform.position.y, botBorder, topBorder), 
