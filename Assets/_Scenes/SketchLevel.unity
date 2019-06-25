@@ -622,6 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleActive: 0
+  nextDialogUnlocked: 1
 --- !u!4 &633405423
 Transform:
   m_ObjectHideFlags: 0
@@ -3764,6 +3765,12 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3339481644051735614, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 486870f2c3133a146b16fafeb8591a36,
+        type: 3}
     m_RemovedComponents:
     - {fileID: 4098054172893964536, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
