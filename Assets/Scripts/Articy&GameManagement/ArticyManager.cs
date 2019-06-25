@@ -110,7 +110,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         // we clear all old branch buttons
 		ClearAllBranches();
         //show layout panel only when branches are available
-        if(aBranches.Count <= 1){
+        if(aBranches.Count == 1){
              branchLayoutPanel.gameObject.SetActive(false);
              singleBranch = aBranches[0];
 			 branches = new List<Branch>();
