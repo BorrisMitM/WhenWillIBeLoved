@@ -7,6 +7,9 @@ public class PushPuzzleManager : MonoBehaviour
     public GameObject backgroundTile;
     public int xSize, ySize;
     public float tileSize;
+
+    public string PostPuzzleText;
+    public int maxSnippetCount = 4;
     // Start is called before the first frame update
     void Start()
     {

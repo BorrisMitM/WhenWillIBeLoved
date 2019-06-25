@@ -5,14 +5,18 @@ using UnityEngine.EventSystems;
 public class PushPuzzleBlock : MonoBehaviour
 {
     [SerializeField] private bool vertical = false;
+    private static int snippetCount = 0;
     private Rigidbody2D rb;
     public bool isSolutionBlock = false;
     [SerializeField] private int length = 1;
     public int touchingEndTiles = 0;
     private float mouseOffset;
+    private PushPuzzleManager manager;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(isSolutionBlock)
+            manager = GetComponentInParent<PushPuzzleManager>();
     }
     private void OnMouseDown()
     {
@@ -35,8 +39,13 @@ public class PushPuzzleBlock : MonoBehaviour
     public void AddTouchingEndTile()
     {
         touchingEndTiles++;
-        if (touchingEndTiles >= length)
+        if (touchingEndTiles >= length){
+            snippetCount++;
+            if(snippetCount >= manager.maxSnippetCount) {
+                FindObjectOfType<RiddleTextPanel>().EnablePanel(manager.PostPuzzleText);
+            }
             GetComponentInParent<ChangeGlobalVariable>().SetBool(true);
+        }
     }
     [ExecuteInEditMode]
     [ContextMenu("AdjustSize")]

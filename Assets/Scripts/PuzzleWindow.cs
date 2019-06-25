@@ -34,9 +34,6 @@ public class PuzzleWindow : MonoBehaviour
     {
         Destroy(puzzle);
         puzzle = Instantiate(lastPuzzlePrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
-
-
-
     }
 
 }
