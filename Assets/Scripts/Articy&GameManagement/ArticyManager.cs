@@ -48,6 +48,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         if(isActive) return;
         panel.SetActive(true);
         GameManager.instance.puzzleActive = true;
+        GameManager.instance.nextDialogUnlocked = false;
         isActive = true;
         StartScroll();
     }

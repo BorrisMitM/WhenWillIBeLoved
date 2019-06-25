@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     string currentScene;
 
     public bool puzzleActive;
-
+    public bool nextDialogUnlocked = true;
 
 
     private void Awake() {

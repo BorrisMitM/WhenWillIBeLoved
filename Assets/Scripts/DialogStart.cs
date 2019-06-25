@@ -13,13 +13,14 @@ public class DialogStart : MonoBehaviour
     }
 
     private void Update() {
-        if(playerInRange && Input.GetButtonDown("Interact")){
+        if(playerInRange && Input.GetButtonDown("Interact") && GameManager.instance.nextDialogUnlocked){
             FindObjectOfType<ArticyManager>().StartDialog();
+            glow.EndGlow();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
+        if(other.CompareTag("Player") && GameManager.instance.nextDialogUnlocked) {
             playerInRange = true;
             glow.StartGlow();
         }

@@ -43,6 +43,7 @@ public class PushPuzzleBlock : MonoBehaviour
             snippetCount++;
             if(snippetCount >= manager.maxSnippetCount) {
                 FindObjectOfType<RiddleTextPanel>().EnablePanel(manager.PostPuzzleText);
+                GameManager.instance.nextDialogUnlocked = true;
             }
             GetComponentInParent<ChangeGlobalVariable>().SetBool(true);
         }

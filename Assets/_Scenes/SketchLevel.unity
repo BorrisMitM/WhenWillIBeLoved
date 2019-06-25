@@ -747,8 +747,8 @@ MonoBehaviour:
   changeOn: 0
   limit: 0
   variableToAppearOn: GlobalVariables.EmiliaKids
-  fadeInDuration: 1
-  shakeMagnitude: 0.4
+  fadeInDuration: 3
+  shakeMagnitude: 0.1
 --- !u!1 &732074333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2293,8 +2293,8 @@ MonoBehaviour:
   changeOn: 3
   limit: 6
   variableToAppearOn: GlobalVariables.EmiliaLeaving
-  fadeInDuration: 1
-  shakeMagnitude: 0.4
+  fadeInDuration: 3
+  shakeMagnitude: 0.1
 --- !u!1 &1303014730
 GameObject:
   m_ObjectHideFlags: 0
@@ -4583,7 +4583,7 @@ MonoBehaviour:
   changeOn: 0
   limit: 0
   variableToAppearOn: GlobalVariables.EmiliaHometown
-  fadeInDuration: 1
+  fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &1818967601
 GameObject:
