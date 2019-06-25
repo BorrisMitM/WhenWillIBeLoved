@@ -5,6 +5,7 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using Articy.Unity.Utils;
 using UnityEngine.UI;
+using UnityEngine.Events;
 using TMPro;
 using UnityEngine.EventSystems;
 using System;
@@ -39,7 +40,9 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	List<Branch> branches;
     public bool buttonPressed = false;
 	bool isScrolling;
-    // Start is called before the first frame update
+
+    public delegate void DialogEnded();
+    public static event DialogEnded OnDialogEnded;
 
     public void StartDialog(){
         if(isActive) return;
@@ -53,6 +56,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         panel.SetActive(false);
         GameManager.instance.puzzleActive = false;
         isActive = false;
+        OnDialogEnded();
     }
     void Start()
     {

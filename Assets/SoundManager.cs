@@ -19,8 +19,15 @@ public class SoundManager : MonoBehaviour
     public void AddSoundContainers(List<SoundContainer> _soundContainers){
         soundContainers = _soundContainers;
     }
+
+    private void OnEnable() {
+        ArticyManager.OnDialogEnded += OnDialogEnded;
+    }
+    private void OnDisable() {
+        ArticyManager.OnDialogEnded -= OnDialogEnded;
+    }
     // Update is called once per frame
-    void Update()
+    void OnDialogEnded()
     {
         foreach (SoundContainer soundContainer in soundContainers)
         {

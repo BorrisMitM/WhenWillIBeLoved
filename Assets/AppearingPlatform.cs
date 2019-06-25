@@ -37,8 +37,14 @@ public class AppearingPlatform : MonoBehaviour
         camMove = FindObjectOfType<CameraMovement>();
         camShake = FindObjectOfType<CameraShake>();
     }
+    private void OnEnable() {
+        ArticyManager.OnDialogEnded += OnDialogEnded;
+    }
+    private void OnDisable() {
+        ArticyManager.OnDialogEnded -= OnDialogEnded;
+    }
     // Update is called once per frame
-    void Update()
+    void OnDialogEnded()
     {
         if(triggered) return;
         switch(changeOn){
