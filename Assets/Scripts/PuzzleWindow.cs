@@ -18,6 +18,7 @@ public class PuzzleWindow : MonoBehaviour
     [ContextMenu("Activate")]
     public void Activate(List<GameObject> puzzlePrefabs, List<string> _puzzleTexts, PuzzleItem _pi)
     {
+        puzzleIndex = 0;
         gameObject.transform.GetChild(0).position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
         transform.GetChild(0).gameObject.SetActive(true);
         GameManager.instance.puzzleActive = true;

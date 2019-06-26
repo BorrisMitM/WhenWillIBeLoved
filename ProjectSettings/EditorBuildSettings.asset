@@ -8,13 +8,16 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Tests/MasterScene.unity
     guid: 96f79253aa6512d409acbccd9367977c
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Tests/Dialogue Test Scene.unity
     guid: 43cebcf770c72dc46bf3bc4287834c3d
-  - enabled: 1
+  - enabled: 0
     path: Assets/_Scenes/Tests/First Pitch Scene.unity
     guid: af83d4386fdad514394aafe4dd172ae3
+  - enabled: 1
+    path: Assets/_Scenes/Level1.unity
+    guid: 3b3d629540837984b8149d976e934477
   m_configObjects: {}

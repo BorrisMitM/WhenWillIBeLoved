@@ -93,7 +93,7 @@ public class AppearingPlatform : MonoBehaviour
         camMove.platformToFocus = null;
     }
 }
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(AppearingPlatform))]
 public class AppearingPlatformEditor : Editor {
     AppearingPlatform platform;
@@ -108,3 +108,4 @@ public class AppearingPlatformEditor : Editor {
         }
     }
 }
+#endif

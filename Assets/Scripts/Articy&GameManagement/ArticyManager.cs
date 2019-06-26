@@ -105,8 +105,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
 		// this will make sure that we find a proper preview image to show in our ui.
 		ExtractCurrentPausePreviewImage(aObject);
-        if(isActive)
-		    StartScroll();
     }
     
 	// called everytime the flow player encounteres multiple branches, or paused on a node and want to tell us how to continue.
@@ -120,13 +118,15 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
              singleBranch = aBranches[0];
 			 branches = new List<Branch>();
              if(textLabel.text.Length <= 0) flowPlayer.Play(singleBranch);
-             return;
         }else{
             branches = new List<Branch>();
+            singleBranch = null;
 			foreach(Branch branch in aBranches)
 				branches.Add(branch);
-		}
-    	
+        }
+        if (isActive)
+            StartScroll();
+
     }
     
 	// convenience method to clear everything underneath our branch layout panel, this should only be our dynamically created branch buttons.
@@ -294,11 +294,13 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         scrollingStart = true;
         // Need to force the text object to be generated so we have valid data to work with right from the start.
         textLabel.ForceMeshUpdate();
-        textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
+        textLabel.maxVisibleCharacters = 0;
         yield return null;
         scrollingStart = false;
         TMP_TextInfo textInfo = textLabel.textInfo;
         Color32[] newVertexColors;
+        Debug.Log(textLabel.textInfo.characterCount);
+        textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
         for (int i = 0; i < textLabel.textInfo.characterCount; i++)
         {
             int materialIndex = textInfo.characterInfo[i].materialReferenceIndex;
@@ -315,20 +317,20 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
             vertexColors[vertexIndex + 2].a = 0;
             vertexColors[vertexIndex + 3].a = 0;
         }
+        textLabel.maxVisibleCharacters = 0;
         textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+        //yield return null;
         List<int> currentlyFadingIn = new List<int>();
-        int fadeInAmount = 5;
-        byte fadeSteps = (byte)Mathf.Max(1, 255 / fadeInAmount);
+        int fadeInAmount = 20;
+        byte fadeSteps = (byte)Mathf.Max(1, 255 / 5);
         int counter = 0;
-        Debug.Log(isScrolling);
-        Debug.Log(textLabel.textInfo.characterCount);
         while(isScrolling){
-            Debug.Log(counter);
+            Debug.Log(currentlyFadingIn.Count);
             if(currentlyFadingIn.Count < fadeInAmount && counter < textInfo.characterInfo.Length){
                 if (textInfo.characterInfo[counter].isVisible)
                     currentlyFadingIn.Add(counter);
                 counter++;
-                //textLabel.maxVisibleCharacters = counter;
+                textLabel.maxVisibleCharacters = counter;
             }
             for (int it = currentlyFadingIn.Count - 1; it >= 0; it--){
                 int i = currentlyFadingIn[it];
@@ -359,7 +361,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
                 }
             }
             textLabel.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
-            yield return null;
+            yield return new WaitForSeconds(1f/charactersPerSecond);
         }
     }
     IEnumerator ScrollingFadeIn()
