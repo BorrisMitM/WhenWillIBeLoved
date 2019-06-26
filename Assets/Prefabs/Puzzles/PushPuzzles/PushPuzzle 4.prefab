@@ -3578,6 +3578,8 @@ MonoBehaviour:
   xSize: 6
   ySize: 6
   tileSize: 1
+  PostPuzzleText: 
+  maxSnippetCount: 4
 --- !u!61 &3263928718830845169
 BoxCollider2D:
   m_ObjectHideFlags: 0

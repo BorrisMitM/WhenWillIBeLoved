@@ -864,7 +864,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 342008412}
   changeOn: 0
   limit: 0
-  variableToAppearOn: GlobalVariables.EmiliaKids
+  variableToAppearOn: GlobalVariables.EmiliaPlatform2
   fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &732074333
@@ -1967,9 +1967,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platform: {fileID: 1210758019}
   blockingCollider: {fileID: 635000179}
-  changeOn: 3
+  changeOn: 0
   limit: 6
-  variableToAppearOn: GlobalVariables.EmiliaLeaving
+  variableToAppearOn: GlobalVariables.EmiliaPlatform3
   fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &1303014730
@@ -2978,7 +2978,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a307a8ffda923ad46b9306512fd06590, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puzzlePrefab: {fileID: 0}
+  puzzlePrefab: {fileID: 3263928718830845175, guid: 66a6897a53c6b85478703fe46585687e,
+    type: 3}
 --- !u!114 &1537010094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3024,7 +3025,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4538c84cbff5dae4f82b893bb4b88150, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3340,7 +3341,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 1334823164}
   changeOn: 0
   limit: 0
-  variableToAppearOn: GlobalVariables.Platform1
+  variableToAppearOn: GlobalVariables.EmiliaPlatform1
   fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &1797717607
@@ -3904,16 +3905,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8792198163828861900, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: startOn.lowId
-      value: 317
-      objectReference: {fileID: 0}
-    - target: {fileID: 29503819835478484, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: scrollingType
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0a6f807c58ffe54c84f26004f1c322b, type: 3}
