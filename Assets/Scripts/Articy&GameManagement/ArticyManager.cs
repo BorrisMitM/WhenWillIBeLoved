@@ -42,6 +42,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     [SerializeField] private List<ArticyRef> dialogs;
     private int dialogCount = 0;
 	bool isScrolling;
+    bool scrollingStart = false;
 
     private Sprite lastSprite;
 
@@ -279,6 +280,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private void EndScroll()
     {
+        if (scrollingStart) return;
         textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
         textLabel.ForceMeshUpdate();
         isScrolling = false;
@@ -289,10 +291,12 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         //yield return null;
         if (isScrolling == true) yield break;
         isScrolling = true;
+        scrollingStart = true;
         // Need to force the text object to be generated so we have valid data to work with right from the start.
         textLabel.ForceMeshUpdate();
         textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
         yield return null;
+        scrollingStart = false;
         TMP_TextInfo textInfo = textLabel.textInfo;
         Color32[] newVertexColors;
         for (int i = 0; i < textLabel.textInfo.characterCount; i++)
@@ -316,11 +320,15 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         int fadeInAmount = 5;
         byte fadeSteps = (byte)Mathf.Max(1, 255 / fadeInAmount);
         int counter = 0;
+        Debug.Log(isScrolling);
+        Debug.Log(textLabel.textInfo.characterCount);
         while(isScrolling){
+            Debug.Log(counter);
             if(currentlyFadingIn.Count < fadeInAmount && counter < textInfo.characterInfo.Length){
                 if (textInfo.characterInfo[counter].isVisible)
                     currentlyFadingIn.Add(counter);
                 counter++;
+                //textLabel.maxVisibleCharacters = counter;
             }
             for (int it = currentlyFadingIn.Count - 1; it >= 0; it--){
                 int i = currentlyFadingIn[it];
