@@ -1,25 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class PuzzleWindow : MonoBehaviour
 {
 
     GameObject puzzle;
+    public GameObject textField;
+    List<GameObject> activePuzzlePrefabs;
+    List<string> puzzleTexts;
 
-    GameObject lastPuzzlePrefab;
+    private int puzzleIndex = 0;
 
-    
-
+    private bool active = false;
+    private bool textActive = false;
+    private PuzzleItem pi;
     [ContextMenu("Activate")]
-    public void Activate(GameObject puzzlePrefab)
+    public void Activate(List<GameObject> puzzlePrefabs, List<string> _puzzleTexts, PuzzleItem _pi)
     {
         gameObject.transform.GetChild(0).position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
         transform.GetChild(0).gameObject.SetActive(true);
         GameManager.instance.puzzleActive = true;
-        puzzle = Instantiate(puzzlePrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        puzzle = Instantiate(puzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
 
-        lastPuzzlePrefab = puzzlePrefab;
+        activePuzzlePrefabs = puzzlePrefabs;
+        puzzleTexts = _puzzleTexts;
+        active = true;
+        pi = _pi;
     }
 
     [ContextMenu("Deactivate")]
@@ -30,10 +37,33 @@ public class PuzzleWindow : MonoBehaviour
         Destroy(puzzle);
     }
 
+    public void PuzzleReady()
+    {
+        Destroy(puzzle);
+        textField.SetActive(true);
+        textField.GetComponentInChildren<TextMeshProUGUI>().text = puzzleTexts[puzzleIndex];
+        textActive = true;
+    }
+    private void Update()
+    {
+        if(textActive && Input.GetButtonDown("Interact"))
+        {
+            textField.SetActive(false);
+            textActive = false;
+            puzzleIndex++;
+            if (puzzleIndex >= activePuzzlePrefabs.Count)
+            {
+                pi.played = true;
+                FindObjectOfType<ArticyManager>().UnlockNextDialog();
+                Deactivate();
+            }
+            else puzzle = Instantiate(activePuzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        }
+    }
     public void Restart()
     {
         Destroy(puzzle);
-        puzzle = Instantiate(lastPuzzlePrefab, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        puzzle = Instantiate(activePuzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
     }
 
 }

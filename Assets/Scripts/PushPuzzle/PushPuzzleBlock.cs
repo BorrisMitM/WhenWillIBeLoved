@@ -44,12 +44,8 @@ public class PushPuzzleBlock : MonoBehaviour
     {
         touchingEndTiles++;
         if (touchingEndTiles >= length){
-            snippetCount++;
-            if(snippetCount >= manager.maxSnippetCount) {
-                FindObjectOfType<RiddleTextPanel>().EnablePanel(manager.PostPuzzleText);
-                GameManager.instance.nextDialogUnlocked = true;
-            }
-            FindObjectOfType<ArticyManager>().UnlockNextDialog();
+            FindObjectOfType<PuzzleWindow>().PuzzleReady();
+            //FindObjectOfType<ArticyManager>().UnlockNextDialog();
             //GetComponentInParent<ChangeGlobalVariable>().SetBool(true);
         }
     }

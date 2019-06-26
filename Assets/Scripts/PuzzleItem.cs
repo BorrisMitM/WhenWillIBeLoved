@@ -5,19 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(Glow))]
 public class PuzzleItem : MonoBehaviour
 {
-    public GameObject puzzlePrefab;
-
+    public List<GameObject> puzzlePrefab;
+    public List<string> inbetweenTexts;
+    public bool played = false;
     bool playerClose = false;
 
     private void Update() {
-        if (playerClose && Input.GetButtonDown("Interact"))
+        if (playerClose && Input.GetButtonDown("Interact") && !GameManager.instance.puzzleActive && !played)
         {
-            FindObjectOfType<PuzzleWindow>().Activate(puzzlePrefab);
+            Debug.Log("pi");
+            FindObjectOfType<PuzzleWindow>().Activate(puzzlePrefab, inbetweenTexts, this);
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")){ 
+        if(collision.CompareTag("Player") && !played){ 
             playerClose = true;
             GetComponent<Glow>().StartGlow();
         }
