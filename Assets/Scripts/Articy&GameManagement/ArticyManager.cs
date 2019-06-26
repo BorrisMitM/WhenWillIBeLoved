@@ -10,7 +10,6 @@ using TMPro;
 using UnityEngine.EventSystems;
 using System;
 
-[RequireComponent(typeof(ArticyFlowPlayer))]
 public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
     [Header("UI")]
@@ -38,7 +37,10 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     Branch singleBranch;
 
 	List<Branch> branches;
+    [Header("other stuff")]
     public bool buttonPressed = false;
+    [SerializeField] private List<ArticyRef> dialogs;
+    private int dialogCount = 0;
 	bool isScrolling;
 
     public delegate void DialogEnded();
@@ -62,13 +64,13 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     void Start()
     {
 		branches = new List<Branch>();
-        flowPlayer = GetComponent<ArticyFlowPlayer>();
-        ClearAllBranches();
+        //flowPlayer = GetComponent<ArticyFlowPlayer>();
+        UnlockNextDialog();
         if (flowPlayer != null && flowPlayer.StartOn == null)
 			textLabel.text = "<color=green>No object selected in the flow player. Navigate to the ArticyflowPlayer and choose a StartOn node.</color>";
     }
     private void LateUpdate() {
-        if(Input.GetButtonDown("Submit") && !buttonPressed){
+        if(Input.GetButtonDown("Interact") && !buttonPressed && isActive){
 			if(isScrolling){
 				EndScroll();
 			}
@@ -107,6 +109,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	// called everytime the flow player encounteres multiple branches, or paused on a node and want to tell us how to continue.
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
+        Debug.Log("yay?" + gameObject.name);
         // we clear all old branch buttons
 		ClearAllBranches();
         //show layout panel only when branches are available
@@ -310,7 +313,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         byte fadeSteps = (byte)Mathf.Max(1, 255 / fadeInAmount);
         int counter = 0;
         while(isScrolling){
-            if(currentlyFadingIn.Count < fadeInAmount){
+            if(currentlyFadingIn.Count < fadeInAmount && counter < textInfo.characterInfo.Length){
                 if (textInfo.characterInfo[counter].isVisible)
                     currentlyFadingIn.Add(counter);
                 counter++;
@@ -430,4 +433,19 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
     #endregion
 
+    public void UnlockNextDialog(){
+        GameManager.instance.nextDialogUnlocked = true;
+        ArticyFlowPlayer oldPlayer = GetComponent<ArticyFlowPlayer>();
+        if(oldPlayer != null) 
+            Destroy(oldPlayer);
+            StartCoroutine(AddNewFlowPlayer());
+    }
+
+    IEnumerator AddNewFlowPlayer(){
+        yield return null;
+        flowPlayer = gameObject.AddComponent<ArticyFlowPlayer>();
+        flowPlayer.startOn = dialogs[dialogCount];
+        ClearAllBranches();
+        dialogCount++;
+    }
 }

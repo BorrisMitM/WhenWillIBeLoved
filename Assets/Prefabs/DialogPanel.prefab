@@ -553,7 +553,6 @@ GameObject:
   - component: {fileID: 6109593113096063729}
   - component: {fileID: 6109593113096063734}
   - component: {fileID: 29503819835478484}
-  - component: {fileID: 8792198163828861900}
   m_Layer: 5
   m_Name: DialogPanel
   m_TagString: Untagged
@@ -609,30 +608,22 @@ MonoBehaviour:
   panel: {fileID: 6109593111678443646}
   portrait: {fileID: 6109593112012923320}
   charactersPerSecond: 60
-  scrollingType: 0
+  scrollingType: 1
   buttonPressed: 0
---- !u!114 &8792198163828861900
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6109593113096063730}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 149237616, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  useDefaultGlobalVariables: 1
-  globalVariables: {fileID: 0}
-  overwriteMethodProvider: 0
-  overwrittenMethodProvider: {fileID: 0}
-  startOn:
-    instanceId: 0
+  dialogs:
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 317
+    highId: 16777216
+  - instanceId: 0
     referencingMode: 0
     lowId: 603
     highId: 16777216
-  pauseOn: 7
-  ignoreInvalidBranches: 1
-  continuouslyRecalculateBranches: 0
-  continouslyRecalculateInterval: 1
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 1013
+    highId: 16777216
+  - instanceId: 0
+    referencingMode: 0
+    lowId: 3896
+    highId: 16777216

@@ -45,7 +45,8 @@ public class PushPuzzleBlock : MonoBehaviour
                 FindObjectOfType<RiddleTextPanel>().EnablePanel(manager.PostPuzzleText);
                 GameManager.instance.nextDialogUnlocked = true;
             }
-            GetComponentInParent<ChangeGlobalVariable>().SetBool(true);
+            FindObjectOfType<ArticyManager>().UnlockNextDialog();
+            //GetComponentInParent<ChangeGlobalVariable>().SetBool(true);
         }
     }
     [ExecuteInEditMode]

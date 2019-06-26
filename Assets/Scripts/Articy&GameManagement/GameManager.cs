@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public bool puzzleActive;
     public bool nextDialogUnlocked = true;
 
-
     private void Awake() {
         if(instance == null)
             instance = this;

@@ -21,7 +21,7 @@ public class PuzzleManager : MonoBehaviour
 
         }
 
-        Debug.Log("Win!");
+        FindObjectOfType<ArticyManager>().UnlockNextDialog();
     }
 
     [ContextMenu("Restart")]
