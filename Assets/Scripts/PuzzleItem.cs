@@ -13,7 +13,6 @@ public class PuzzleItem : MonoBehaviour
     private void Update() {
         if (playerClose && Input.GetButtonDown("Interact") && !GameManager.instance.puzzleActive && !played)
         {
-            Debug.Log("pi");
             FindObjectOfType<PuzzleWindow>().Activate(puzzlePrefab, inbetweenTexts, this);
         }
     }
