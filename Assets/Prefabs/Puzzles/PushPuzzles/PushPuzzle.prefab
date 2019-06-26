@@ -3577,6 +3577,8 @@ MonoBehaviour:
   xSize: 6
   ySize: 6
   tileSize: 1
+  backGroundKasten: {fileID: 8225333344335631772, guid: d006ca1f01ed3b94883e6551d6a20d53,
+    type: 3}
   PostPuzzleText: 
   maxSnippetCount: 4
 --- !u!61 &3263928718830845169

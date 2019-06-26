@@ -8,7 +8,7 @@ using TMPro;
 public class ArticyChoiceButton : MonoBehaviour
 {
 	// the unity ui button text, so we can assign in code different labels.
-	private TextMeshProUGUI dialogText;
+	public TextMeshProUGUI dialogText;
 	// the branch identifier, so we can tell the processor which way it should continue to traverse our flow when the user clicked this button
 	private Branch branch;
 	// the processor itself.

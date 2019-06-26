@@ -8,12 +8,13 @@ public class PushPuzzleManager : MonoBehaviour
     public int xSize, ySize;
     public float tileSize;
 
+    public GameObject backGroundKasten;
     public string PostPuzzleText;
     public int maxSnippetCount = 4;
     // Start is called before the first frame update
     void Start()
     {
-        
+        dumb();
     }
     [ExecuteInEditMode]
     [ContextMenu("SpawnField")]
@@ -52,5 +53,22 @@ public class PushPuzzleManager : MonoBehaviour
         wall = gameObject.AddComponent<BoxCollider2D>();
         wall.offset = new Vector2(0f, -ySize / 2f - 0.25f);
         wall.size = new Vector2(xSize, .5f);
+    }
+
+    [ExecuteInEditMode]
+    [ContextMenu("dumb")]
+    public void dumb()
+    {
+        PushPuzzleBlock[] blocks = FindObjectsOfType<PushPuzzleBlock>();
+        foreach(PushPuzzleBlock block in blocks){
+            block.AdjustSize();
+        }
+        foreach(Transform child in transform){
+            if(child.name.Contains("Square"))
+                child.GetComponent<SpriteRenderer>().enabled = false;
+            PushPuzzleBlock block = child.GetComponent<PushPuzzleBlock>();
+            if(block != null) block.AdjustSize();
+        }
+        Instantiate(backGroundKasten, transform);
     }
 }

@@ -12,6 +12,10 @@ public class PushPuzzleBlock : MonoBehaviour
     public int touchingEndTiles = 0;
     private float mouseOffset;
     private PushPuzzleManager manager;
+    [SerializeField] private Sprite[] threeLong;
+    [SerializeField] private Sprite[] twoLong;
+
+    [SerializeField] private Sprite solutionSprite;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -53,11 +57,24 @@ public class PushPuzzleBlock : MonoBehaviour
     [ContextMenu("AdjustSize")]
     public void AdjustSize()
     {
-        if (vertical)
-            transform.localScale = new Vector3(1f, length, 1f);
+        // if (vertical)
+        //     transform.localScale = new Vector3(1f, length, 1f);
+        // else
+        //     transform.localScale = new Vector3(length, 1f, 1f);
+        // if (isSolutionBlock) GetComponent<SpriteRenderer>().color = Color.cyan;
+        if(!vertical || isSolutionBlock){
+            transform.rotation = Quaternion.Euler(0f,0f, 90f);
+        }
+        if(isSolutionBlock)
+            GetComponent<BoxCollider2D>().size = new Vector2( length * 0.95f,  0.95f);
         else
-            transform.localScale = new Vector3(length, 1f, 1f);
-        if (isSolutionBlock) GetComponent<SpriteRenderer>().color = Color.cyan;
+            GetComponent<BoxCollider2D>().size = new Vector2( 0.95f, length * 0.95f);
+
+        if(isSolutionBlock) GetComponent<SpriteRenderer>().sprite = solutionSprite;
+        else if(length == 2) GetComponent<SpriteRenderer>().sprite = twoLong[Random.Range(0, twoLong.Length)];
+        else if(length == 3) GetComponent<SpriteRenderer>().sprite = threeLong[Random.Range(0, threeLong.Length)];
+        transform.localScale = Vector3.one;
+        GetComponent<SpriteRenderer>().color = Color.white;
     }
     [ExecuteInEditMode]
     [ContextMenu("Align")]
@@ -81,8 +98,4 @@ public class PushPuzzleBlock : MonoBehaviour
         }
     }
 
-    private void OnValidate() {
-        AdjustSize();
-        Align();
-    }
 }

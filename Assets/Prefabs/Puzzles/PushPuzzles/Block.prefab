@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4116215118097632852}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: -1}
   m_LocalPosition: {x: 5.5, y: 1.5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -98,6 +98,13 @@ MonoBehaviour:
   isSolutionBlock: 0
   length: 1
   touchingEndTiles: 0
+  threeLong:
+  - {fileID: 21300000, guid: 6ffa5e95e2498b14197e8bbf15e99349, type: 3}
+  - {fileID: 21300000, guid: 70d9987cab2f90d4f88cd997987fc022, type: 3}
+  twoLong:
+  - {fileID: 21300000, guid: b953d70160d072a4a9c01741f0e8357d, type: 3}
+  - {fileID: 21300000, guid: ce3082ba6f5d6494bb4460608e1be6a9, type: 3}
+  solutionSprite: {fileID: 21300000, guid: 6fcc4535771688445960bf5fbe7ebfc7, type: 3}
 --- !u!61 &4116215118097632853
 BoxCollider2D:
   m_ObjectHideFlags: 0

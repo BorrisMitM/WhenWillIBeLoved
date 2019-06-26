@@ -43,6 +43,8 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     private int dialogCount = 0;
 	bool isScrolling;
 
+    private Sprite lastSprite;
+
     public delegate void DialogEnded();
     public static event DialogEnded OnDialogEnded;
 
@@ -109,7 +111,6 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	// called everytime the flow player encounteres multiple branches, or paused on a node and want to tell us how to continue.
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
-        Debug.Log("yay?" + gameObject.name);
         // we clear all old branch buttons
 		ClearAllBranches();
         //show layout panel only when branches are available
@@ -120,6 +121,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
              if(textLabel.text.Length <= 0) flowPlayer.Play(singleBranch);
              return;
         }else{
+            branches = new List<Branch>();
 			foreach(Branch branch in aBranches)
 				branches.Add(branch);
 		}
@@ -137,7 +139,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	{
 		IAsset articyAsset = null;
 
-		portrait.sprite = null;
+		//portrait.sprite = null;
 
 		// to figure out which asset we could show in our preview, we first try to see if it is an object with a speaker
 		IObjectWithSpeaker dlgSpeaker = aObject as IObjectWithSpeaker;
@@ -177,11 +179,13 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     {
         if (singleBranch != null) return;
         if (!branchLayoutPanel.gameObject.activeSelf) branchLayoutPanel.gameObject.SetActive(true);
+        List<Branch> alreadyInstantiated = new List<Branch>();
         // for every branch provided by the flow player, we will create a button in our vertical list
         foreach (var branch in branches)
         {
             // if the branch is invalid, because a script evaluated to false, we don't create a button.
-            if (!branch.IsValid) continue;
+            if (!branch.IsValid || alreadyInstantiated.Contains(branch)) continue;
+            alreadyInstantiated.Add(branch);
             // we create a our button prefab and parent it to our vertical list
             var btn = Instantiate(branchPrefab);
             var rect = btn.GetComponent<RectTransform>();
@@ -433,6 +437,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
     #endregion
 
+    [ContextMenu("UNlockNextDialog")]
     public void UnlockNextDialog(){
         GameManager.instance.nextDialogUnlocked = true;
         ArticyFlowPlayer oldPlayer = GetComponent<ArticyFlowPlayer>();
