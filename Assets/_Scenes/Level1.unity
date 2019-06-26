@@ -254,10 +254,10 @@ MonoBehaviour:
   cameraShaker: {fileID: 2003568705}
   moveSpeed: 1
   smoothTime: 0.05
-  leftBorder: -6.1
+  leftBorder: -6.86
   rightBorder: 7.71
-  topBorder: 4.57
-  botBorder: -6.06
+  topBorder: 2.7
+  botBorder: -6.6
 --- !u!1 &206532361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,8 +2853,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 357707467
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 1cff710b12a75484594a97dcb90e7e5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3097,8 +3097,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 357707467
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 31c96db40483b274282a4e05f3b7cfaa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3688,9 +3688,9 @@ PolygonCollider2D:
     m_Paths:
     - - {x: 0.0324378, y: 2.4921513}
       - {x: -4.3894925, y: 0.19548392}
-      - {x: -4.2286124, y: -0.1376605}
-      - {x: -4.063872, y: -0.046141624}
-      - {x: -4.150248, y: 0.031715393}
+      - {x: -4.264268, y: -0.22680156}
+      - {x: -4.0460443, y: -0.13528255}
+      - {x: -3.9630527, y: 0.1119422}
       - {x: -0.35770404, y: 1.9657687}
       - {x: 0.037253432, y: 1.835852}
       - {x: 0.33361587, y: 1.8249427}
