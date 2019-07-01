@@ -12,7 +12,6 @@ public class PuzzleWindow : MonoBehaviour
 
     private int puzzleIndex = 0;
 
-    private bool active = false;
     private bool textActive = false;
     [SerializeField] private float afterPuzzleFade;
     private PuzzleItem pi;
@@ -27,7 +26,6 @@ public class PuzzleWindow : MonoBehaviour
 
         activePuzzlePrefabs = puzzlePrefabs;
         puzzleTexts = _puzzleTexts;
-        active = true;
         pi = _pi;
     }
 
@@ -50,6 +48,7 @@ public class PuzzleWindow : MonoBehaviour
             //textField.SetActive(true);
             StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
             textField.GetComponentInChildren<TextMeshProUGUI>().text = puzzleTexts[puzzleIndex];
+            puzzleIndex++;
         }
         textActive = true;
     }
@@ -57,18 +56,22 @@ public class PuzzleWindow : MonoBehaviour
     {
         if(textActive && Input.GetButtonDown("Interact"))
         {
-            textField.SetActive(false);
-            textActive = false;
-            puzzleIndex++;
-            if (puzzleIndex >= activePuzzlePrefabs.Count)
-            {
-                pi.played = true;
-                puzzleIndex = 0;
-                FindObjectOfType<ArticyManager>().UnlockNextDialog();
-                Deactivate();
-            }
-            else puzzle = Instantiate(activePuzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+            EndText();
         }
+    }
+
+    public void EndText(){
+        textField.SetActive(false);
+        textActive = false;
+        if (puzzleIndex >= activePuzzlePrefabs.Count)
+        {
+            pi.played = true;
+            puzzleIndex = 0;
+            FindObjectOfType<ArticyManager>().UnlockNextDialog();
+            Deactivate();
+        }
+        else puzzle = Instantiate(activePuzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        
     }
     public void Restart()
     {
