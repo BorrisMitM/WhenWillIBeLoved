@@ -91,5 +91,4 @@ public class IsometricCharacterRenderer : MonoBehaviour
         //we're done!
         return hashArray;
     }
-
 }
