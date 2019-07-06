@@ -378,7 +378,6 @@ GameObject:
   - component: {fileID: 204827078}
   - component: {fileID: 204827080}
   - component: {fileID: 204827079}
-  - component: {fileID: 204827081}
   m_Layer: 0
   m_Name: FLOATpainting4
   m_TagString: Untagged
@@ -462,20 +461,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &204827081
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 204827077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &206532361
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1391,6 @@ GameObject:
   - component: {fileID: 546668673}
   - component: {fileID: 546668675}
   - component: {fileID: 546668674}
-  - component: {fileID: 546668676}
   m_Layer: 0
   m_Name: FLOATpainting1
   m_TagString: Untagged
@@ -1490,20 +1474,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &546668676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 546668672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &577676774
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1756,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   puzzleActive: 0
   nextDialogUnlocked: 1
+  panel: {fileID: 0}
+  glennSprite: {fileID: 0}
+  loadText: {fileID: 0}
+  glennSprites: []
+  spriteChangePause: 0.4
 --- !u!4 &633405423
 Transform:
   m_ObjectHideFlags: 0
@@ -2610,7 +2585,6 @@ GameObject:
   - component: {fileID: 814958373}
   - component: {fileID: 814958375}
   - component: {fileID: 814958374}
-  - component: {fileID: 814958376}
   m_Layer: 0
   m_Name: FLOATpainting6
   m_TagString: Untagged
@@ -2694,20 +2668,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &814958376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814958372}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &818499920
 GameObject:
   m_ObjectHideFlags: 0
@@ -2967,7 +2927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.1
+  amplitude: 0.18
   frequency: 0.5
 --- !u!212 &862079888
 SpriteRenderer:
@@ -4196,7 +4156,6 @@ GameObject:
   - component: {fileID: 1196183419}
   - component: {fileID: 1196183421}
   - component: {fileID: 1196183420}
-  - component: {fileID: 1196183422}
   m_Layer: 0
   m_Name: FLOATpainting5
   m_TagString: Untagged
@@ -4280,20 +4239,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1196183422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1196183418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &1210758019
 GameObject:
   m_ObjectHideFlags: 0
@@ -4522,7 +4467,6 @@ GameObject:
   - component: {fileID: 1218500828}
   - component: {fileID: 1218500830}
   - component: {fileID: 1218500829}
-  - component: {fileID: 1218500831}
   m_Layer: 0
   m_Name: FLOATpainting7
   m_TagString: Untagged
@@ -4606,20 +4550,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1218500831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218500827}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &1234684947
 GameObject:
   m_ObjectHideFlags: 0
@@ -4819,7 +4749,6 @@ GameObject:
   - component: {fileID: 1243457566}
   - component: {fileID: 1243457568}
   - component: {fileID: 1243457567}
-  - component: {fileID: 1243457569}
   m_Layer: 0
   m_Name: FLOATpainting2
   m_TagString: Untagged
@@ -4903,20 +4832,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1243457569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1243457565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &1252318897
 GameObject:
   m_ObjectHideFlags: 0
@@ -6475,7 +6390,6 @@ GameObject:
   - component: {fileID: 1723219521}
   - component: {fileID: 1723219523}
   - component: {fileID: 1723219522}
-  - component: {fileID: 1723219524}
   m_Layer: 0
   m_Name: FLOATpainting3
   m_TagString: Untagged
@@ -6559,20 +6473,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1723219524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723219520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  amplitude: 0
-  frequency: 0
 --- !u!1 &1733485001
 GameObject:
   m_ObjectHideFlags: 0
