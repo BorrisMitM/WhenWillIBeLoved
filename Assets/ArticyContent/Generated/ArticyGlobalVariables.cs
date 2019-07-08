@@ -41,8 +41,9 @@ namespace Articy.Side_Effects.GlobalVariables
             variableNames.Add("GlobalVariables.AngerHurt");
             variableNames.Add("GlobalVariables.AngerPassive");
             variableNames.Add("GlobalVariables.AngerFurious");
-            variableNames.Add("GlobalVariables.EmiliaPlatform2");
-            variableNames.Add("GlobalVariables.EmiliaPlatform3");
+            variableNames.Add("GlobalVariables.RaphaelYouCanSeeThat");
+            variableNames.Add("GlobalVariables.RaphaelArentYouScared");
+            variableNames.Add("GlobalVariables.RaphaelWhyAreYouHere");
         }
         #endregion
         

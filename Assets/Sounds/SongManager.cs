@@ -22,5 +22,20 @@ public class SongManager : MonoBehaviour {
 
             source.Play();
         }
+
+    }
+
+    public void SetLocation(Location _loc )
+    {
+        loc = _loc;
+
+        foreach (SongPart songs in songParts)
+        {
+            foreach(Location loc in songs.locationsPlayed)
+            {
+                
+            }
+        }
+       
     }
 }

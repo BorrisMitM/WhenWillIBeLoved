@@ -8,6 +8,7 @@ public class LocationSetter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
+        //FindObjectOfType<SongManager>().SetLocation();
     }
 }

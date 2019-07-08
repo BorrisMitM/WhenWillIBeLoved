@@ -22,7 +22,7 @@ namespace Articy.Side_Effects
     
     
     [Serializable()]
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636971590434943517)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636981884959763455)]
     public class InputPin : ArticyPrimitive, IInputPin
     {
         

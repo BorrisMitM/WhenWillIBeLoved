@@ -20,7 +20,7 @@ namespace Articy.Side_Effects.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636971590649067570)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636981885122994120)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -31,15 +31,6 @@ namespace Articy.Side_Effects.GlobalVariables
         #endregion
         
         #region Script fragments
-        /// <summary>
-        /// ObjectID: 0x100000000000239
-        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037928505?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x100000000000239Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.GlobalVariables.EmiliaPlatform1 = true;
-        }
-        
         /// <summary>
         /// ObjectID: 0x100000000000277
         /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037928567?pane=selected&amp;tab=current
@@ -128,15 +119,6 @@ namespace Articy.Side_Effects.GlobalVariables
         public void Script_0x1000000000003EFText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.GlobalVariables.EmiliaLeaving = true;
-        }
-        
-        /// <summary>
-        /// ObjectID: 0x1000000000004E9
-        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037929193?pane=selected&amp;tab=current
-        /// </summary>
-        public void Script_0x1000000000004E9Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
-        {
-            aGlobalVariablesState.GlobalVariables.EmiliaPlatform3 = true;
         }
         
         /// <summary>
@@ -737,6 +719,61 @@ namespace Articy.Side_Effects.GlobalVariables
         }
         
         /// <summary>
+        /// ObjectID: 0x10000000000198B
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037934475?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x10000000000198BText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000001997
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037934487?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000001997Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.RaphaelArentYouScared == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000019F4
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037934580?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000019F4Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat = true
+;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000001D7F
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037935487?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000001D7FText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.RaphaelArentYouScared = true ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000001DAD
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037935533?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000001DADText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.RaphaelWhyAreYouHere == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000001DF8
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037935608?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000001DF8Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.RaphaelWhyAreYouHere = true;
+        }
+        
+        /// <summary>
         /// ObjectID: 0x1000000000006E0
         /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037929696?pane=selected&amp;tab=current
         /// </summary>
@@ -754,7 +791,27 @@ aGlobalVariablesState.GlobalVariables.EmiliaLeaving == true ;
         /// </summary>
         public void Script_0x1000000000006E3Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.GlobalVariables.EmiliaPlatform2 = true;
+            aGlobalVariablesState.GlobalVariables.EmiliaPlatform1 = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000001F0A
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037935882?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000001F0AExpression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.RaphaelArentYouScared == true &&
+aGlobalVariablesState.GlobalVariables.RaphaelWhyAreYouHere == true &&
+aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat == true  ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000001F0C
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037935884?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000001F0CText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EmiliaPlatform1 = true;
         }
         #endregion
         
@@ -767,7 +824,6 @@ aGlobalVariablesState.GlobalVariables.EmiliaLeaving == true ;
         {
             Conditions = new System.Collections.Generic.Dictionary<int, System.Func<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider, bool>>();
             Instructions = new System.Collections.Generic.Dictionary<int, System.Action<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider>>();
-            Instructions.Add(1272488572, this.Script_0x100000000000239Text);
             Conditions.Add(-309402626, this.Script_0x100000000000277Text);
             Conditions.Add(-496623895, this.Script_0x10000000000027DText);
             Conditions.Add(-277445207, this.Script_0x100000000000283Text);
@@ -778,7 +834,6 @@ aGlobalVariablesState.GlobalVariables.EmiliaLeaving == true ;
             Instructions.Add(-1660094993, this.Script_0x10000000000036FText);
             Instructions.Add(1625551029, this.Script_0x1000000000003ACText);
             Instructions.Add(-1660038368, this.Script_0x1000000000003EFText);
-            Instructions.Add(1615077640, this.Script_0x1000000000004E9Text);
             Instructions.Add(497455540, this.Script_0x100000000000F7AText);
             Instructions.Add(1795808724, this.Script_0x100000000000FB6Text);
             Instructions.Add(-511875143, this.Script_0x100000000000FCDText);
@@ -845,8 +900,16 @@ aGlobalVariablesState.GlobalVariables.EmiliaLeaving == true ;
             Instructions.Add(-489917203, this.Script_0x1000000000018A5Text);
             Instructions.Add(-337526269, this.Script_0x1000000000018D6Text);
             Instructions.Add(1965002387, this.Script_0x100000000001929Text);
+            Conditions.Add(140564934, this.Script_0x10000000000198BText);
+            Conditions.Add(-811952400, this.Script_0x100000000001997Text);
+            Instructions.Add(-964371066, this.Script_0x1000000000019F4Text);
+            Instructions.Add(1056170406, this.Script_0x100000000001D7FText);
+            Conditions.Add(-1623091546, this.Script_0x100000000001DADText);
+            Instructions.Add(1154776539, this.Script_0x100000000001DF8Text);
             Conditions.Add(266074708, this.Script_0x1000000000006E0Expression);
             Instructions.Add(-1039398928, this.Script_0x1000000000006E3Text);
+            Conditions.Add(1763531725, this.Script_0x100000000001F0AExpression);
+            Instructions.Add(335208804, this.Script_0x100000000001F0CText);
         }
         #endregion
         

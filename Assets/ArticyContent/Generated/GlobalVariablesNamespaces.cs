@@ -157,7 +157,7 @@ namespace Articy.Side_Effects.GlobalVariables
         }
         
         // 
-        public bool EmiliaPlatform2
+        public bool RaphaelYouCanSeeThat
         {
             get
             {
@@ -170,7 +170,7 @@ namespace Articy.Side_Effects.GlobalVariables
         }
         
         // 
-        public bool EmiliaPlatform3
+        public bool RaphaelArentYouScared
         {
             get
             {
@@ -179,6 +179,19 @@ namespace Articy.Side_Effects.GlobalVariables
             set
             {
                 _VariableStorage.Internal_SetVariableValueBoolean(7, value);
+            }
+        }
+        
+        // 
+        public bool RaphaelWhyAreYouHere
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(8);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(8, value);
             }
         }
         
@@ -195,8 +208,9 @@ namespace Articy.Side_Effects.GlobalVariables
             aStorage.RegisterVariable("GlobalVariables.AngerHurt", 1);
             aStorage.RegisterVariable("GlobalVariables.AngerPassive", 1);
             aStorage.RegisterVariable("GlobalVariables.AngerFurious", 1);
-            aStorage.RegisterVariable("GlobalVariables.EmiliaPlatform2", false);
-            aStorage.RegisterVariable("GlobalVariables.EmiliaPlatform3", false);
+            aStorage.RegisterVariable("GlobalVariables.RaphaelYouCanSeeThat", false);
+            aStorage.RegisterVariable("GlobalVariables.RaphaelArentYouScared", false);
+            aStorage.RegisterVariable("GlobalVariables.RaphaelWhyAreYouHere", false);
         }
     }
 }
