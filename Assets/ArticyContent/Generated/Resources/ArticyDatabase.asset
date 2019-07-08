@@ -22,52 +22,7 @@ MonoBehaviour:
   mThrowOnMissingText: 0
   mClearOnLanguageSwitch: 1
   mExportLanguage: en
---- !u!114 &-510660453064056931
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6874cb6c37df69146ba120fb81928c7f, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 2419448029022159530}
-  mLocalization: {fileID: -2832721883174641762}
-  mInternalProject:
-    mName: side effects
-    mDetailName: 
-    mId: 971af6bc-f27e-4441-8577-5067285a4fdf
-    mTechnicalName: Side_Effects
-  mImportedAssets:
-  - "Assets/Bilder/em\xEDliaprofile2"
-  - "Assets/Bilder/em\xEDliaprofile1"
-  - Assets/Bilder/unknown
-  - Assets/Bilder/RaphaelIconDefault
-  - "Assets/Bilder/em\xEDliaIconBLUR"
-  - "Assets/Bilder/em\xEDliaIconDefault"
-  - Assets/Bilder/GlennIconDefault
-  mDefaultGlobalVariables: {fileID: 1107954222283261942}
-  mScriptFragments: {fileID: -510660453064056931}
-  mPackages:
-  - PackageName: Alle Objekte
-    PackagePath: Alle Objekte
-    mIsDefaultPackage: 1
---- !u!114 &1107954222283261942
+--- !u!114 &-785142801005111275
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,6 +62,15 @@ MonoBehaviour:
   - mFullQualifiedName: GlobalVariables.RaphaelWhyAreYouHere
     mVar:
       values: 00
+  - mFullQualifiedName: GlobalVariables.Platform1
+    mVar:
+      values: 00
+  - mFullQualifiedName: GlobalVariables.Platform2
+    mVar:
+      values: 00
+  - mFullQualifiedName: GlobalVariables.Platform3
+    mVar:
+      values: 00
   IntVariableCache:
   - mFullQualifiedName: GlobalVariables.AngerFrustration
     mVar:
@@ -126,8 +90,53 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mGlobalVariables:
-    _VariableStorage: {fileID: 1107954222283261942}
---- !u!114 &2419448029022159530
+    _VariableStorage: {fileID: -785142801005111275}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: 7848776317011668916}
+  mLocalization: {fileID: -2832721883174641762}
+  mInternalProject:
+    mName: side effects
+    mDetailName: 
+    mId: 971af6bc-f27e-4441-8577-5067285a4fdf
+    mTechnicalName: Side_Effects
+  mImportedAssets:
+  - "Assets/Bilder/em\xEDliaprofile2"
+  - "Assets/Bilder/em\xEDliaprofile1"
+  - Assets/Bilder/unknown
+  - Assets/Bilder/RaphaelIconDefault
+  - "Assets/Bilder/em\xEDliaIconBLUR"
+  - "Assets/Bilder/em\xEDliaIconDefault"
+  - Assets/Bilder/GlennIconDefault
+  mDefaultGlobalVariables: {fileID: -785142801005111275}
+  mScriptFragments: {fileID: 4145089727941723014}
+  mPackages:
+  - PackageName: Alle Objekte
+    PackagePath: Alle Objekte
+    mIsDefaultPackage: 1
+--- !u!114 &4145089727941723014
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6874cb6c37df69146ba120fb81928c7f, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &7848776317011668916
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

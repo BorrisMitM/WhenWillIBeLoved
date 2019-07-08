@@ -5,8 +5,8 @@
     "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
     "set_UseScriptSupport": "True",
     "ExportVersion": "1.1",
-    "ObjectDefinitionsHash": "F2F1544E8BA6752C26A54837132540B1529A6ABCCD9DB7700F13C4077F331115",
-    "ScriptFragmentsHash": "1391034858"
+    "ObjectDefinitionsHash": "925E9A816A7D49A6196BFB3A1E3122CAFBFD5E86F6607E32682683ADCC0EAE2E",
+    "ScriptFragmentsHash": "2972653144"
   },
   "Project": {
     "Name": "side effects",
@@ -93,6 +93,24 @@
         },
         {
           "Variable": "RaphaelWhyAreYouHere",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        },
+        {
+          "Variable": "Platform1",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        },
+        {
+          "Variable": "Platform2",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        },
+        {
+          "Variable": "Platform3",
           "Type": "Boolean",
           "Value": "False",
           "Description": ""
@@ -2564,6 +2582,57 @@
           }
         },
         {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_064B033D",
+            "Id": "0x100000000001F12",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Level Two: Pre Riddle",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 242.0,
+              "y": 750.0
+            },
+            "ZIndex": 5.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 105579325,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001F15",
+                "Owner": "0x100000000001F12"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000001F16",
+                "Owner": "0x100000000001F12"
+              }
+            ]
+          }
+        },
+        {
           "Type": "DialogueFragment",
           "Properties": {
             "TechnicalName": "DFr_E4184206",
@@ -4226,7 +4295,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "GlobalVariables.Platform1 = true ",
                 "Id": "0x100000000000239",
                 "Owner": "0x100000000000235",
                 "Connections": [
@@ -8582,7 +8651,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "",
+                "Text": "GlobalVariables.Platform3 = true \n",
                 "Id": "0x1000000000004E9",
                 "Owner": "0x1000000000004E5",
                 "Connections": [
@@ -28151,7 +28220,7 @@
             ],
             "OutputPins": [
               {
-                "Text": "GlobalVariables.EmiliaPlatform1 = true",
+                "Text": "GlobalVariables.Platform2 = true",
                 "Id": "0x1000000000006E3",
                 "Owner": "0x1000000000006E0",
                 "Connections": [
@@ -31123,6 +31192,11 @@
                 "Type": "Condition"
               }
             ]
+          },
+          {
+            "Id": "0x100000000001F12",
+            "TechnicalName": "Dlg_064B033D",
+            "Type": "Dialogue"
           }
         ]
       },

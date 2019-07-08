@@ -44,6 +44,9 @@ namespace Articy.Side_Effects.GlobalVariables
             variableNames.Add("GlobalVariables.RaphaelYouCanSeeThat");
             variableNames.Add("GlobalVariables.RaphaelArentYouScared");
             variableNames.Add("GlobalVariables.RaphaelWhyAreYouHere");
+            variableNames.Add("GlobalVariables.Platform1");
+            variableNames.Add("GlobalVariables.Platform2");
+            variableNames.Add("GlobalVariables.Platform3");
         }
         #endregion
         

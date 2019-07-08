@@ -20,7 +20,7 @@ namespace Articy.Side_Effects.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636981885122994120)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636982040342417649)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -31,6 +31,15 @@ namespace Articy.Side_Effects.GlobalVariables
         #endregion
         
         #region Script fragments
+        /// <summary>
+        /// ObjectID: 0x100000000000239
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037928505?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000000239Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Platform1 = true ;
+        }
+        
         /// <summary>
         /// ObjectID: 0x100000000000277
         /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037928567?pane=selected&amp;tab=current
@@ -119,6 +128,16 @@ namespace Articy.Side_Effects.GlobalVariables
         public void Script_0x1000000000003EFText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.GlobalVariables.EmiliaLeaving = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000004E9
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037929193?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000004E9Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Platform3 = true 
+;
         }
         
         /// <summary>
@@ -791,7 +810,7 @@ aGlobalVariablesState.GlobalVariables.EmiliaLeaving == true ;
         /// </summary>
         public void Script_0x1000000000006E3Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.GlobalVariables.EmiliaPlatform1 = true;
+            aGlobalVariablesState.GlobalVariables.Platform2 = true;
         }
         
         /// <summary>
@@ -824,6 +843,7 @@ aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat == true  ;
         {
             Conditions = new System.Collections.Generic.Dictionary<int, System.Func<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider, bool>>();
             Instructions = new System.Collections.Generic.Dictionary<int, System.Action<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider>>();
+            Instructions.Add(1272488572, this.Script_0x100000000000239Text);
             Conditions.Add(-309402626, this.Script_0x100000000000277Text);
             Conditions.Add(-496623895, this.Script_0x10000000000027DText);
             Conditions.Add(-277445207, this.Script_0x100000000000283Text);
@@ -834,6 +854,7 @@ aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat == true  ;
             Instructions.Add(-1660094993, this.Script_0x10000000000036FText);
             Instructions.Add(1625551029, this.Script_0x1000000000003ACText);
             Instructions.Add(-1660038368, this.Script_0x1000000000003EFText);
+            Instructions.Add(1615077640, this.Script_0x1000000000004E9Text);
             Instructions.Add(497455540, this.Script_0x100000000000F7AText);
             Instructions.Add(1795808724, this.Script_0x100000000000FB6Text);
             Instructions.Add(-511875143, this.Script_0x100000000000FCDText);

@@ -2418,7 +2418,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 342008412}
   changeOn: 0
   limit: 0
-  variableToAppearOn: GlobalVariables.EmiliaPlatform2
+  variableToAppearOn: GlobalVariables.Platform2
   fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &732074333
@@ -5189,7 +5189,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 635000179}
   changeOn: 0
   limit: 6
-  variableToAppearOn: GlobalVariables.EmiliaPlatform3
+  variableToAppearOn: GlobalVariables.Platform3
   fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &1302881499
@@ -7081,7 +7081,7 @@ MonoBehaviour:
   blockingCollider: {fileID: 1334823164}
   changeOn: 0
   limit: 0
-  variableToAppearOn: GlobalVariables.EmiliaPlatform1
+  variableToAppearOn: GlobalVariables.Platform1
   fadeInDuration: 3
   shakeMagnitude: 0.1
 --- !u!1 &1797717607

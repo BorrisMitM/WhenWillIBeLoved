@@ -195,6 +195,45 @@ namespace Articy.Side_Effects.GlobalVariables
             }
         }
         
+        // 
+        public bool Platform1
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(9);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(9, value);
+            }
+        }
+        
+        // 
+        public bool Platform2
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(10);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(10, value);
+            }
+        }
+        
+        // 
+        public bool Platform3
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(11);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(11, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -211,6 +250,9 @@ namespace Articy.Side_Effects.GlobalVariables
             aStorage.RegisterVariable("GlobalVariables.RaphaelYouCanSeeThat", false);
             aStorage.RegisterVariable("GlobalVariables.RaphaelArentYouScared", false);
             aStorage.RegisterVariable("GlobalVariables.RaphaelWhyAreYouHere", false);
+            aStorage.RegisterVariable("GlobalVariables.Platform1", false);
+            aStorage.RegisterVariable("GlobalVariables.Platform2", false);
+            aStorage.RegisterVariable("GlobalVariables.Platform3", false);
         }
     }
 }
