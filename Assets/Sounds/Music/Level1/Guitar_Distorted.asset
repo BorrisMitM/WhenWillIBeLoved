@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57587c0338b43a47aed26101521df84, type: 3}
   m_Name: Guitar_Distorted
   m_EditorClassIdentifier: 
-  locationsPlayed: 
+  locationsPlayed: 03000000
   clip: {fileID: 8300000, guid: 38dc6274d5702c248aea6a7018ca492f, type: 3}
   isPlaying: 0
   source: {fileID: 0}

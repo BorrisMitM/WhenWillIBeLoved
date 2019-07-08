@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public enum Location { LivingRoom, Kitchen, Bedroom, Tent};
 [CreateAssetMenu(menuName = "SongPart")]
 

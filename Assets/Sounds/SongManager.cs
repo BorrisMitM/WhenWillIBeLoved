@@ -6,7 +6,6 @@ public class SongManager : MonoBehaviour {
 
     public List<SongPart> songParts;
     public Location startLoc;
-    public AudioSource source;
 
     //private Location loc;
 
@@ -15,12 +14,12 @@ public class SongManager : MonoBehaviour {
     {
         foreach (SongPart songs in songParts)
         {
-            source = gameObject.AddComponent<AudioSource>();
-            songs.source = this.source;
+            AudioSource source = gameObject.AddComponent<AudioSource>();
+            songs.source = source;
             songs.isPlaying = false;
             source.volume = 0;
             source.loop = true;
-
+            source.clip = songs.clip;
             source.Play();
         }
 
@@ -42,13 +41,13 @@ public class SongManager : MonoBehaviour {
 
             if(inLocation == true && !songs.isPlaying)
             {
-                source.volume = 1;
+                songs.source.volume = 1;
                 songs.isPlaying = true;
             }
 
             else if (!inLocation && songs.isPlaying)
             {
-                source.volume = 0;
+                songs.source.volume = 0;
                 songs.isPlaying = false;
             }
 
