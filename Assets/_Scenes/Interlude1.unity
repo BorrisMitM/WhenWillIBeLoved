@@ -1043,12 +1043,12 @@ PrefabInstance:
     - target: {fileID: 8978270910708372734, guid: 37a82180a62e22a4aa0b689c09946846,
         type: 3}
       propertyPath: rightBorder
-      value: 13.4
+      value: 16.57
       objectReference: {fileID: 0}
     - target: {fileID: 8978270910708372734, guid: 37a82180a62e22a4aa0b689c09946846,
         type: 3}
       propertyPath: botBorder
-      value: -8.35
+      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a82180a62e22a4aa0b689c09946846, type: 3}
