@@ -10,6 +10,8 @@ public class SongPart : ScriptableObject
     public List<Location> locationsPlayed;
     public AudioClip clip;
     public bool isPlaying;
+    public AudioSource source;
+
 
 
 }

@@ -6719,6 +6719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1055083115}
   - component: {fileID: 1055083116}
+  - component: {fileID: 1055083117}
   m_Layer: 0
   m_Name: LocationSetter
   m_TagString: Untagged
@@ -6770,6 +6771,19 @@ PolygonCollider2D:
       - {x: 1.9544148, y: 1.2862016}
       - {x: 2.4036412, y: 1.0906478}
       - {x: 3.2418284, y: 1.5382115}
+--- !u!114 &1055083117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055083114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc20d5a6ff371744b9e6c9ac39baf1d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loc: 1
 --- !u!1 &1055190180
 GameObject:
   m_ObjectHideFlags: 0

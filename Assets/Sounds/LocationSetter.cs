@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LocationSetter : MonoBehaviour
 {
-    
+    public Location loc;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        //FindObjectOfType<SongManager>().SetLocation();
+        FindObjectOfType<SongManager>().SetLocation(loc);
     }
 }
