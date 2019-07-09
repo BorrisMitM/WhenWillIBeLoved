@@ -199,6 +199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 33370989}
   - component: {fileID: 33370990}
+  - component: {fileID: 33370991}
   m_Layer: 0
   m_Name: Interludehallwaysketch2LIGHTS 1 (1)
   m_TagString: Untagged
@@ -268,6 +269,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &33370991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33370988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1041cc0cc46b00949b528e52a0c1c8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitingTime: 0
+  lightOn: 0
 --- !u!1 &33518259
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201814260}
   - component: {fileID: 201814261}
+  - component: {fileID: 201814262}
   m_Layer: 0
   m_Name: Interludehallwaysketch2LIGHTS 1 (5)
   m_TagString: Untagged
@@ -394,6 +410,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &201814262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201814259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1041cc0cc46b00949b528e52a0c1c8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitingTime: 0
+  lightOn: 0
 --- !u!1 &224927099
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,6 +434,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224927100}
   - component: {fileID: 224927101}
+  - component: {fileID: 224927102}
   m_Layer: 0
   m_Name: Interludehallwaysketch2LIGHTS 1 (2)
   m_TagString: Untagged
@@ -473,6 +504,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &224927102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224927099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1041cc0cc46b00949b528e52a0c1c8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitingTime: 0
+  lightOn: 0
 --- !u!1 &268334895
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,6 +1416,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1495846529}
   - component: {fileID: 1495846530}
+  - component: {fileID: 1495846531}
   m_Layer: 0
   m_Name: Interludehallwaysketch2LIGHTS 1 (3)
   m_TagString: Untagged
@@ -1440,6 +1486,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1495846531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495846528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1041cc0cc46b00949b528e52a0c1c8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitingTime: 0
+  lightOn: 0
 --- !u!4 &1498963510 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1226570771215831027, guid: a900421e43dc0364a80f0fad67875e04,
@@ -1456,6 +1516,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1585831087}
   - component: {fileID: 1585831088}
+  - component: {fileID: 1585831089}
   m_Layer: 0
   m_Name: Interludehallwaysketch2LIGHTS 1 (4)
   m_TagString: Untagged
@@ -1525,6 +1586,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1585831089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585831086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1041cc0cc46b00949b528e52a0c1c8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitingTime: 0
+  lightOn: 0
 --- !u!1 &1673886666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2005271197}
   - component: {fileID: 2005271198}
+  - component: {fileID: 2005271199}
   m_Layer: 0
   m_Name: Interludehallwaysketch2LIGHTS 1
   m_TagString: Untagged
@@ -1824,6 +1900,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &2005271199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005271196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1041cc0cc46b00949b528e52a0c1c8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitingTime: 0
+  lightOn: 0
 --- !u!1 &2059825494
 GameObject:
   m_ObjectHideFlags: 0
