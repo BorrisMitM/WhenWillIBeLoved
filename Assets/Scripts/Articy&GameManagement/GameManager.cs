@@ -87,6 +87,7 @@ public class GameManager : MonoBehaviour
     public void LevelCompleted(){
         levelToLoad++;
         PlayerPrefs.SetInt("currentLevelID", levelToLoad);
+        LoadCurrentScene();
     }
     string LevelToLoadString(){
         switch(levelToLoad){

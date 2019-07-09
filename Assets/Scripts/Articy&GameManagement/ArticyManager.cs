@@ -447,7 +447,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
     #endregion
 
-    [ContextMenu("UNlockNextDialog")]
+    [ContextMenu("UnlockNextDialog")]
     public void UnlockNextDialog(){
         GameManager.instance.nextDialogUnlocked = true;
         ArticyFlowPlayer oldPlayer = GetComponent<ArticyFlowPlayer>();
@@ -462,5 +462,9 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         flowPlayer.startOn = dialogs[dialogCount];
         ClearAllBranches();
         dialogCount++;
+    }
+
+    public bool LastDialogPlayed(){
+        return dialogCount >= dialogs.Count;
     }
 }

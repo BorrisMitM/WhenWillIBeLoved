@@ -7,8 +7,10 @@ public class GreyScaleEffect : MonoBehaviour
     float saturation;
     [SerializeField] private PostProcessProfile profile;
     [SerializeField] private float fadeInTime = 1f;
+    [SerializeField] private bool active = false;
     ColorGrading colorGrading;
     private void Awake() {
+        if(!active) return;
         profile = GetComponent<PostProcessVolume>().profile;
         profile.TryGetSettings(out colorGrading);
         if(colorGrading){
