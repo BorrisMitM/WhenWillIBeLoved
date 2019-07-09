@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     
     public static GameManager instance;
     string currentScene;
-
+    int levelToLoad;
     public bool puzzleActive;
     public bool nextDialogUnlocked = true;
     [SerializeField] private GameObject panel;
@@ -27,16 +27,35 @@ public class GameManager : MonoBehaviour
             Debug.LogWarning("Multiple instances of the GameManager active.");
             Destroy(this);
         }
+        levelToLoad = PlayerPrefs.GetInt("currentLevelID", 0);
     }
-    public void LoadScene(string sceneName){
+    public void LoadScene(string sceneName, bool withLoadingScreen = true){
         if(currentScene != null)
             SceneManager.UnloadSceneAsync(currentScene);
         currentScene = sceneName;
-        //SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
-        StartCoroutine(LoadAsync(sceneName));
+        if(withLoadingScreen)
+            StartCoroutine(LoadAsync(sceneName));
+        else SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         isLoading = true;
     }
 
+    public void LoadCurrentScene(){
+        if(currentScene != null)
+            SceneManager.UnloadSceneAsync(currentScene);
+        currentScene = LevelToLoadString();
+            StartCoroutine(LoadAsync(currentScene));
+        isLoading = true;
+    }
+
+    public void LoadNewScene(){
+        if(currentScene != null)
+            SceneManager.UnloadSceneAsync(currentScene);
+        levelToLoad = 0;
+        PlayerPrefs.SetInt("currentLevelID", levelToLoad);
+        currentScene = LevelToLoadString();
+            StartCoroutine(LoadAsync(currentScene));
+        isLoading = true;
+    }
     private void Update() {
         if(isLoading && Input.anyKeyDown){
             StopAllCoroutines();
@@ -63,5 +82,18 @@ public class GameManager : MonoBehaviour
         }
         //panel.SetActive(false);
         loadText.text = "Press any key.";
+    }
+
+    public void LevelCompleted(){
+        levelToLoad++;
+        PlayerPrefs.SetInt("currentLevelID", levelToLoad);
+    }
+    string LevelToLoadString(){
+        switch(levelToLoad){
+            case 0: return "Level1";
+            case 1: return "Interlude1";
+            case 2: return "Level2";
+        }
+        return "oh fuck";
     }
 }

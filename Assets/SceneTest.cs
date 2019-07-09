@@ -7,7 +7,7 @@ public class SceneTest : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager.instance.LoadScene("Level1");
+        GameManager.instance.LoadScene("MenuScene", false);
     }
 
 }
