@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 7848776317011668916}
+  mHierarchy: {fileID: 8574138147134856230}
   mLocalization: {fileID: -2832721883174641762}
   mInternalProject:
     mName: side effects
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6874cb6c37df69146ba120fb81928c7f, type: 3}
   m_Name: ArticyScriptFragments
   m_EditorClassIdentifier: 
---- !u!114 &7848776317011668916
+--- !u!114 &8574138147134856230
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,10 +148,4 @@ MonoBehaviour:
   m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: HierarchyManager
   m_EditorClassIdentifier: 
-  serializedNodes:
-  - id: 72057594037927937
-    parent: 0
-    technicalName: Side_Effects
-    articyType: Project
-    childCount: 0
-    indexOfFirstChild: 1
+  serializedNodes: []

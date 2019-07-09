@@ -103,7 +103,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 70d9987cab2f90d4f88cd997987fc022, type: 3}
   twoLong:
   - {fileID: 21300000, guid: b953d70160d072a4a9c01741f0e8357d, type: 3}
-  - {fileID: 21300000, guid: ce3082ba6f5d6494bb4460608e1be6a9, type: 3}
+  - {fileID: 21300000, guid: f03af59c6f11fb9478907ef42d00a6cf, type: 3}
   solutionSprite: {fileID: 21300000, guid: 6fcc4535771688445960bf5fbe7ebfc7, type: 3}
 --- !u!61 &4116215118097632853
 BoxCollider2D:
