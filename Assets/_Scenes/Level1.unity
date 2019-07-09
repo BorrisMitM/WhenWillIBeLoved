@@ -180,6 +180,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80cc817ee4bc5f942bfbfa66fdb1891b, type: 2}
   - {fileID: 11400000, guid: d724c21a84ef58040be85b3f3b6d1ce1, type: 2}
   startLoc: 0
+  fadeRate: 1
 --- !u!1 &110278110
 GameObject:
   m_ObjectHideFlags: 0
@@ -5987,6 +5988,10 @@ PrefabInstance:
     - target: {fileID: 2079923368, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079923368, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2079923369, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
       propertyPath: movementSpeed
