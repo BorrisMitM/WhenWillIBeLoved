@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Base_Bell
   m_EditorClassIdentifier: 
   locationsPlayed: 02000000
-  clip: {fileID: 8300000, guid: 34a80b01dcc08364ebf22aa8c58bfca0, type: 3}
+  clip: {fileID: 8300000, guid: 4f38c935e9870e649a018d7abc09ef05, type: 3}
   isPlaying: 0
   source: {fileID: 0}

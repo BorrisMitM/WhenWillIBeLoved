@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Akkordeon
   m_EditorClassIdentifier: 
   locationsPlayed: 0000000001000000
-  clip: {fileID: 8300000, guid: 11ebb9e4472f63e499610ba9f797efed, type: 3}
+  clip: {fileID: 8300000, guid: 5759a18658092724abc0c717972d5022, type: 3}
   isPlaying: 1
   source: {fileID: 0}

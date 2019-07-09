@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Piano
   m_EditorClassIdentifier: 
   locationsPlayed: 01000000
-  clip: {fileID: 8300000, guid: 85af54368971dfc4ba2fde9700e2d1db, type: 3}
+  clip: {fileID: 8300000, guid: 7e368ab90e7c2c14caf1bc29398d489f, type: 3}
   isPlaying: 0
   source: {fileID: 0}
