@@ -2720,6 +2720,16 @@ MonoBehaviour:
   - {fileID: 912657657}
   - {fileID: 867150895}
   endPanel: {fileID: 1151845637}
+  variableNames:
+  - AngerFrustration
+  - AngerFurious
+  - AngerHurt
+  - AngerPassive
+  onTextNames:
+  - FRUSTRATION
+  - FURY
+  - HURT
+  - PASSIVE AGRESSION
 --- !u!1 &788757113
 GameObject:
   m_ObjectHideFlags: 0
