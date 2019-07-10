@@ -43,39 +43,39 @@ public class SongManager : MonoBehaviour {
 
             if(inLocation == true && !songs.isPlaying)
             {
-                StartCoroutine(FadeIn(songs.source));
                 //songs.source.volume = 1;
                 songs.isPlaying = true;
+                StartCoroutine(FadeIn(songs));
             }
 
             else if (!inLocation && songs.isPlaying)
             {
-                StartCoroutine(FadeOut(songs.source));
                 //songs.source.volume = 0;
                 songs.isPlaying = false;
+                StartCoroutine(FadeOut(songs));
             }
 
        
         }
        
-        IEnumerator FadeIn(AudioSource _source)
+        IEnumerator FadeIn(SongPart songPart)
         {
-            while(_source.volume < 1f)
+            while(songPart.source.volume < 1f && songPart.isPlaying)
             {
-                _source.volume += Time.deltaTime / fadeRate;
+                songPart.source.volume += Time.deltaTime / fadeRate;
                 yield return null;
             }
-            _source.volume = 1f;
+           songPart.source.volume = 1f;
         }
 
-        IEnumerator FadeOut(AudioSource _source)
+        IEnumerator FadeOut(SongPart songPart)
         {
-            while (_source.volume > 0f)
+            while (songPart.source.volume > 0f)
             {
-                _source.volume -= Time.deltaTime / fadeRate;
+                songPart.source.volume -= Time.deltaTime / fadeRate;
                 yield return null;
             }
-            _source.volume = 0f;
+            songPart.source.volume = 0f;
         }
     }
 
