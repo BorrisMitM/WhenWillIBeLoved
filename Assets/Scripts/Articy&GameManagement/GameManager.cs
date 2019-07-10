@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image glennSprite;
     [SerializeField] private TextMeshProUGUI loadText;
     [SerializeField] private List<Sprite> glennSprites;
-    [SerializeField] private float spriteChangePause = .4f;
+    [SerializeField] private float spriteChangePause = .05f;
     private bool isLoading = false;
     private void Awake() {
         if(instance == null)
@@ -70,14 +70,16 @@ public class GameManager : MonoBehaviour
         float lastSpriteUpdate = Time.time;
         int counter = 0;
         while(!op.isDone){
+            Debug.Log(Time.time - lastSpriteUpdate - spriteChangePause);
             float progress = Mathf.Clamp01(op.progress / .9f);
-            if(Time.time > lastSpriteUpdate + spriteChangePause){
+            if(Time.time >= lastSpriteUpdate + spriteChangePause){
+                Debug.Log("turn");
                 lastSpriteUpdate += spriteChangePause;
                 counter++;
                 if(counter > glennSprites.Count) counter = 0;
                 glennSprite.sprite = glennSprites[counter];
             }
-            loadText.text = (progress * 100f).ToString() + "%";
+            loadText.text = ((int)(progress * 100f)).ToString() + "%";
             yield return null;
         }
         //panel.SetActive(false);
