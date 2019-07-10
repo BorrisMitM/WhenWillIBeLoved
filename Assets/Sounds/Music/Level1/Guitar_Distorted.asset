@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Guitar_Distorted
   m_EditorClassIdentifier: 
   locationsPlayed: 03000000
-  clip: {fileID: 8300000, guid: 38dc6274d5702c248aea6a7018ca492f, type: 3}
+  clip: {fileID: 8300000, guid: df38864c14e81b649a83b47cf208af62, type: 3}
   isPlaying: 0
   source: {fileID: 0}

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Guitar_Clean
   m_EditorClassIdentifier: 
   locationsPlayed: 010000000200000000000000
-  clip: {fileID: 8300000, guid: 606a79a9f43de374993660ff25e72d16, type: 3}
+  clip: {fileID: 8300000, guid: ef1a4aa5707c1c84ea4148fec268e128, type: 3}
   isPlaying: 1
   source: {fileID: 0}
