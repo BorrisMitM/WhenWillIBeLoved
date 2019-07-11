@@ -15,15 +15,26 @@ public class PuzzleWindow : MonoBehaviour
     private bool textActive = false;
     [SerializeField] private float afterPuzzleFade;
     private PuzzleItem pi;
+    private bool tutorialSeen = false;
     [ContextMenu("Activate")]
-    public void Activate(List<GameObject> puzzlePrefabs, List<string> _puzzleTexts, PuzzleItem _pi)
+    public void Activate(List<GameObject> puzzlePrefabs, List<string> _puzzleTexts, string tutorialText, PuzzleItem _pi)
     {
         //puzzleIndex = 0;
         gameObject.transform.GetChild(0).position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
         transform.GetChild(0).gameObject.SetActive(true);
         GameManager.instance.puzzleActive = true;
-        puzzle = Instantiate(puzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        if (!tutorialSeen)
+        {
+            StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
+            textField.GetComponentInChildren<TextMeshProUGUI>().text = tutorialText;
+            tutorialSeen = true;
+        }
+        else
+        {
+            puzzle = Instantiate(puzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        }
 
+        textActive = true;
         activePuzzlePrefabs = puzzlePrefabs;
         puzzleTexts = _puzzleTexts;
         pi = _pi;
@@ -67,6 +78,7 @@ public class PuzzleWindow : MonoBehaviour
         {
             pi.played = true;
             puzzleIndex = 0;
+            tutorialSeen = false;
             FindObjectOfType<ArticyManager>().UnlockNextDialog();
             Deactivate();
         }

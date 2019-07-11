@@ -15,6 +15,7 @@ public class AppearingPlatform : MonoBehaviour
     [SerializeField] private string variableToAppearOn;
     [SerializeField] private float fadeInDuration = 1f;
     [SerializeField] private float shakeMagnitude = .4f;
+    [SerializeField] private Vector2 cameraFocusOffset;
     private bool triggered = false;
     private CameraMovement camMove;
     private CameraShake camShake;
@@ -64,12 +65,16 @@ public class AppearingPlatform : MonoBehaviour
         if(triggered)
             Appear(true);
     }
-
+    [ContextMenu("AppearTest")]
+    public void AppearTest()
+    {
+        Appear(true);
+    }
     private void Appear(bool appear)
     {
         platform.SetActive(appear);
         if(appear){
-            camMove.platformToFocus = platform.transform;
+            camMove.platformToFocus = (Vector2)platform.transform.position + cameraFocusOffset;
             StartCoroutine(camShake.ShakeCamera(fadeInDuration, shakeMagnitude));
             StartCoroutine(FadeIn(appear));
         }
@@ -90,7 +95,7 @@ public class AppearingPlatform : MonoBehaviour
             sprite.color = new Color(sprite.color.r,sprite.color.g,sprite.color.b, 1f);
         }
         blockingCollider.SetActive(!appear);
-        camMove.platformToFocus = null;
+        camMove.platformToFocus = Vector2.zero;
     }
 }
 #if UNITY_EDITOR
