@@ -14,6 +14,7 @@ public class PuzzleWindow : MonoBehaviour
 
     private bool textActive = false;
     [SerializeField] private float afterPuzzleFade;
+    [SerializeField] private TextMeshProUGUI counterText;
     private PuzzleItem pi;
     private bool tutorialSeen = false;
     [ContextMenu("Activate")]
@@ -39,11 +40,13 @@ public class PuzzleWindow : MonoBehaviour
         activePuzzlePrefabs = puzzlePrefabs;
         puzzleTexts = _puzzleTexts;
         pi = _pi;
+        counterText.text = puzzleIndex.ToString() + "/" + activePuzzlePrefabs.Count.ToString();
     }
 
     [ContextMenu("Deactivate")]
     public void Deactivate()
     {
+        textField.gameObject.SetActive(false);
         transform.GetChild(0).gameObject.SetActive(false);
         GameManager.instance.puzzleActive = false;
         textActive = false;
@@ -61,6 +64,7 @@ public class PuzzleWindow : MonoBehaviour
             StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
             textField.GetComponentInChildren<TextMeshProUGUI>().text = puzzleTexts[puzzleIndex];
             puzzleIndex++;
+            counterText.text = puzzleIndex.ToString() + "/" + activePuzzlePrefabs.Count.ToString();
         }
         textActive = true;
     }
