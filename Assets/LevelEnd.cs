@@ -18,7 +18,7 @@ public class LevelEnd : MonoBehaviour
 
     [ContextMenu("LevelEnd")]
     private void OnDialogEnded(){
-        //if(FindObjectOfType<ArticyManager>().LastDialogPlayed())
+        if(FindObjectOfType<ArticyManager>().LastDialogPlayed())
         {
             GetComponent<LevelFadeOut>().StartFadeOut();
             foreach(GameObject obj in objsToActivate){
