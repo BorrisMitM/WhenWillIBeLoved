@@ -6,7 +6,6 @@ public class CameraMovement : MonoBehaviour
 {
     private Vector3 startingPosition;
     public Transform targetToFollow;
-    [HideInInspector]
     public Vector2 platformToFocus;
     private Vector3 targetPosition;
 
@@ -28,13 +27,13 @@ public class CameraMovement : MonoBehaviour
         cameraShaker = GetComponentInChildren<CameraShake>();
     }
 
-    private void Update()
-    {
-        if(Input.GetKey(KeyCode.E))
-        {
-            StartCoroutine(cameraShaker.ShakeCamera(2f, .4f));
-        }
-    }
+    //private void Update()
+    //{
+    //    if(Input.GetKey(KeyCode.E))
+    //    {
+    //        StartCoroutine(cameraShaker.ShakeCamera(2f, .4f));
+    //    }
+    //}
 
     void LateUpdate()
     {

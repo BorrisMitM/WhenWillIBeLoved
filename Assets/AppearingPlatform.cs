@@ -77,6 +77,7 @@ public class AppearingPlatform : MonoBehaviour
             camMove.platformToFocus = (Vector2)platform.transform.position + cameraFocusOffset;
             StartCoroutine(camShake.ShakeCamera(fadeInDuration, shakeMagnitude));
             StartCoroutine(FadeIn(appear));
+            //GameManager.instance.puzzleActive = true;
         }
         else blockingCollider.SetActive(true);
     }
@@ -96,6 +97,7 @@ public class AppearingPlatform : MonoBehaviour
         }
         blockingCollider.SetActive(!appear);
         camMove.platformToFocus = Vector2.zero;
+        //GameManager.instance.puzzleActive = false;
     }
 }
 #if UNITY_EDITOR
