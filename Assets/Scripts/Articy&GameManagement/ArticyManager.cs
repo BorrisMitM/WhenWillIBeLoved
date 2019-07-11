@@ -21,6 +21,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 	// the ui target for our vertical list of branch buttons
 	public RectTransform branchLayoutPanel;
 
+    public GameObject scrollingDing;
     public GameObject panel;
     private bool isActive = false;
 
@@ -215,6 +216,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void StartScroll()
     {
+        scrollingDing.SetActive(false);
         switch (scrollingType)
         {
             case ScrollingType.TypeWriter:
@@ -284,6 +286,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         textLabel.maxVisibleCharacters = textLabel.textInfo.characterCount;
         textLabel.ForceMeshUpdate();
         isScrolling = false;
+        scrollingDing.SetActive(true);
 		EnableContextMenu();
     }
 
