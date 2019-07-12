@@ -20,8 +20,8 @@ public static class Vector3Extension {
     public static Vector3 Rotate(this Vector3 origin, float angle, Vector3 rotationAxis){
         return Quaternion.AngleAxis(angle, rotationAxis) * origin;
     }
-    private void Start() {
-        Vector3 a;
-        Vector3Extension.RoundToNearestPixel(a);
-    }
+
+    // public static Vector3 operator * (Vector3 a, Vector3 b){
+    //     return new Vector3(a.x * b.x, a.y * b.y, a.z * b.z);
+    // }
 }

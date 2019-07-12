@@ -7,7 +7,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     public float movementSpeed = 1f;
     IsometricCharacterRenderer isoRenderer;
-
+    [SerializeField] private bool turnMovement = true;
     public float moveOffset;
 
     Rigidbody2D rbody;
@@ -30,9 +30,12 @@ public class IsometricPlayerMovementController : MonoBehaviour
         }
 
         Vector3 currentPos = rbody.position;
-        float horizontalInput = Input.GetAxis("Horizontal")*moveOffset;
+        float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputVector = new Vector3(horizontalInput, verticalInput, 0);
+        if(turnMovement)
+            inputVector = inputVector.Rotate(-45f, Vector3.forward);
+        inputVector.x *= moveOffset;
         inputVector = Vector3.ClampMagnitude(inputVector, 1);
         Vector3 movement = inputVector * movementSpeed;
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
