@@ -15664,7 +15664,6 @@ GameObject:
   - component: {fileID: 1129159994}
   - component: {fileID: 1129159992}
   - component: {fileID: 1129159997}
-  - component: {fileID: 1129159998}
   m_Layer: 0
   m_Name: emilia
   m_TagString: Untagged
@@ -15785,18 +15784,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1129159998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1129159991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ef448d9baad9d46b56c0c1776f9a0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1132939842
 GameObject:
   m_ObjectHideFlags: 0
@@ -16246,7 +16233,6 @@ GameObject:
   - component: {fileID: 1211713765}
   - component: {fileID: 1211713764}
   - component: {fileID: 1211713762}
-  - component: {fileID: 1211713763}
   m_Layer: 0
   m_Name: ACTIVATIONSdrawer
   m_TagString: Untagged
@@ -16294,18 +16280,6 @@ MonoBehaviour:
   tutorialText: Why is there a note between the cluttery? Maybe, by moving everything
     very carefully I could get it out.
   played: 0
---- !u!114 &1211713763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1211713760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ef448d9baad9d46b56c0c1776f9a0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1211713764
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -17312,7 +17286,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1303033929}
   - component: {fileID: 1303033933}
-  - component: {fileID: 1303033932}
   - component: {fileID: 1303033931}
   - component: {fileID: 1303033930}
   m_Layer: 0
@@ -17377,18 +17350,6 @@ MonoBehaviour:
   tutorialText: Funny little thing. Looks like I can connect the nails with this string.
     I wonder where this will lead me?
   played: 0
---- !u!114 &1303033932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1303033928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ef448d9baad9d46b56c0c1776f9a0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1303033933
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17979,6 +17940,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8402476434935544342, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402476434935544342, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402476434935544342, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8402476434935544342, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498929, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_Name
@@ -18478,7 +18459,6 @@ GameObject:
   - component: {fileID: 1537010092}
   - component: {fileID: 1537010096}
   - component: {fileID: 1537010095}
-  - component: {fileID: 1537010094}
   - component: {fileID: 1537010093}
   m_Layer: 0
   m_Name: ACTIVATIONdiary
@@ -18524,18 +18504,6 @@ MonoBehaviour:
     but I don\u2018t have to fold them all the way. I see... One of them must fit
     the lock."
   played: 0
---- !u!114 &1537010094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537010091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0ef448d9baad9d46b56c0c1776f9a0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &1537010095
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -8,22 +8,33 @@ public class Interactable : MonoBehaviour
     private float fadeInDuration = 0.2f;
     bool playerInside = false;
     Vector3 originalScale;
+    InteractionPopUp popUp;
     private void Awake() {
         originalScale = textPanel.transform.localScale;
+        popUp = FindObjectOfType<InteractionPopUp>();
     }
     private void Update() {
         if(playerInside && Input.GetButtonDown("Interact")){
             textPanel.SetActive(true);
             StartCoroutine(ScaleFadeIn());
             GameManager.instance.puzzleActive = true;
+            popUp.Deactivate();
         }
     }
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) playerInside = true;
+        if(other.CompareTag("Player"))
+        {
+            popUp.Activate();
+            playerInside = true;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if(other.CompareTag("Player")) playerInside = false;
+        if(other.CompareTag("Player"))
+        {
+            popUp.Deactivate();
+            playerInside = false;
+        }
     }
 
     IEnumerator ScaleFadeIn(){

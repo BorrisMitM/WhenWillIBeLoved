@@ -6,30 +6,30 @@ public class DialogStart : MonoBehaviour
 {
     private bool playerInRange = false;
 
-    private Glow glow;
+    private InteractionPopUp popUp;
 
     private void Start() {
-        glow = GetComponent<Glow>();
+        popUp = FindObjectOfType<InteractionPopUp>();
     }
 
     private void Update() {
         if(playerInRange && Input.GetButtonDown("Interact") && GameManager.instance.nextDialogUnlocked){
             FindObjectOfType<ArticyManager>().StartDialog();
-            glow.EndGlow();
+            popUp.Deactivate();
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && GameManager.instance.nextDialogUnlocked) {
             playerInRange = true;
-            glow.StartGlow();
+            popUp.Activate();
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
         if(other.CompareTag("Player")) {
             playerInRange = false;
-            glow.EndGlow();
+            popUp.Deactivate();
         }        
     }
 
