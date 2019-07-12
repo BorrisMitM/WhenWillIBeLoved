@@ -37,6 +37,7 @@ public class IntroCutscene : MonoBehaviour
                     textLabel.text = "";
                     Destroy(scrollingDing);
                     StartCoroutine(FadeOut());
+                    return;
                 }
                 NewText();
             }
