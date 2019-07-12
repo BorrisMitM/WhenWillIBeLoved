@@ -75,6 +75,9 @@ public class ArticyChoiceButton : MonoBehaviour
 				}
 			}
 		}
+
+        //sadest fix I ever made
+        if (dialogText.text == "Questions") Destroy(gameObject);
 	}
 
 	// the method used when the button is clicked

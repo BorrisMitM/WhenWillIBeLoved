@@ -114,7 +114,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         // we clear all old branch buttons
 		ClearAllBranches();
         //show layout panel only when branches are available
-        if(aBranches.Count == 1){
+        if(aBranches.Count == 1 && aBranches[0].IsValid){
              branchLayoutPanel.gameObject.SetActive(false);
              singleBranch = aBranches[0];
 			 branches = new List<Branch>();
@@ -180,6 +180,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
     private void EnableContextMenu()
     {
         if (singleBranch != null) return;
+        ClearAllBranches();
         if (!branchLayoutPanel.gameObject.activeSelf) branchLayoutPanel.gameObject.SetActive(true);
         List<Branch> alreadyInstantiated = new List<Branch>();
         // for every branch provided by the flow player, we will create a button in our vertical list
@@ -238,7 +239,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         {
             if(!isScrolling) yield break;
             textLabel.maxVisibleCharacters = currentChar;
-            currentChar++;
+            currentChar+= 2;
             yield return new WaitForSeconds(1f / charactersPerSecond);
         }
         EndScroll();
