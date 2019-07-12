@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1450,6 +1450,7 @@ MonoBehaviour:
   - aber das war schwieriger als gedacht deswegen ist they jetzt in dem kopf hier
     und versucht emilia nen bissle wut ausm brain zu sucken(fast)
   - keine sorgen drogen kommen auch noch vor
+  fadeOutTimePanel: 2
 --- !u!114 &368898368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14630,7 +14631,8 @@ MonoBehaviour:
   - 'A whispered I love you in a moment of quiet. '
   - Maria, running up to you, short hair tousled by the wind, opening her little arms
     to hug you.
-  tutorialText: "Do se block r\xE4tsel"
+  tutorialText: Why is there a note between the cluttery? Maybe, by moving everything
+    very carefully I could get it out.
   played: 0
 --- !u!114 &1211713763
 MonoBehaviour:
@@ -15679,7 +15681,8 @@ MonoBehaviour:
   - Hands interlocked, and yet you feel so alone.
   - A pale sky and a pale living room and you sigh.
   - A room full of faces and their expectations on your shoulders.
-  tutorialText: 
+  tutorialText: Funny little thing. Looks like I can connect the nails with this string.
+    I wonder where this will lead me?
   played: 0
 --- !u!114 &1303033932
 MonoBehaviour:
@@ -16619,7 +16622,9 @@ MonoBehaviour:
     ever seen. [10.5] In retrospective, the sky is infinite and beautiful, but not
     quite as beautiful as her eyes. [29.5] Her name is Ana, and I think I might be
     in love.  [4.6] I don''t want to leave. Not now, not ever.'
-  tutorialText: 
+  tutorialText: "Looks like the keys can be folded but the hinges limit my actions,
+    but I don\u2018t have to fold them all the way. I see... One of them must fit
+    the lock."
   played: 0
 --- !u!114 &1537010094
 MonoBehaviour:
@@ -18631,11 +18636,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1535126101725034014, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4815045399093957190, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_IsActive
@@ -18675,6 +18675,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.z
       value: -31.169254
+      objectReference: {fileID: 0}
+    - target: {fileID: 1535126101725034014, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6277851125179096485, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
