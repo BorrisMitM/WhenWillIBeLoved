@@ -527,6 +527,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.08093035
       objectReference: {fileID: 0}
+    - target: {fileID: 4325394725531932461, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6791127541570370745, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3513,6 +3518,11 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: -0.08093035
       objectReference: {fileID: 0}
+    - target: {fileID: 4325394725531932461, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6791127541570370745, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4018,7 +4028,7 @@ PrefabInstance:
     - target: {fileID: 4325394725531932461, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_Radius
-      value: 0.80372554
+      value: 0.6303607
       objectReference: {fileID: 0}
     - target: {fileID: 4325394725531932461, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
@@ -4028,7 +4038,7 @@ PrefabInstance:
     - target: {fileID: 4325394725531932461, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: 0.17336476
       objectReference: {fileID: 0}
     - target: {fileID: 6791127541570370745, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
@@ -15675,9 +15685,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.15, y: -0.26}
+  m_Offset: {x: 0.11555672, y: -0.21479881}
   serializedVersion: 2
-  m_Radius: 1.055
+  m_Radius: 0.7442424
 --- !u!114 &1129159994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16307,9 +16317,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.18591923, y: -0.24847478}
+  m_Offset: {x: -0.08353257, y: -0.24847478}
   serializedVersion: 2
-  m_Radius: 0.47255558
+  m_Radius: 0.37016892
 --- !u!212 &1211713765
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17747,12 +17757,12 @@ PrefabInstance:
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.43
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 0.28
       objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
@@ -20874,17 +20884,17 @@ PrefabInstance:
     - target: {fileID: 4285273048115268623, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.42
+      value: -4.67
       objectReference: {fileID: 0}
     - target: {fileID: 4285273048115268623, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 4285273048115268623, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.03
+      value: 0.031
       objectReference: {fileID: 0}
     - target: {fileID: 4285273048115268623, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
@@ -21015,7 +21025,7 @@ PrefabInstance:
     - target: {fileID: 2334357966266098493, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}
       propertyPath: m_text
-      value: Nice Color. Did I think of it or does it come from her?
+      value: Nice color. Did I think of it or does it come from her?
       objectReference: {fileID: 0}
     - target: {fileID: 2334357966266098493, guid: 092ce41f386dc7a46b02d9dbee5dd6ca,
         type: 3}

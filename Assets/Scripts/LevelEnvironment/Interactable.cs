@@ -7,10 +7,14 @@ public class Interactable : MonoBehaviour
     [SerializeField] private GameObject textPanel;
     private float fadeInDuration = 0.2f;
     bool playerInside = false;
+    Vector3 originalScale;
+    private void Awake() {
+        originalScale = textPanel.transform.localScale;
+    }
     private void Update() {
         if(playerInside && Input.GetButtonDown("Interact")){
             textPanel.SetActive(true);
-            StartCoroutine(ScaleFadeIn(textPanel.transform.localScale));
+            StartCoroutine(ScaleFadeIn());
             GameManager.instance.puzzleActive = true;
         }
     }
@@ -22,7 +26,7 @@ public class Interactable : MonoBehaviour
         if(other.CompareTag("Player")) playerInside = false;
     }
 
-    IEnumerator ScaleFadeIn(Vector3 originalScale){
+    IEnumerator ScaleFadeIn(){
         float startTime = Time.time;
         while(Time.time <= startTime + fadeInDuration){
             textPanel.transform.localScale = Vector3.Lerp(Vector3.zero, originalScale, (Time.time - startTime) / fadeInDuration);
