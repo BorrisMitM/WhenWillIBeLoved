@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Scenes/Interlude1.unity
     guid: c1f49f95a8096164c98c215a8c636110
+  - enabled: 1
+    path: Assets/_Scenes/Level2.unity
+    guid: f3e6db3633bc29c4fb79ad4f3e5d18be
   m_configObjects: {}
