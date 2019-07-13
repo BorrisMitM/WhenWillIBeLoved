@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 public class LevelEnd : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class LevelEnd : MonoBehaviour
     [SerializeField] private string[] onTextNames;
     [SerializeField] private Vector2 targetPosGlenn;
     [SerializeField] private Transform glenn;
+    [SerializeField] private bool interlude = false;
 
     public delegate void LevelEnding();
     public static event LevelEnding OnLevelEnding;
@@ -22,7 +24,14 @@ public class LevelEnd : MonoBehaviour
     }
     
     private void OnDialogEnded(){
-        if(FindObjectOfType<ArticyManager>().LastDialogPlayed())
+        if (interlude)
+        {
+            GetComponent<LevelFadeOut>().StartFadeOut();
+            NewLevel();
+            return;
+        }
+
+        if (FindObjectOfType<ArticyManager>().LastDialogPlayed())
         {
             OnLevelEnding();
             GetComponent<LevelFadeOut>().StartFadeOut();
@@ -31,12 +40,19 @@ public class LevelEnd : MonoBehaviour
             }
             FindObjectOfType<CameraShake>().ShakeCamera(2f, .1f);
             StartCoroutine(ActivateEndPanel());
+            StartCoroutine(MoveGlenn());
         }
     }
 
     [ContextMenu("LevelEnd")]
     private void OnDialogEndedTest()
     {
+        if (interlude)
+        {
+            GetComponent<LevelFadeOut>().StartFadeOut();
+            NewLevel();
+            return;
+        }
         {
             OnLevelEnding();
             GetComponent<LevelFadeOut>().StartFadeOut();
@@ -48,6 +64,16 @@ public class LevelEnd : MonoBehaviour
             StartCoroutine(ActivateEndPanel());
             StartCoroutine(MoveGlenn());
         }
+    }
+
+    public void NewLevel()
+    {
+        StartCoroutine(LoadNewLevel());
+    }
+    IEnumerator LoadNewLevel()
+    {
+        yield return new WaitForSeconds(1f);
+        GameManager.instance.LevelCompleted();
     }
     IEnumerator MoveGlenn()
     {

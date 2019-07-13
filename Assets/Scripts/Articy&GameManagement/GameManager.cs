@@ -71,10 +71,8 @@ public class GameManager : MonoBehaviour
         float lastSpriteUpdate = Time.time;
         int counter = 0;
         while(!op.isDone){
-            Debug.Log(Time.time - lastSpriteUpdate - spriteChangePause);
             float progress = Mathf.Clamp01(op.progress / .9f);
             if(Time.time >= lastSpriteUpdate + spriteChangePause){
-                Debug.Log("turn");
                 lastSpriteUpdate += spriteChangePause;
                 counter++;
                 if(counter > glennSprites.Count) counter = 0;
@@ -88,7 +86,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void LevelCompleted(){
-        levelToLoad++;
+        SetLevelToLoad();
         PlayerPrefs.SetInt("currentLevelID", levelToLoad);
         LoadCurrentScene();
     }
@@ -97,7 +95,14 @@ public class GameManager : MonoBehaviour
             case 0: return "Level1";
             case 1: return "Interlude1";
             case 2: return "Level2";
+            case 3: return "MenuScene";
         }
         return "oh fuck";
+    }
+    void SetLevelToLoad()
+    {
+        if (currentScene == "Level1") levelToLoad = 1;
+        else if (currentScene == "Interlude1") levelToLoad = 2;
+        else if (currentScene == "Level2") levelToLoad = 3;
     }
 }
