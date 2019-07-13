@@ -432,7 +432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 1
   thisInformation: Black
 --- !u!212 &1108928
@@ -1233,7 +1232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 1
   thisInformation: Pink
 --- !u!212 &119656722
@@ -3200,7 +3198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 0
   thisInformation: Eira
 --- !u!212 &326019286
@@ -3779,7 +3776,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 0
   thisInformation: Even
 --- !u!212 &431400278
@@ -4434,7 +4430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 2
   thisInformation: 16
 --- !u!212 &561865866
@@ -5084,7 +5079,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 3
   thisInformation: Guitar
 --- !u!212 &709801814
@@ -5229,7 +5223,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 3
   thisInformation: Keyboard
 --- !u!212 &721660496
@@ -5590,7 +5583,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 2
   thisInformation: 19
 --- !u!212 &779238012
@@ -5735,7 +5727,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 2
   thisInformation: 17
 --- !u!212 &797884136
@@ -6621,7 +6612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 0
   thisInformation: Olga
 --- !u!212 &950656263
@@ -6839,7 +6829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 1
   thisInformation: Red
 --- !u!212 &1095889559
@@ -6914,7 +6903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125521297}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: -0, y: 2.47, z: -0.72}
+  m_LocalPosition: {x: 0.04, y: 1.59, z: -1.91}
   m_LocalScale: {x: 0.73816, y: 0.73816, z: 0.73816}
   m_Children:
   - {fileID: 1184952169}
@@ -7799,7 +7788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298120274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.86, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3396791, y: 0.3396791, z: 0.3396791}
   m_Children:
   - {fileID: 1343282055}
@@ -8214,7 +8203,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 2
   thisInformation: 18
 --- !u!212 &1382107638
@@ -8793,7 +8781,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 0
   thisInformation: Mads
 --- !u!212 &1473602502
@@ -9955,7 +9942,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 1
   thisInformation: Purple
 --- !u!212 &1706131277
@@ -10254,7 +10240,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 0
   thisInformation: "Bj\xF6rn"
 --- !u!212 &1806794222
@@ -10461,7 +10446,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 3
   thisInformation: LeadSinger
 --- !u!212 &1850856559
@@ -11036,7 +11020,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 3
   thisInformation: Drums
 --- !u!212 &1961831834
@@ -11181,7 +11164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 1
   thisInformation: Blue
 --- !u!212 &1985487198
@@ -11326,7 +11308,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 2
   thisInformation: 20
 --- !u!212 &2096675414
@@ -11667,7 +11648,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22b58ea162515ce4fa21bc06fd7de6a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  originalPos: 0
   infoType: 3
   thisInformation: Bass
 --- !u!212 &2140690739

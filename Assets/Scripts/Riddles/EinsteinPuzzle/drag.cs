@@ -7,7 +7,7 @@ public class drag : MonoBehaviour
     Vector3 dist;
     float posX;
     float posY;
-    public float originalPos;
+   
 
     public enum InformationType { name, trousers, age, instrument }
     public InformationType infoType;
