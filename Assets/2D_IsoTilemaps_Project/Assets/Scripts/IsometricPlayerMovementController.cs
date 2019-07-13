@@ -23,7 +23,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (GameManager.instance.puzzleActive)
+        if (GameManager.instance.puzzleActive || GameManager.instance.disableMovement)
         {
             isoRenderer.SetDirection(new Vector2(0, 0));
             return;

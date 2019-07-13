@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     string currentScene;
     int levelToLoad;
     public bool puzzleActive;
+    public bool disableMovement = false;
     public bool nextDialogUnlocked = true;
     [SerializeField] private GameObject panel;
     [SerializeField] private Image glennSprite;
