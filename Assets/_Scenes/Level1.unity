@@ -17948,11 +17948,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3339481645408498929, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18008,21 +18003,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.883608
-      objectReference: {fileID: 0}
-    - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.883608
-      objectReference: {fileID: 0}
-    - target: {fileID: 3339481645408498932, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.883608
-      objectReference: {fileID: 0}
     - target: {fileID: 8402476434935544342, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -18043,50 +18023,47 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3339481645408498930, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+    - target: {fileID: 4835806799542290314, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
-      propertyPath: m_Constraints
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3739837256326815607, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079923368, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079923368, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
-      propertyPath: m_SortingLayerID
+      propertyPath: m_textInfo.characterCount
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2079923369, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
-      propertyPath: movementSpeed
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079923369, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
-      propertyPath: moveOffset
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9212947015899080534, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+    - target: {fileID: 4835806799542290314, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
         type: 3}
-      propertyPath: m_Offset.y
-      value: -0.27
-      objectReference: {fileID: 0}
-    - target: {fileID: 3339481644051735614, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 486870f2c3133a146b16fafeb8591a36,
-        type: 3}
-    - target: {fileID: 3339481644051735614, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
-        type: 3}
-      propertyPath: m_SortingOrder
+      propertyPath: m_textInfo.wordCount
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4098054172893964536, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
+    - target: {fileID: 4835806799542290314, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835806799542290314, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856604766817307978, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856604766817307978, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856604766817307978, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856604766817307978, guid: 5e2a82902b6ea4c0b9b652322ffadcff,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e2a82902b6ea4c0b9b652322ffadcff, type: 3}
 --- !u!1 &1502252494
 GameObject:
@@ -18321,8 +18298,8 @@ GameObject:
   - component: {fileID: 1520599905}
   - component: {fileID: 1520599909}
   - component: {fileID: 1520599908}
-  - component: {fileID: 1520599907}
   - component: {fileID: 1520599906}
+  - component: {fileID: 1520599907}
   m_Layer: 10
   m_Name: CloseButton
   m_TagString: Untagged
@@ -18339,7 +18316,7 @@ Transform:
   m_GameObject: {fileID: 1520599904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 8.66, y: 5.92, z: -5}
-  m_LocalScale: {x: 0.13775091, y: 0.13775091, z: 0.13775091}
+  m_LocalScale: {x: 0.8799357, y: 0.8799357, z: 0.8799357}
   m_Children: []
   m_Father: {fileID: 1055190183}
   m_RootOrder: 0
@@ -18356,8 +18333,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac37ba329ccb1664ba8fb42e7db5a991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1520599907
-BoxCollider2D:
+--- !u!58 &1520599907
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -18369,19 +18346,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 16, y: 16}
-    newSize: {x: 16, y: 16}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0.0000012516975, y: 0}
   serializedVersion: 2
-  m_Size: {x: 16, y: 16}
-  m_EdgeRadius: 0
+  m_Radius: 1.4999999
 --- !u!212 &1520599908
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18419,7 +18386,7 @@ SpriteRenderer:
   m_SortingLayerID: 357707467
   m_SortingLayer: 1
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 31c96db40483b274282a4e05f3b7cfaa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c6a5116ec599a10478b9137501ab7601, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

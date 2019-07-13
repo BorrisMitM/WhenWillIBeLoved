@@ -27,7 +27,7 @@ public class PuzzleItem : MonoBehaviour
     {
         if(collision.CompareTag("Player") && !played){ 
             playerClose = true;
-            popUp.Activate();
+            popUp.Activate(PopUp.ImportantInteraction);
         }
     }
 

@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player"))
         {
-            popUp.Activate();
+            popUp.Activate(PopUp.Fluff);
             playerInside = true;
         }
     }
