@@ -9,17 +9,22 @@ public class LevelEnd : MonoBehaviour
 
     [SerializeField] private string[] variableNames;
     [SerializeField] private string[] onTextNames;
+    [SerializeField] private Vector2 targetPosGlenn;
+    [SerializeField] private Transform glenn;
+
+    public delegate void LevelEnding();
+    public static event LevelEnding OnLevelEnding;
     private void OnEnable() {
         ArticyManager.OnDialogEnded += OnDialogEnded;
     }
     private void OnDisable() {
         ArticyManager.OnDialogEnded -= OnDialogEnded;
     }
-
-    [ContextMenu("LevelEnd")]
+    
     private void OnDialogEnded(){
         if(FindObjectOfType<ArticyManager>().LastDialogPlayed())
         {
+            OnLevelEnding();
             GetComponent<LevelFadeOut>().StartFadeOut();
             foreach(GameObject obj in objsToActivate){
                 obj.SetActive(true);
@@ -29,6 +34,33 @@ public class LevelEnd : MonoBehaviour
         }
     }
 
+    [ContextMenu("LevelEnd")]
+    private void OnDialogEndedTest()
+    {
+        {
+            OnLevelEnding();
+            GetComponent<LevelFadeOut>().StartFadeOut();
+            foreach (GameObject obj in objsToActivate)
+            {
+                obj.SetActive(true);
+            }
+            FindObjectOfType<CameraShake>().ShakeCamera(2f, .1f);
+            StartCoroutine(ActivateEndPanel());
+            StartCoroutine(MoveGlenn());
+        }
+    }
+    IEnumerator MoveGlenn()
+    {
+        float startTime = Time.time;
+        float duration = 1f;
+        Vector3 startPos = glenn.position;
+        glenn.GetComponent<IsometricPlayerMovementController>().isoRenderer.SetDirection(new Vector2(1f, 1f));
+        while(Time.time <= startTime + duration)
+        {
+            glenn.position = Vector3.Lerp(startPos, targetPosGlenn, (Time.time - startTime) / duration);
+            yield return null;
+        }
+    }
     IEnumerator ActivateEndPanel(){
         yield return new WaitForSeconds(3f);
         endPanel.SetActive(true);

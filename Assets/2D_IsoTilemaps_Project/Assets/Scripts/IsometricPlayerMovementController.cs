@@ -6,7 +6,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 {
 
     public float movementSpeed = 1f;
-    IsometricCharacterRenderer isoRenderer;
+    [HideInInspector]
+    public IsometricCharacterRenderer isoRenderer;
     [SerializeField] private bool turnMovement = true;
     public float moveOffset;
 
