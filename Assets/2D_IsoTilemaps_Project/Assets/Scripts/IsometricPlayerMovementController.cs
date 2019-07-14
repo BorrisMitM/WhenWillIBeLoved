@@ -21,6 +21,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
         
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
 
+        
     }
 
 

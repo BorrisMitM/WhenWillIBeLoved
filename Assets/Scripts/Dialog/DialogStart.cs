@@ -8,13 +8,21 @@ public class DialogStart : MonoBehaviour
 
     private InteractionPopUp popUp;
 
+    AudioSource source;
+
     private void Start() {
         popUp = FindObjectOfType<InteractionPopUp>();
+        source = GetComponent<AudioSource>();
     }
 
     private void Update() {
+
         if(playerInRange && Input.GetButtonDown("Interact") && GameManager.instance.nextDialogUnlocked){
+
             FindObjectOfType<ArticyManager>().StartDialog();
+
+            source.Play();
+
             popUp.Deactivate();
         }
     }
