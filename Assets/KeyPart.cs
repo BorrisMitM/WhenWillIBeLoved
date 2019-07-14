@@ -78,8 +78,8 @@ public class KeyPart : MonoBehaviour
         {
             isSideView = false;
             if (myState == KeyState.original) myState = KeyState.toriginal;
-            else if (myState == KeyState.original) myState = KeyState.tup;
-            else if (myState == KeyState.original) myState = KeyState.tturned;
+            else if (myState == KeyState.up) myState = KeyState.tup;
+            else if (myState == KeyState.turned) myState = KeyState.tturned;
         }
         isSideView = turnCode == KeyState.up;
 
