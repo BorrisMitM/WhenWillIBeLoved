@@ -1,18 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using System.Linq;
 public class KeyManager : MonoBehaviour
 {
+    List<KeyPart> keyParts;
     // Start is called before the first frame update
-    void Start()
+    void OnEnable()
     {
-        
+        keyParts = new List<KeyPart>();
+        keyParts = GetComponentsInChildren<KeyPart>().ToList<KeyPart>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CheckForWin()
     {
-        
+        bool win = true;
+        foreach(KeyPart keyPart in keyParts)
+        {
+            if (!keyPart.wantedStates.Contains(keyPart.myState))
+            {
+                win = false;
+                break;
+            }
+        }
+        if (win) FindObjectOfType<PuzzleWindow>().PuzzleReady();
     }
 }
