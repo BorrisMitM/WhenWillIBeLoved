@@ -19,6 +19,9 @@ public class AppearingPlatform : MonoBehaviour
     private bool triggered = false;
     private CameraMovement camMove;
     private CameraShake camShake;
+
+    AudioSource source;
+
     private void Start() {
         switch(changeOn){
             case ChangeOn.boolTrue : 
@@ -62,6 +65,7 @@ public class AppearingPlatform : MonoBehaviour
                         if(GetGlobalVariable.Int(variableToAppearOn) > limit) triggered = true;
                         break;
         }
+
         if(triggered)
             Appear(true);
     }
@@ -70,14 +74,19 @@ public class AppearingPlatform : MonoBehaviour
     {
         Appear(true);
     }
+
+
     private void Appear(bool appear)
     {
         platform.SetActive(appear);
+        
+
         if(appear){
             camMove.platformToFocus = (Vector2)platform.transform.position + cameraFocusOffset;
             StartCoroutine(camShake.ShakeCamera(fadeInDuration, shakeMagnitude));
             StartCoroutine(FadeIn(appear));
             GameManager.instance.disableMovement = true;
+            GetComponent<AudioSource>().Play();
         }
         else blockingCollider.SetActive(true);
     }
