@@ -15,9 +15,10 @@ public class KeyPart : MonoBehaviour
     [SerializeField] float originalRotation = 0f;
     [SerializeField] int dir = 1;
     [SerializeField] int hingeDirection = 1;
+    [SerializeField] public List<KeyState> wantedStates;
     int parentLayer = 0;
     public List<DependingHinge> dependingOn;
-    private KeyState myState = KeyState.original;
+    public KeyState myState = KeyState.original;
     private SpriteRenderer sr;
     private bool isSideView;
     private void Start()
