@@ -11,6 +11,14 @@ public class IsometricPlayerMovementController : MonoBehaviour
     [SerializeField] private bool turnMovement = true;
     public float moveOffset;
 
+    [SerializeField]
+    AudioClip[] steps;
+    [SerializeField]
+    AudioSource currentAudio;
+    bool needNewSound = true;
+   
+
+
     Rigidbody2D rbody;
 
     private void Awake()
@@ -18,6 +26,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
+
+        currentAudio = GetComponent<AudioSource>();
     }
 
 
@@ -42,5 +52,23 @@ public class IsometricPlayerMovementController : MonoBehaviour
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
         isoRenderer.SetDirection(movement);
         rbody.MovePosition(newPos);
+
+
+        if ( (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 ) && needNewSound)
+        {
+            currentAudio.clip = steps[Random.Range(0, steps.Length)];
+            currentAudio.volume = 0.5f;
+            currentAudio.Play();
+            needNewSound = false;
+            StartCoroutine(WaitForFootStep());
+
+            
+        }
+    }
+
+    IEnumerator WaitForFootStep()
+    {
+        yield return new WaitForSeconds(0.3f);
+        needNewSound = true;
     }
 }
