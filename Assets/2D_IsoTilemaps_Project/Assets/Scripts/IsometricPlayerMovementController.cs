@@ -21,7 +21,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
         
         isoRenderer = GetComponentInChildren<IsometricCharacterRenderer>();
 
-        currentAudio = GetComponent<AudioSource>();
     }
 
 
