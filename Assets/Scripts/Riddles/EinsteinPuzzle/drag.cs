@@ -45,7 +45,20 @@ public class drag : MonoBehaviour
             transform.position = startPosition;
         }
         else
-        if (!currentSnap[0].DO()) transform.position = startPosition;
+        {
+            float minDistance = 100f;
+            int minID = 0;
+            for (int i = 0; i < currentSnap.Count; i++)
+            {
+                float thisDistance = (transform.position - currentSnap[i].transform.position).magnitude;
+                if ( thisDistance < minDistance)
+                {
+                    minDistance = thisDistance;
+                    minID = i;
+                }
+            }
+            if (!currentSnap[minID].DO()) transform.position = startPosition;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

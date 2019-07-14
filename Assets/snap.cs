@@ -22,9 +22,9 @@ public class snap : MonoBehaviour
         if (drag.activeGO.GetComponent<drag>().infoType == infoType)
         {
             Vector3 currentPos = transform.position;
-            drag.activeGO.transform.position = new Vector3(Mathf.Round(currentPos.x),
-                                             Mathf.Round(currentPos.y),
-                                             -0.5f);
+            drag.activeGO.transform.position = new Vector3(currentPos.x,
+                                                           currentPos.y,
+                                                           -0.5f);
 
             currentInfo = drag.activeGO.GetComponent<drag>().thisInformation;
             drag.activeGO = null;
