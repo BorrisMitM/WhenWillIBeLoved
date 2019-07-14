@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleActive: 0
+  disableMovement: 0
   nextDialogUnlocked: 1
   panel: {fileID: 1283206513}
   glennSprite: {fileID: 1669159442}
@@ -420,6 +421,7 @@ GameObject:
   - component: {fileID: 1369379592}
   - component: {fileID: 1369379591}
   - component: {fileID: 1369379590}
+  - component: {fileID: 1369379594}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -507,6 +509,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1369379594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369379589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279e9390bb635b441b2f2a709f93042e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  paused: {fileID: 0}
 --- !u!1 &1669159440
 GameObject:
   m_ObjectHideFlags: 0
