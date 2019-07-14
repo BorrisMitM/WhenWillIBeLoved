@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using TMPro;
 public class KeyManager : MonoBehaviour
 {
     List<KeyPart> keyParts;
@@ -19,10 +20,15 @@ public class KeyManager : MonoBehaviour
         {
             if (!keyPart.wantedStates.Contains(keyPart.myState))
             {
+                Debug.Log(keyPart.gameObject.name);
                 win = false;
                 break;
             }
         }
-        if (win) FindObjectOfType<PuzzleWindow>().PuzzleReady();
+        if (win)
+        {
+            FindObjectOfType<PuzzleWindow>().textField.GetComponentInChildren<TextMeshProUGUI>().fontSize = 10f;
+            FindObjectOfType<PuzzleWindow>().PuzzleReady();
+        }
     }
 }

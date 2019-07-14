@@ -165,7 +165,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: 1
-  wantedStates: 
+  wantedStates: 02000000
   dependingOn:
   - keyPart: {fileID: 5294096561374093613}
     OhingePosition: {fileID: 5294096560286152064}
@@ -310,7 +310,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: 1
-  wantedStates: 
+  wantedStates: 02000000
   dependingOn:
   - keyPart: {fileID: 5294096561050820666}
     OhingePosition: {fileID: 5294096559821407751}
@@ -623,7 +623,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: -1
-  wantedStates: 
+  wantedStates: 000000000100000002000000
   dependingOn: []
   myState: 0
 --- !u!114 &5294096560694963569
@@ -648,7 +648,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: -1
-  wantedStates: 
+  wantedStates: 000000000100000002000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096560738063773
@@ -753,7 +753,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: -1
-  wantedStates: 
+  wantedStates: 02000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096560945997550
@@ -971,7 +971,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: -1
-  wantedStates: 
+  wantedStates: 01000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096561050820671
@@ -1076,7 +1076,7 @@ MonoBehaviour:
   originalRotation: -90
   dir: -1
   hingeDirection: 1
-  wantedStates: 
+  wantedStates: 0500000004000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096561083015710
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: -1
-  wantedStates: 
+  wantedStates: 0400000005000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096561117925700
@@ -1286,7 +1286,7 @@ MonoBehaviour:
   originalRotation: 0
   dir: 1
   hingeDirection: 1
-  wantedStates: 
+  wantedStates: 0100000002000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096561123475900
@@ -1423,7 +1423,7 @@ MonoBehaviour:
   originalRotation: 90
   dir: -1
   hingeDirection: 1
-  wantedStates: 
+  wantedStates: 0400000005000000
   dependingOn: []
   myState: 0
 --- !u!1 &5294096561508352405

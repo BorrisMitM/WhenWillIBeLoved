@@ -64,6 +64,7 @@ public class KeyPart : MonoBehaviour
             else if (myState == KeyState.up) dh.keyPart.SetDepending(myState, dh.UhingePosition.position, hingeDirection);
             else if (myState == KeyState.turned) dh.keyPart.SetDepending(myState, dh.ThingePosition.position, hingeDirection);
         }
+        GetComponentInParent<KeyManager>().CheckForWin();
     }
 
     public void SetDepending(KeyState turnCode, Vector3 newPosition, int _parentLayer)

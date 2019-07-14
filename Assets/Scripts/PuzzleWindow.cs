@@ -34,7 +34,9 @@ public class PuzzleWindow : MonoBehaviour
         if (!tutorialSeen)
         {
             StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
-            textField.GetComponentInChildren<TextMeshProUGUI>().text = tutorialText;
+            textField.GetComponentInChildren<TextMeshProUGUI>().text = tutorialText.Replace("\\n", "\n");
+
+            ;
             tutorialSeen = true;
             textActive = true;
         }
@@ -72,7 +74,7 @@ public class PuzzleWindow : MonoBehaviour
         if(puzzleTexts.Count > puzzleIndex){        
             //textField.SetActive(true);
             StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
-            textField.GetComponentInChildren<TextMeshProUGUI>().text = puzzleTexts[puzzleIndex];
+            textField.GetComponentInChildren<TextMeshProUGUI>().text = puzzleTexts[puzzleIndex].Replace("\\n", "\n");
             puzzleIndex++;
             counterText.text = puzzleIndex.ToString() + "/" + activePuzzlePrefabs.Count.ToString();
         }

@@ -18671,12 +18671,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePrefab:
-  - {fileID: 3263928718830845175, guid: a1a7419265febbc4bb21c6e7f894da61, type: 3}
+  - {fileID: 5294096561123475900, guid: ccd88141a29c9bb47841b478b86b86cf, type: 3}
   inbetweenTexts:
   - '[5.5] The sky here in Brazil is endless. It''s the most beautiful thing I''ve
-    ever seen. [10.5] In retrospective, the sky is infinite and beautiful, but not
-    quite as beautiful as her eyes. [29.5] Her name is Ana, and I think I might be
-    in love.  [4.6] I don''t want to leave. Not now, not ever.'
+    ever seen. \n[10.5] In retrospective, the sky is infinite and beautiful, but not
+    quite as beautiful as her eyes. \n[29.5] Her name is Ana, and I think I might
+    be in love.  \n[4.6] I don''t want to leave. Not now, not ever.'
   tutorialText: "Looks like the keys can be folded but the hinges limit my actions,
     but I don\u2018t have to fold them all the way. I see... One of them must fit
     the lock."
