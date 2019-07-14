@@ -13,6 +13,8 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     [SerializeField]
     AudioClip[] steps;
+    [Range(0f, 1f)]
+    [SerializeField] float timeBetweenSteps = 0.4f;
     [SerializeField]
     AudioSource currentAudio;
     bool needNewSound = true;
@@ -68,7 +70,7 @@ public class IsometricPlayerMovementController : MonoBehaviour
 
     IEnumerator WaitForFootStep()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(timeBetweenSteps);
         needNewSound = true;
     }
 }
