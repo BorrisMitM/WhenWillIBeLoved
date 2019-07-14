@@ -11,6 +11,14 @@ public class PushPuzzleManager : MonoBehaviour
     public GameObject backGroundKasten;
     public string PostPuzzleText;
     public int maxSnippetCount = 4;
+
+    AudioSource audio;
+
+    [SerializeField]
+    AudioClip open;
+    [SerializeField]
+    AudioClip close;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +26,16 @@ public class PushPuzzleManager : MonoBehaviour
     }
     [ExecuteInEditMode]
     [ContextMenu("SpawnField")]
+
+    private void OnEnable()
+    {
+        audio.clip = open;
+        audio.volume = 0.5f;
+        audio.Play();
+
+    }
+
+
     public void SpawnField()
     {
         for (int x = 0; x < xSize; x++)

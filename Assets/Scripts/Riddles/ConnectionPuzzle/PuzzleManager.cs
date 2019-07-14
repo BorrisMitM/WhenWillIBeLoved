@@ -8,6 +8,14 @@ public class PuzzleManager : MonoBehaviour
     public Node activeNode;
     List<Node> nodes;
 
+
+    private void OnEnable()
+    {
+        GetComponent<AudioSource>().volume = 0.5f;
+        GetComponent<AudioSource>().Play();
+
+    }
+
     void Start()
     {
         nodes = GetComponentsInChildren<Node>().ToList<Node>();

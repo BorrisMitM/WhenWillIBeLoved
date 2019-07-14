@@ -16,7 +16,7 @@ public class Footsteps : MonoBehaviour
     public void StepSound()
     {
         currentAudio.clip = steps[Random.Range(0, steps.Length)];
-        currentAudio.volume = 0.1f;
+        currentAudio.volume = 0.2f;
         currentAudio.Play();
 
     }

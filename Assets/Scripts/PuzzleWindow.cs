@@ -18,6 +18,10 @@ public class PuzzleWindow : MonoBehaviour
     private PuzzleItem pi;
     private bool tutorialSeen = false;
     private bool active = false;
+
+    AudioSource audio;
+
+
     [ContextMenu("Activate")]
     public void Activate(List<GameObject> puzzlePrefabs, List<string> _puzzleTexts, string tutorialText, PuzzleItem _pi)
     {
@@ -55,6 +59,8 @@ public class PuzzleWindow : MonoBehaviour
         textActive = false;
         Destroy(puzzle);
         active = false;
+
+        playSound();
     }
 
     public void PuzzleReady()
@@ -120,5 +126,12 @@ public class PuzzleWindow : MonoBehaviour
             yield return null;
         }
         Destroy(trans.gameObject);
+    }
+
+    void playSound()
+    {
+        audio = GetComponent<AudioSource>();
+        audio.volume = 0.5f;
+        audio.Play();
     }
 }
