@@ -10,14 +10,6 @@ public class IsometricPlayerMovementController : MonoBehaviour
     public IsometricCharacterRenderer isoRenderer;
     [SerializeField] private bool turnMovement = true;
     public float moveOffset;
-
-    [SerializeField]
-    AudioClip[] steps;
-    [Range(0f, 1f)]
-    [SerializeField] float timeBetweenSteps = 0.4f;
-    [SerializeField]
-    AudioSource currentAudio;
-    bool needNewSound = true;
    
 
 
@@ -56,21 +48,17 @@ public class IsometricPlayerMovementController : MonoBehaviour
         rbody.MovePosition(newPos);
 
 
-        if ( (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 ) && needNewSound)
-        {
-            currentAudio.clip = steps[Random.Range(0, steps.Length)];
-            currentAudio.volume = 0.5f;
-            currentAudio.Play();
-            needNewSound = false;
-            StartCoroutine(WaitForFootStep());
+        //if ( (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0 ) && needNewSound)
+        //{
+        //    currentAudio.clip = steps[Random.Range(0, steps.Length)];
+        //    currentAudio.volume = 0.5f;
+        //    currentAudio.Play();
+        //    needNewSound = false;
+        //    StartCoroutine(WaitForFootStep());
 
             
-        }
+        //}
     }
 
-    IEnumerator WaitForFootStep()
-    {
-        yield return new WaitForSeconds(timeBetweenSteps);
-        needNewSound = true;
-    }
+   
 }

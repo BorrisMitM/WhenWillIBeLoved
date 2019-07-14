@@ -1033,6 +1033,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!1 &792964910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 92214321856768312, guid: 74930d449f324e2428d34aed0c723022,
+    type: 3}
+  m_PrefabInstance: {fileID: 1249306589}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &792964915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792964910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef41eea01a6b22143afcb32d49b4930e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steps:
+  - {fileID: 8300000, guid: 73f83bf4fb4dc7f4988610e8b144f0c7, type: 3}
+  - {fileID: 8300000, guid: 74656a68341fc734faab11f80c56e530, type: 3}
+  - {fileID: 8300000, guid: bcd9aeaafa220ba46a215d40f35eaefa, type: 3}
+  - {fileID: 8300000, guid: b207002881759af479602cc861e16379, type: 3}
+  - {fileID: 8300000, guid: d9cb4313c95b04e49afa17c0f8957304, type: 3}
+  - {fileID: 8300000, guid: d52c056e1d70dcd4896f31ba9311cf54, type: 3}
+  - {fileID: 8300000, guid: fac41811e4127a0478d918b56f6f21bb, type: 3}
+  currentAudio: {fileID: 1249306591}
 --- !u!1001 &956553027
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1514,6 +1541,11 @@ PrefabInstance:
         type: 3}
       propertyPath: timeBetweenSteps
       value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395613733658349995, guid: 74930d449f324e2428d34aed0c723022,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74930d449f324e2428d34aed0c723022, type: 3}
