@@ -1179,8 +1179,8 @@ MonoBehaviour:
   tup: {fileID: 21300000, guid: 95a7eb77db324364f8296182a89a1126, type: 3}
   tturned: {fileID: 21300000, guid: 5c05572ce5ddc57479600b85127fd075, type: 3}
   originalRotation: 0
-  dir: 1
-  hingeDirection: 1
+  dir: -1
+  hingeDirection: -1
   wantedStates: 0400000005000000
   dependingOn: []
   myState: 0
