@@ -15,6 +15,7 @@ public class PuzzleWindow : MonoBehaviour
     private bool textActive = false;
     [SerializeField] private float afterPuzzleFade;
     [SerializeField] private TextMeshProUGUI counterText;
+    [SerializeField] private List<GameObject> deactivateOnText;
     private PuzzleItem pi;
     private bool tutorialSeen = false;
     private bool active = false;
@@ -36,13 +37,20 @@ public class PuzzleWindow : MonoBehaviour
             StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
             textField.GetComponentInChildren<TextMeshProUGUI>().text = tutorialText.Replace("\\n", "\n");
 
-            ;
             tutorialSeen = true;
             textActive = true;
+            foreach (GameObject gi in deactivateOnText)
+            {
+                gi.SetActive(false);
+            }
         }
         else
         {
             textField.gameObject.SetActive(false);
+            foreach (GameObject gi in deactivateOnText)
+            {
+                gi.SetActive(true);
+            }
             puzzle = Instantiate(puzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
         }
 
@@ -77,6 +85,10 @@ public class PuzzleWindow : MonoBehaviour
             textField.GetComponentInChildren<TextMeshProUGUI>().text = puzzleTexts[puzzleIndex].Replace("\\n", "\n");
             puzzleIndex++;
             counterText.text = puzzleIndex.ToString() + "/" + activePuzzlePrefabs.Count.ToString();
+            foreach (GameObject gi in deactivateOnText)
+            {
+                gi.SetActive(false);
+            }
         }
         textActive = true;
     }
@@ -99,7 +111,13 @@ public class PuzzleWindow : MonoBehaviour
             FindObjectOfType<ArticyManager>().UnlockNextDialog();
             Deactivate();
         }
-        else puzzle = Instantiate(activePuzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        else{ 
+            foreach (GameObject gi in deactivateOnText)
+            {
+                gi.SetActive(true);
+            }
+            puzzle = Instantiate(activePuzzlePrefabs[puzzleIndex], new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z), Quaternion.identity, transform.GetChild(0));
+        }
         
     }
     public void Restart()

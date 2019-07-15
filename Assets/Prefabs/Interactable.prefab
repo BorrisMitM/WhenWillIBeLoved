@@ -45,8 +45,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed9e9f030370ce2428a0029f6a3eda5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionText: please give me a reason to be a part of the game.
-  text: {fileID: 2334357966266098493}
   textPanel: {fileID: 5664305687890632119}
 --- !u!58 &4325394725531932461
 CircleCollider2D:
@@ -82,7 +80,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6044167426547305995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -100,8 +98,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.4417, y: 0.718}
-  m_SizeDelta: {x: 3.3721, y: 0.2065}
+  m_AnchoredPosition: {x: -0.32, y: 1.21}
+  m_SizeDelta: {x: 3.55, y: 0.134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6133530449487072707
 CanvasRenderer:
@@ -135,7 +133,7 @@ MonoBehaviour:
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 3
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
