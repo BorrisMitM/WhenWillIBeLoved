@@ -918,7 +918,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 4cd596a99f0f5f74192769ebd261651c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2262,11 +2262,13 @@ PolygonCollider2D:
     - - {x: -0.7301861, y: -2.188478}
       - {x: -1.2431313, y: -1.8815401}
       - {x: -0.6121241, y: -1.1497703}
-      - {x: 1.4883488, y: -2.342407}
-      - {x: 4.0970306, y: -1.085093}
-      - {x: 4.2033625, y: -0.24459922}
-      - {x: 4.009509, y: 0.31246483}
-      - {x: 3.3271742, y: 1.0792377}
+      - {x: 1.539708, y: -1.8288152}
+      - {x: 2.8314676, y: -1.3092351}
+      - {x: 3.464388, y: -0.99471545}
+      - {x: 3.7586422, y: -1.2039075}
+      - {x: 3.9888191, y: -0.4530769}
+      - {x: 3.6448183, y: -0.1488533}
+      - {x: 3.1823425, y: 0.27231526}
       - {x: 0.9734458, y: 1.7244263}
       - {x: 0.45706496, y: 1.3730636}
       - {x: 0.54211605, y: 0.8810687}
@@ -13661,7 +13663,9 @@ PolygonCollider2D:
       - {x: -1.3051744, y: 0.71158195}
       - {x: -1.3816133, y: 0.44379735}
       - {x: -0.5197716, y: 0.08815694}
-      - {x: -1.377552, y: -0.26454568}
+      - {x: -1.0750265, y: 0.3117416}
+      - {x: -1.9264193, y: -0.08749175}
+      - {x: -1.3712788, y: -0.27552104}
       - {x: -1.485568, y: -0.80620265}
       - {x: -0.9554534, y: -1.0149109}
       - {x: 0.4260111, y: -0.30898786}
@@ -14254,7 +14258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1470507506}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.72, y: -1.86, z: 0}
+  m_LocalPosition: {x: 0.7, y: -1.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1899056208}
@@ -15254,7 +15258,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1899056207}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.02, y: 0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1470507507}
