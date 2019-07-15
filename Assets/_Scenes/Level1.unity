@@ -18232,7 +18232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePrefab:
-  - {fileID: 3263928718830845175, guid: a1a7419265febbc4bb21c6e7f894da61, type: 3}
+  - {fileID: 5294096561123475900, guid: ccd88141a29c9bb47841b478b86b86cf, type: 3}
   inbetweenTexts:
   - '[5.5] The sky here in Brazil is endless. It''s the most beautiful thing I''ve
     ever seen. [10.5] In retrospective, the sky is infinite and beautiful, but not
