@@ -47,6 +47,17 @@ namespace Articy.Side_Effects.GlobalVariables
             variableNames.Add("GlobalVariables.Platform1");
             variableNames.Add("GlobalVariables.Platform2");
             variableNames.Add("GlobalVariables.Platform3");
+            variableNames.Add("GlobalVariables.Excitement");
+            variableNames.Add("GlobalVariables.Optimism");
+            variableNames.Add("GlobalVariables.Peacefulness");
+            variableNames.Add("GlobalVariables.Thankfulness");
+            variableNames.Add("GlobalVariables.Platform4");
+            variableNames.Add("GlobalVariables.Platform5");
+            variableNames.Add("GlobalVariables.Platform6");
+            variableNames.Add("GlobalVariables.EvenJob");
+            variableNames.Add("GlobalVariables.EvenFamily");
+            variableNames.Add("GlobalVariables.EvenFiancee");
+            variableNames.Add("GlobalVariables.EvenLife");
         }
         #endregion
         

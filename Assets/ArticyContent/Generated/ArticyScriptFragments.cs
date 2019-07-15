@@ -20,7 +20,7 @@ namespace Articy.Side_Effects.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636982040342417649)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636988050562171414)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -793,6 +793,168 @@ namespace Articy.Side_Effects.GlobalVariables
         }
         
         /// <summary>
+        /// ObjectID: 0x100000000002096
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936278?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002096Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Platform4 = true ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000210F
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936399?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x10000000000210FText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.EvenJob == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002115
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936405?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000002115Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.EvenFamily == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x10000000000211B
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936411?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x10000000000211BText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.EvenFiancee == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002121
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936417?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000002121Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.EvenLife == false;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000021C7
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936583?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000021C7Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000021CE
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936590?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000021CEText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002205
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936645?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002205Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002243
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936707?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002243Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Platform5 = true ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002291
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936785?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002291Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EvenFamily = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000022FA
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936890?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000022FAText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002340
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936960?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002340Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.EvenLife = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000027A1
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037938081?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000027A1Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Platform6 = true ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000028FF
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037938431?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000028FFText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Excitement +=1 ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x1000000000029DB
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037938651?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x1000000000029DBText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Optimism +=1 ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002A71
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037938801?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002A71Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Thankfulness +=5 ;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002B23
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037938979?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002B23Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Optimism +=10;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002BF4
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037939188?pane=selected&amp;tab=current
+        /// </summary>
+        public void Script_0x100000000002BF4Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            aGlobalVariablesState.GlobalVariables.Excitement +=10;
+        }
+        
+        /// <summary>
         /// ObjectID: 0x1000000000006E0
         /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037929696?pane=selected&amp;tab=current
         /// </summary>
@@ -831,6 +993,18 @@ aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat == true  ;
         public void Script_0x100000000001F0CText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
             aGlobalVariablesState.GlobalVariables.EmiliaPlatform1 = true;
+        }
+        
+        /// <summary>
+        /// ObjectID: 0x100000000002208
+        /// Articy Object ref: articy://localhost/view/971af6bc-f27e-4441-8577-5067285a4fdf/72057594037936648?pane=selected&amp;tab=current
+        /// </summary>
+        public bool Script_0x100000000002208Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        {
+            return aGlobalVariablesState.GlobalVariables.EvenFamily == true && 
+aGlobalVariablesState.GlobalVariables.EvenFiancee == true &&
+aGlobalVariablesState.GlobalVariables.EvenJob == true &&
+aGlobalVariablesState.GlobalVariables.EvenLife == true ;
         }
         #endregion
         
@@ -927,10 +1101,29 @@ aGlobalVariablesState.GlobalVariables.RaphaelYouCanSeeThat == true  ;
             Instructions.Add(1056170406, this.Script_0x100000000001D7FText);
             Conditions.Add(-1623091546, this.Script_0x100000000001DADText);
             Instructions.Add(1154776539, this.Script_0x100000000001DF8Text);
+            Instructions.Add(1109591637, this.Script_0x100000000002096Text);
+            Conditions.Add(1555702441, this.Script_0x10000000000210FText);
+            Conditions.Add(472987911, this.Script_0x100000000002115Text);
+            Conditions.Add(1587646676, this.Script_0x10000000000211BText);
+            Conditions.Add(504940470, this.Script_0x100000000002121Text);
+            Instructions.Add(635042351, this.Script_0x1000000000021C7Text);
+            Instructions.Add(644479049, this.Script_0x1000000000021CEText);
+            Instructions.Add(-147334855, this.Script_0x100000000002205Text);
+            Instructions.Add(-277521813, this.Script_0x100000000002243Text);
+            Instructions.Add(-115381924, this.Script_0x100000000002291Text);
+            Instructions.Add(-1940615261, this.Script_0x1000000000022FAText);
+            Instructions.Add(-589835903, this.Script_0x100000000002340Text);
+            Instructions.Add(123853677, this.Script_0x1000000000027A1Text);
+            Instructions.Add(-1432653836, this.Script_0x1000000000028FFText);
+            Instructions.Add(140505945, this.Script_0x1000000000029DBText);
+            Instructions.Add(-2024815487, this.Script_0x100000000002A71Text);
+            Instructions.Add(-727904255, this.Script_0x100000000002B23Text);
+            Instructions.Add(877985116, this.Script_0x100000000002BF4Text);
             Conditions.Add(266074708, this.Script_0x1000000000006E0Expression);
             Instructions.Add(-1039398928, this.Script_0x1000000000006E3Text);
             Conditions.Add(1763531725, this.Script_0x100000000001F0AExpression);
             Instructions.Add(335208804, this.Script_0x100000000001F0CText);
+            Conditions.Add(-1722447933, this.Script_0x100000000002208Expression);
         }
         #endregion
         

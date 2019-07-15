@@ -234,6 +234,149 @@ namespace Articy.Side_Effects.GlobalVariables
             }
         }
         
+        // 
+        public int Excitement
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(4);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(4, value);
+            }
+        }
+        
+        // 
+        public int Optimism
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(5);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(5, value);
+            }
+        }
+        
+        // 
+        public int Peacefulness
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(6);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(6, value);
+            }
+        }
+        
+        // 
+        public int Thankfulness
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(7);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(7, value);
+            }
+        }
+        
+        // 
+        public bool Platform4
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(12);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(12, value);
+            }
+        }
+        
+        // 
+        public bool Platform5
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(13);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(13, value);
+            }
+        }
+        
+        // 
+        public bool Platform6
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(14);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(14, value);
+            }
+        }
+        
+        // 
+        public bool EvenJob
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(15);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(15, value);
+            }
+        }
+        
+        // 
+        public bool EvenFamily
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(16);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(16, value);
+            }
+        }
+        
+        // 
+        public bool EvenFiancee
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(17);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(17, value);
+            }
+        }
+        
+        // 
+        public bool EvenLife
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(18);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(18, value);
+            }
+        }
+        
         public void RegisterVariables(BaseGlobalVariables aStorage)
         {
             _VariableStorage = aStorage;
@@ -253,6 +396,17 @@ namespace Articy.Side_Effects.GlobalVariables
             aStorage.RegisterVariable("GlobalVariables.Platform1", false);
             aStorage.RegisterVariable("GlobalVariables.Platform2", false);
             aStorage.RegisterVariable("GlobalVariables.Platform3", false);
+            aStorage.RegisterVariable("GlobalVariables.Excitement", 1);
+            aStorage.RegisterVariable("GlobalVariables.Optimism", 1);
+            aStorage.RegisterVariable("GlobalVariables.Peacefulness", 1);
+            aStorage.RegisterVariable("GlobalVariables.Thankfulness", 1);
+            aStorage.RegisterVariable("GlobalVariables.Platform4", false);
+            aStorage.RegisterVariable("GlobalVariables.Platform5", false);
+            aStorage.RegisterVariable("GlobalVariables.Platform6", false);
+            aStorage.RegisterVariable("GlobalVariables.EvenJob", false);
+            aStorage.RegisterVariable("GlobalVariables.EvenFamily", false);
+            aStorage.RegisterVariable("GlobalVariables.EvenFiancee", false);
+            aStorage.RegisterVariable("GlobalVariables.EvenLife", false);
         }
     }
 }
