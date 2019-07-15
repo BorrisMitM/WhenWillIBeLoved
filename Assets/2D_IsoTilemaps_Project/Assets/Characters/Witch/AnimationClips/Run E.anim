@@ -16,30 +16,23 @@ AnimationClip:
   m_EulerCurves: []
   m_PositionCurves: []
   m_ScaleCurves: []
-  m_FloatCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_FlipX
-    path: 
-    classID: 212
-    script: {fileID: 0}
+  m_FloatCurves: []
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 18b9dbd5b882a3d4b9acd100f6e72ba4, type: 3}
+      value: {fileID: 21300000, guid: db3705be392453a418e8acc9867c5552, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 47ff6e51185d8954897b99e110365e77, type: 3}
+    - time: 0.16666667
+      value: {fileID: 21300000, guid: 3e758d1072087344e835a059809bddfc, type: 3}
+    - time: 0.25
+      value: {fileID: 21300000, guid: 54a3e1fc1eae4a64f98c7f08a11ad397, type: 3}
+    - time: 0.33333334
+      value: {fileID: 21300000, guid: 700fcfa3622ebf844ba8564dcb0dd585, type: 3}
+    - time: 0.41666666
+      value: {fileID: 21300000, guid: 7d125e6a04e3a4342bbbf5932b93b363, type: 3}
+    - time: 0.5
+      value: {fileID: 21300000, guid: 72cd942137831aa448ac0f67bca680c1, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -58,21 +51,20 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
-    - serializedVersion: 2
-      path: 0
-      attribute: 555744692
-      script: {fileID: 0}
-      typeID: 212
-      customType: 0
-      isPPtrCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 18b9dbd5b882a3d4b9acd100f6e72ba4, type: 3}
+    - {fileID: 21300000, guid: db3705be392453a418e8acc9867c5552, type: 3}
+    - {fileID: 21300000, guid: 47ff6e51185d8954897b99e110365e77, type: 3}
+    - {fileID: 21300000, guid: 3e758d1072087344e835a059809bddfc, type: 3}
+    - {fileID: 21300000, guid: 54a3e1fc1eae4a64f98c7f08a11ad397, type: 3}
+    - {fileID: 21300000, guid: 700fcfa3622ebf844ba8564dcb0dd585, type: 3}
+    - {fileID: 21300000, guid: 7d125e6a04e3a4342bbbf5932b93b363, type: 3}
+    - {fileID: 21300000, guid: 72cd942137831aa448ac0f67bca680c1, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.083333336
+    m_StopTime: 0.5833333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -87,27 +79,22 @@ AnimationClip:
     m_KeepOriginalPositionXZ: 0
     m_HeightFromFeet: 0
     m_Mirror: 0
-  m_EditorCurves:
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 103
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_FlipX
-    path: 
-    classID: 212
-    script: {fileID: 0}
+  m_EditorCurves: []
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.16666667
+    functionName: StepSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.5
+    functionName: StepSound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
