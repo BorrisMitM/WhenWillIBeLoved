@@ -38,7 +38,11 @@ public class snap : MonoBehaviour
                 }
             }
 
-            if (done) FindObjectOfType<PuzzleWindow>().PuzzleReady();
+            if (done)
+            {
+                FindObjectOfType<PuzzleWindow>().PuzzleReady();
+            }
+
             return true;
         }
         drag.activeGO = null;

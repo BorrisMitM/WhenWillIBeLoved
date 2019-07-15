@@ -16458,7 +16458,7 @@ MonoBehaviour:
   puzzlePrefab:
   - {fileID: 4516636598663385362, guid: 6e672531fe95f7b428a9634cabd28bd0, type: 3}
   inbetweenTexts:
-  - asdasd
+  - 
   tutorialText: That must be Even and his band. Which of those is him?
   played: 0
 --- !u!1 &1611681837
