@@ -60,12 +60,12 @@ public class SongManager : MonoBehaviour {
        
         IEnumerator FadeIn(SongPart songPart)
         {
-            while(songPart.source.volume < 0.3f && songPart.isPlaying)
+            while(songPart.source.volume < 1f && songPart.isPlaying)
             {
                 songPart.source.volume += Time.deltaTime / fadeRate;
                 yield return null;
             }
-           songPart.source.volume = 0.3f;
+           songPart.source.volume = 1f;
         }
 
         IEnumerator FadeOut(SongPart songPart)
