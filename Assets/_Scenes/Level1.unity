@@ -22030,6 +22030,16 @@ PrefabInstance:
       propertyPath: dialogs.Array.data[0].lowId
       value: 317
       objectReference: {fileID: 0}
+    - target: {fileID: 29503819835478484, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: skipClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3533c4fe9df8c244ea03fcaad98670f2, type: 3}
+    - target: {fileID: 29503819835478484, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: scrollClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 69696a3fd790d624a86fc6db6f98e688, type: 3}
     - target: {fileID: 6109593111678443646, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_IsActive

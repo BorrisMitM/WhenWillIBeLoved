@@ -9,6 +9,7 @@ using UnityEngine.Events;
 using TMPro;
 using UnityEngine.EventSystems;
 using System;
+using UnityEngine.Audio;
 
 public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
@@ -49,6 +50,10 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public delegate void DialogEnded();
     public static event DialogEnded OnDialogEnded;
+    [SerializeField] private AudioClip scrollClip;
+    private AudioSource source;
+    [SerializeField] private AudioClip skipClip;
+    private AudioSource otherSource;
 
     public void StartDialog(){
         if(isActive) return;
@@ -72,6 +77,15 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
         UnlockNextDialog();
         if (flowPlayer != null && flowPlayer.StartOn == null)
 			textLabel.text = "<color=green>No object selected in the flow player. Navigate to the ArticyflowPlayer and choose a StartOn node.</color>";
+        source = gameObject.AddComponent<AudioSource>();
+        source.clip = skipClip;
+        source.loop = false;
+        source.Stop();
+        otherSource = gameObject.AddComponent<AudioSource>();
+        otherSource.clip = scrollClip;
+        otherSource.loop = false;
+        otherSource.volume = 0.15f;
+        otherSource.Stop();
     }
     private void LateUpdate() {
         if(Input.GetButtonDown("Interact") && !buttonPressed && isActive){
@@ -82,6 +96,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
 				Branch thisBranch = singleBranch;
 				flowPlayer.Play(singleBranch);
 				if(singleBranch == thisBranch) singleBranch = null;
+                source.Play();
 			}
         }
         if(buttonPressed) buttonPressed = false;
@@ -240,6 +255,7 @@ public class ArticyManager : MonoBehaviour, IArticyFlowPlayerCallbacks
             if(!isScrolling) yield break;
             textLabel.maxVisibleCharacters = currentChar;
             currentChar+= 2;
+            otherSource.Play();
             yield return new WaitForSeconds(1f / charactersPerSecond);
         }
         EndScroll();

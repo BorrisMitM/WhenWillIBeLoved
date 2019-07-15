@@ -629,6 +629,7 @@ MonoBehaviour:
     referencingMode: 0
     lowId: 3896
     highId: 16777216
+  scrollClip: {fileID: 8300000, guid: 3533c4fe9df8c244ea03fcaad98670f2, type: 3}
 --- !u!1 &6277851125179096485
 GameObject:
   m_ObjectHideFlags: 0
