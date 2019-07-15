@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -431,8 +431,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.2
-  frequency: 0.6
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!1001 &149418475
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -728,8 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.3
-  frequency: 0.4
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!212 &163300470
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1711,8 +1711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.2
-  frequency: 0.7
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!212 &337746572
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2573,7 +2573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.6
+  frequency: 0.5
 --- !u!212 &512815040
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3220,8 +3220,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.2
-  frequency: 0.7
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!212 &594966315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3427,7 +3427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.3
+  frequency: 0.5
 --- !u!212 &641815906
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3521,7 +3521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.8
+  frequency: 0.5
 --- !u!212 &646816045
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3828,7 +3828,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.6
+  frequency: 0.5
 --- !u!212 &696191646
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4902,7 +4902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.6
+  frequency: 0.5
 --- !u!212 &818499923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4996,7 +4996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.7
+  frequency: 0.5
 --- !u!212 &822115109
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5117,7 +5117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.18
-  frequency: 0.8
+  frequency: 0.5
 --- !u!212 &862079888
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14795,7 +14795,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.8
+  frequency: 0.5
 --- !u!1001 &948064768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15122,7 +15122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.3
+  frequency: 0.5
 --- !u!212 &994813034
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15902,8 +15902,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055190180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.77, y: 3.234912, z: 0}
-  m_LocalScale: {x: 0.39945585, y: 0.39945585, z: 0.39945585}
+  m_LocalPosition: {x: 0.31, y: -0.22, z: 0}
+  m_LocalScale: {x: 0.5305281, y: 0.5305281, z: 0.5305281}
   m_Children:
   - {fileID: 1520599905}
   - {fileID: 1502252495}
@@ -16105,7 +16105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.7
+  frequency: 0.5
 --- !u!212 &1088542899
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16199,7 +16199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.7
+  frequency: 0.5
 --- !u!212 &1117768254
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16961,17 +16961,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzlePrefab:
-  - {fileID: 3263928718830845175, guid: a1a7419265febbc4bb21c6e7f894da61, type: 3}
+  - {fileID: 3263928718830845175, guid: 66a6897a53c6b85478703fe46585687e, type: 3}
   - {fileID: 3263928718830845175, guid: 12fd72ae6a1381946a460f75c16d6191, type: 3}
   - {fileID: 3263928718830845175, guid: 2995076aa5a36cb4aa7a5c819555c87e, type: 3}
-  - {fileID: 3263928718830845175, guid: 66a6897a53c6b85478703fe46585687e, type: 3}
+  - {fileID: 3263928718830845175, guid: a1a7419265febbc4bb21c6e7f894da61, type: 3}
   inbetweenTexts:
   - 'Lavender, outstretching outside of a window. '
   - The sun high up in the cloudless sky and a smile on your face.
   - 'A whispered I love you in a moment of quiet. '
   - Maria, running up to you, short hair tousled by the wind, opening her little arms
     to hug you.
-  tutorialText: Why is there a note between the cutlery? Maybe, by moving everything
+  tutorialText: Why is there a note between the cluttery? Maybe, by moving everything
     very carefully I could get it out.
   played: 0
 --- !u!58 &1211713764
@@ -17177,7 +17177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.9
+  frequency: 0.5
 --- !u!212 &1234684950
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17271,7 +17271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.7
+  frequency: 0.5
 --- !u!212 &1235494749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18556,7 +18556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.9
+  frequency: 0.5
 --- !u!1 &1443764447
 GameObject:
   m_ObjectHideFlags: 0
@@ -19584,8 +19584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1873b56d813492f47aabb20762275238, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.2
-  frequency: 0.6
+  amplitude: 0.1
+  frequency: 0.5
 --- !u!212 &1602374492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20206,7 +20206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.8
+  frequency: 0.5
 --- !u!212 &1753899792
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20732,7 +20732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amplitude: 0.1
-  frequency: 0.6
+  frequency: 0.5
 --- !u!212 &1924496227
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -21915,58 +21915,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_text
-      value: "hjksdfhjkasdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjksdfhjkhdfkjsdhfk\xF6ajshdf"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 123
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -31.169254
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 47a8cc597830e49428f97ebce3159640,
-        type: 2}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5355432282849103996, guid: 47a8cc597830e49428f97ebce3159640,
-        type: 2}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.materialCount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6109593113096063729, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -22097,15 +22045,67 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1535126101725034014, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4815045399093957190, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1535126101725034014, guid: e0a6f807c58ffe54c84f26004f1c322b,
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
+      propertyPath: m_text
+      value: "hjksdfhjkasdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjksdfhjkhdfkjsdhfk\xF6ajshdf"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -31.169254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 47a8cc597830e49428f97ebce3159640,
+        type: 2}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5355432282849103996, guid: 47a8cc597830e49428f97ebce3159640,
+        type: 2}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6277851125179096485, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
