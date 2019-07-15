@@ -32,7 +32,7 @@ public class PuzzleWindow : MonoBehaviour
         gameObject.transform.GetChild(0).position = new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y, transform.position.z);
         transform.GetChild(0).gameObject.SetActive(true);
         GameManager.instance.puzzleActive = true;
-        if (!tutorialSeen)
+        if (!tutorialSeen && tutorialText != "")
         {
             StartCoroutine(FadeAndSetActive(textField.GetComponent<SpriteRenderer>(), textField, 1f, .3f));
             textField.GetComponentInChildren<TextMeshProUGUI>().text = tutorialText.Replace("\\n", "\n");
