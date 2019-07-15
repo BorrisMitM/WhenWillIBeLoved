@@ -29,6 +29,7 @@ public class PushPuzzleManager : MonoBehaviour
 
     private void OnEnable()
     {
+        audio = GetComponent<AudioSource>();
         audio.clip = open;
         audio.volume = 0.5f;
         audio.Play();

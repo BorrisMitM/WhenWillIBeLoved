@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1948,7 +1948,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &368898367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1967,10 +1967,17 @@ MonoBehaviour:
   characterPerSecond: 60
   refreshRate: 0.03
   introTexts:
-  - also da war mal glenn, nen fey, und wollte emotions sucken.
-  - aber das war schwieriger als gedacht deswegen ist they jetzt in dem kopf hier
-    und versucht emilia nen bissle wut ausm brain zu sucken(fast)
-  - keine sorgen drogen kommen auch noch vor
+  - Dear Diary,  humans don't really like me for some reason. I'm still trying to
+    figure out why - I think it has something to do with the way I act? With my emotions?
+    I'm confused.
+  - 'Dear Diary,  apparently humans just feel different from us Fae. I''ve been trying
+    to fake it, but to be honest, it hasn''t been working. They just think I''m weird
+    and don''t want to talk to me anymore.  '
+  - Dear Diary,  I may not be able to live in the human world, but I think I found
+    the perfect plan to deal with it! It involves trapping humans within a dream world
+    and if they feel an emotion, I can copy it for myself - this way I'll collect
+    more emotions and humans will like me more, right? I can't see what could go wrong!
+  - 'Really, I just can''t wait to live among humans and to be accepted by them! '
   fadeOutTimePanel: 2
 --- !u!114 &368898368
 MonoBehaviour:
@@ -20747,58 +20754,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogPanel
       objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_text
-      value: "hjksdfhjkasdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjksdfhjkhdfkjsdhfk\xF6ajshdf"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 123
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_margin.z
-      value: -31.169254
-      objectReference: {fileID: 0}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 47a8cc597830e49428f97ebce3159640,
-        type: 2}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 5355432282849103996, guid: 47a8cc597830e49428f97ebce3159640,
-        type: 2}
-    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
-        type: 3}
-      propertyPath: m_textInfo.materialCount
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6109593113096063729, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20929,15 +20884,67 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1535126101725034014, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4815045399093957190, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1535126101725034014, guid: e0a6f807c58ffe54c84f26004f1c322b,
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
-      propertyPath: m_RootOrder
-      value: 4
+      propertyPath: m_text
+      value: "hjksdfhjkasdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjkhjksdfhjksdfhjksdfhjksdfhjksdfhjksdfhjkhdfkjsdhfk\xF6ajshdf"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -31.169254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 47a8cc597830e49428f97ebce3159640,
+        type: 2}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 5355432282849103996, guid: 47a8cc597830e49428f97ebce3159640,
+        type: 2}
+    - target: {fileID: 6109593111974834095, guid: e0a6f807c58ffe54c84f26004f1c322b,
+        type: 3}
+      propertyPath: m_textInfo.materialCount
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6277851125179096485, guid: e0a6f807c58ffe54c84f26004f1c322b,
         type: 3}
@@ -21278,16 +21285,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzzleWindowManager
       objectReference: {fileID: 0}
-    - target: {fileID: 5902271762708361943, guid: 197107c5811bee246b70815a3157a032,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2003568702}
-    - target: {fileID: 5902271763900062436, guid: 197107c5811bee246b70815a3157a032,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2003568702}
     - target: {fileID: 5902271764168059439, guid: 197107c5811bee246b70815a3157a032,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21343,5 +21340,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5902271762708361943, guid: 197107c5811bee246b70815a3157a032,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2003568702}
+    - target: {fileID: 5902271763900062436, guid: 197107c5811bee246b70815a3157a032,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2003568702}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 197107c5811bee246b70815a3157a032, type: 3}
