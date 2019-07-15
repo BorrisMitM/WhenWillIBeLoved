@@ -34,8 +34,10 @@ public class GameManager : MonoBehaviour
         if(currentScene != null)
             SceneManager.UnloadSceneAsync(currentScene);
         currentScene = sceneName;
-        if(withLoadingScreen)
+        if(withLoadingScreen){
+            StartCoroutine(RotateGlenn());
             StartCoroutine(LoadAsync(sceneName));
+        }
         else SceneManager.LoadSceneAsync(sceneName, LoadSceneMode.Additive);
         isLoading = true;
     }
@@ -44,7 +46,8 @@ public class GameManager : MonoBehaviour
         if(currentScene != null)
             SceneManager.UnloadSceneAsync(currentScene);
         currentScene = LevelToLoadString();
-            StartCoroutine(LoadAsync(currentScene));
+        StartCoroutine(LoadAsync(currentScene));
+        StartCoroutine(RotateGlenn());
         isLoading = true;
     }
 
@@ -55,6 +58,7 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("currentLevelID", levelToLoad);
         currentScene = LevelToLoadString();
             StartCoroutine(LoadAsync(currentScene));
+        StartCoroutine(RotateGlenn());
         isLoading = true;
     }
     private void Update() {
@@ -68,16 +72,8 @@ public class GameManager : MonoBehaviour
     IEnumerator LoadAsync(string sceneName){
         panel.SetActive(true);
         AsyncOperation op = SceneManager.LoadSceneAsync(sceneName,LoadSceneMode.Additive);
-        float lastSpriteUpdate = Time.time;
-        int counter = 0;
         while(!op.isDone){
             float progress = Mathf.Clamp01(op.progress / .9f);
-            if(Time.time >= lastSpriteUpdate + spriteChangePause){
-                lastSpriteUpdate += spriteChangePause;
-                counter++;
-                if(counter > glennSprites.Count) counter = 0;
-                glennSprite.sprite = glennSprites[counter];
-            }
             loadText.text = ((int)(progress * 100f)).ToString() + "%";
             yield return null;
         }
@@ -85,6 +81,19 @@ public class GameManager : MonoBehaviour
         loadText.text = "Press any key.";
     }
 
+    IEnumerator RotateGlenn(){
+        int counter = 0;
+        float lastSpriteUpdate = Time.time;
+        while(true){
+            if(Time.time >= lastSpriteUpdate + spriteChangePause){
+                lastSpriteUpdate += spriteChangePause;
+                counter++;
+                if(counter > glennSprites.Count) counter = 0;
+                glennSprite.sprite = glennSprites[counter];
+            }
+            yield return true;
+        }
+    }
     public void LevelCompleted(){
         SetLevelToLoad();
         PlayerPrefs.SetInt("currentLevelID", levelToLoad);

@@ -20,7 +20,6 @@ public class KeyManager : MonoBehaviour
         {
             if (!keyPart.wantedStates.Contains(keyPart.myState))
             {
-                Debug.Log(keyPart.gameObject.name);
                 win = false;
                 break;
             }
