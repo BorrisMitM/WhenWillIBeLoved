@@ -14,6 +14,10 @@ public class LevelEnd : MonoBehaviour
     [SerializeField] private Transform glenn;
     [SerializeField] private bool interlude = false;
 
+    [SerializeField] AudioSource source;
+    [SerializeField] AudioClip absorb;
+    [SerializeField] AudioClip success;
+
     public delegate void LevelEnding();
     public static event LevelEnding OnLevelEnding;
     private void OnEnable() {
@@ -38,6 +42,9 @@ public class LevelEnd : MonoBehaviour
             foreach(GameObject obj in objsToActivate){
                 obj.SetActive(true);
             }
+            source.clip = absorb;
+            source.Play();
+
             FindObjectOfType<CameraShake>().ShakeCamera(2f, .1f);
             StartCoroutine(ActivateEndPanel());
             StartCoroutine(MoveGlenn());
@@ -60,6 +67,10 @@ public class LevelEnd : MonoBehaviour
             {
                 obj.SetActive(true);
             }
+
+            source.clip = absorb;
+            source.Play();
+
             FindObjectOfType<CameraShake>().ShakeCamera(2f, .1f);
             StartCoroutine(ActivateEndPanel());
             StartCoroutine(MoveGlenn());
@@ -90,6 +101,10 @@ public class LevelEnd : MonoBehaviour
     IEnumerator ActivateEndPanel(){
         yield return new WaitForSeconds(3f);
         endPanel.SetActive(true);
+
+        source.clip = success;
+        source.Play();
+
         TextMeshProUGUI text = endPanel.GetComponentInChildren<TextMeshProUGUI>();
         text.text = "You gathered " + GetItem() + " from Emilia.";
     }
