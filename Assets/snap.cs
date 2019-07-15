@@ -18,7 +18,6 @@ public class snap : MonoBehaviour
     }
     public bool DO()
     {
-        Debug.Log("sda");
         if (drag.activeGO.GetComponent<drag>().infoType == infoType)
         {
             Vector3 currentPos = transform.position;
@@ -39,7 +38,7 @@ public class snap : MonoBehaviour
                 }
             }
 
-            if (done) Debug.Log("done");
+            if (done) FindObjectOfType<PuzzleWindow>().PuzzleReady();
             return true;
         }
         drag.activeGO = null;
