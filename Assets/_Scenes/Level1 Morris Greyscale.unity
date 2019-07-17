@@ -1785,6 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleActive: 0
+  disableMovement: 0
   nextDialogUnlocked: 1
   panel: {fileID: 0}
   glennSprite: {fileID: 0}
@@ -3734,6 +3735,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1067201164}
     m_Modifications:
+    - target: {fileID: 720094970300079000, guid: 420b0090b7b58354493df9f223fe68f6,
+        type: 3}
+      propertyPath: m_Name
+      value: RiddlePanelManager
+      objectReference: {fileID: 0}
     - target: {fileID: 720094970300079007, guid: 420b0090b7b58354493df9f223fe68f6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3838,11 +3844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 720094970300079000, guid: 420b0090b7b58354493df9f223fe68f6,
-        type: 3}
-      propertyPath: m_Name
-      value: RiddlePanelManager
       objectReference: {fileID: 0}
     - target: {fileID: 720094970300079005, guid: 420b0090b7b58354493df9f223fe68f6,
         type: 3}
@@ -4440,6 +4441,7 @@ MonoBehaviour:
   - 'A whispered I love you in a moment of quiet. '
   - Maria, running up to you, short hair tousled by the wind, opening her little arms
     to hug you.
+  tutorialText: 
   played: 0
 --- !u!114 &1211713763
 MonoBehaviour:
@@ -5210,6 +5212,7 @@ MonoBehaviour:
   - Hands interlocked, and yet you feel so alone.
   - A pale sky and a pale living room and you sigh.
   - A room full of faces and their expectations on your shoulders.
+  tutorialText: 
   played: 0
 --- !u!114 &1303033932
 MonoBehaviour:
@@ -5604,6 +5607,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 705348332}
   afterPuzzleFade: 0
+  counterText: {fileID: 0}
+  deactivateOnText: []
 --- !u!1001 &1496773674
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6148,6 +6153,7 @@ MonoBehaviour:
     ever seen. [10.5] In retrospective, the sky is infinite and beautiful, but not
     quite as beautiful as her eyes. [29.5] Her name is Ana, and I think I might be
     in love.  [4.6] I don''t want to leave. Not now, not ever.'
+  tutorialText: 
   played: 0
 --- !u!114 &1537010094
 MonoBehaviour:
@@ -7602,7 +7608,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   profile: {fileID: 0}
   fadeInTime: 1
-  active: 0
+  active: 1
 --- !u!1001 &2046739726
 PrefabInstance:
   m_ObjectHideFlags: 0
