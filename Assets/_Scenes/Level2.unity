@@ -1078,11 +1078,12 @@ MonoBehaviour:
   - {fileID: 1395231524548700928, guid: 75742a810e8f977408bdca49cb69b06f, type: 3}
   - {fileID: 1021219945266805411, guid: 187d230cb342b654b88789867da8b575, type: 3}
   inbetweenTexts:
-  - dsaaa
-  - dasaaaa
-  - dasaaaaaa
-  - dasaaaaaaa
-  tutorialText: 
+  - 
+  - 
+  - 
+  - 
+  tutorialText: "Seems like he planned on following this band. I should reconnect
+    the pins with this thread\u2026"
   played: 0
 --- !u!58 &275931833
 CircleCollider2D:
@@ -3176,11 +3177,12 @@ MonoBehaviour:
   - {fileID: 3263928718830845175, guid: 7c17bf2fb745d9a4e98b70e31a0a4255, type: 3}
   - {fileID: 3263928718830845175, guid: 7c431b3119e2d044babebfd3bb9fa814, type: 3}
   inbetweenTexts:
-  - asd
-  - asddd
-  - asddddd
-  - asdddddd
-  tutorialText: 
+  - 
+  - 
+  - 
+  - 
+  tutorialText: Oh right, I have heard of this game! Seems like there is something
+    under the pawn, I should get it out by moving the other chess pieces.
   played: 0
 --- !u!1 &779474756
 GameObject:
