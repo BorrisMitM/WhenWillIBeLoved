@@ -97,7 +97,7 @@ LightmapSettings:
     m_ShowResolutionOverlay: 1
     m_ExportTrainingData: 0
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -17469,7 +17469,7 @@ MonoBehaviour:
   variableToAppearOn: GlobalVariables.Platform6
   fadeInDuration: 3
   shakeMagnitude: 0.1
-  cameraFocusOffset: {x: 0, y: 0}
+  cameraFocusOffset: {x: 0, y: 1.8}
 --- !u!82 &1929853335
 AudioSource:
   m_ObjectHideFlags: 0
@@ -18378,6 +18378,11 @@ PrefabInstance:
     - target: {fileID: 5902271764168059439, guid: 197107c5811bee246b70815a3157a032,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5902271763545958659, guid: 197107c5811bee246b70815a3157a032,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

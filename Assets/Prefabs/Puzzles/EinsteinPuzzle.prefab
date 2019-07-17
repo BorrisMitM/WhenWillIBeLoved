@@ -698,6 +698,7 @@ MonoBehaviour:
   infoType: 3
   wantedInfo: Keyboard
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636596898896617
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +772,7 @@ MonoBehaviour:
   infoType: 1
   wantedInfo: Purple
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636596919344359
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,6 +846,7 @@ MonoBehaviour:
   infoType: 1
   wantedInfo: Blue
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636596980262479
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +920,7 @@ MonoBehaviour:
   infoType: 0
   wantedInfo: Olga
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636597025541978
 GameObject:
   m_ObjectHideFlags: 0
@@ -2469,6 +2473,7 @@ MonoBehaviour:
   infoType: 1
   wantedInfo: Pink
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636597300479357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2547,7 @@ MonoBehaviour:
   infoType: 3
   wantedInfo: Guitar
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636597337269059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3741,6 +3747,7 @@ MonoBehaviour:
   infoType: 0
   wantedInfo: Eira
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636597687957745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4177,6 +4184,7 @@ MonoBehaviour:
   infoType: 3
   wantedInfo: Drums
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636597749708743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4972,6 +4980,7 @@ MonoBehaviour:
   infoType: 0
   wantedInfo: "Bj\xF6rn"
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636597941805781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5483,6 +5492,7 @@ MonoBehaviour:
   infoType: 2
   wantedInfo: 18
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598013631957
 GameObject:
   m_ObjectHideFlags: 0
@@ -5556,6 +5566,7 @@ MonoBehaviour:
   infoType: 1
   wantedInfo: Red
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598032958538
 GameObject:
   m_ObjectHideFlags: 0
@@ -5629,6 +5640,7 @@ MonoBehaviour:
   infoType: 3
   wantedInfo: Bass
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598068005322
 GameObject:
   m_ObjectHideFlags: 0
@@ -6864,6 +6876,7 @@ MonoBehaviour:
   infoType: 2
   wantedInfo: 17
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598200987973
 GameObject:
   m_ObjectHideFlags: 0
@@ -7809,6 +7822,7 @@ MonoBehaviour:
   infoType: 0
   wantedInfo: Even
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598365974796
 GameObject:
   m_ObjectHideFlags: 0
@@ -7882,6 +7896,7 @@ MonoBehaviour:
   infoType: 2
   wantedInfo: 19
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598373396213
 GameObject:
   m_ObjectHideFlags: 0
@@ -8536,6 +8551,7 @@ MonoBehaviour:
   infoType: 1
   wantedInfo: Black
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598437805568
 GameObject:
   m_ObjectHideFlags: 0
@@ -8609,6 +8625,7 @@ MonoBehaviour:
   infoType: 2
   wantedInfo: 16
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598450578553
 GameObject:
   m_ObjectHideFlags: 0
@@ -8682,6 +8699,7 @@ MonoBehaviour:
   infoType: 3
   wantedInfo: LeadSinger
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598451009780
 GameObject:
   m_ObjectHideFlags: 0
@@ -9337,6 +9355,7 @@ MonoBehaviour:
   infoType: 2
   wantedInfo: 20
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598586061209
 GameObject:
   m_ObjectHideFlags: 0
@@ -11035,6 +11054,7 @@ MonoBehaviour:
   infoType: 0
   wantedInfo: Mads
   currentInfo: 
+  photo: {fileID: 5669960921495704199, guid: 6245f18f5ad68bc41b1c2a63441fbd7f, type: 3}
 --- !u!1 &4516636598900034076
 GameObject:
   m_ObjectHideFlags: 0

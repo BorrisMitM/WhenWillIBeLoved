@@ -7,6 +7,7 @@ public class snap : MonoBehaviour
     public drag.InformationType infoType;
     public string wantedInfo;
     public string currentInfo;
+    public GameObject photo;
     static List<snap> allsnaps;
     private void Awake()
     {
@@ -40,6 +41,7 @@ public class snap : MonoBehaviour
 
             if (done)
             {
+                Instantiate(photo, transform.position, Quaternion.identity, transform.parent.parent.parent);
                 FindObjectOfType<PuzzleWindow>().PuzzleReady();
             }
 
