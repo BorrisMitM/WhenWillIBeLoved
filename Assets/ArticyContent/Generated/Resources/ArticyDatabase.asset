@@ -1,6 +1,75 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8780012721632590327
+--- !u!114 &-2832721883174641762
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocalizationManager
+  m_EditorClassIdentifier: 
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: Articy.Unity.OnLanguageChangedEvent, ArticyRuntime, Version=2.0.3.0,
+      Culture=neutral, PublicKeyToken=null
+  mUseLocalization: 0
+  mLanguage: en
+  mThrowOnMissingText: 0
+  mClearOnLanguageSwitch: 1
+  mExportLanguage: en
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyDatabase
+  m_EditorClassIdentifier: 
+  mHierarchy: {fileID: 6183260194107210643}
+  mLocalization: {fileID: -2832721883174641762}
+  mInternalProject:
+    mName: side effects
+    mDetailName: 
+    mId: 971af6bc-f27e-4441-8577-5067285a4fdf
+    mTechnicalName: Side_Effects
+  mImportedAssets:
+  - "Assets/Bilder/em\xEDliaprofile2"
+  - "Assets/Bilder/em\xEDliaprofile1"
+  - Assets/Bilder/unknown
+  - Assets/Bilder/RaphaelIconDefault
+  - "Assets/Bilder/em\xEDliaIconBLUR"
+  - "Assets/Bilder/em\xEDliaIconDefault"
+  - Assets/Bilder/GlennIconDefault
+  - Assets/Bilder/EvenIconDefaultBLUR
+  - Assets/Bilder/EvenIconDefault
+  mDefaultGlobalVariables: {fileID: 5384881862969566072}
+  mScriptFragments: {fileID: 1260327639816625355}
+  mPackages:
+  - PackageName: Alle Objekte
+    PackagePath: Alle Objekte
+    mIsDefaultPackage: 1
+--- !u!114 &1260327639816625355
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6874cb6c37df69146ba120fb81928c7f, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 
+--- !u!114 &5384881862969566072
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,42 +170,8 @@ MonoBehaviour:
   LiveStringVariableCache: []
   isInitialized: 1
   mGlobalVariables:
-    _VariableStorage: {fileID: -8780012721632590327}
---- !u!114 &-6161365987160399322
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6874cb6c37df69146ba120fb81928c7f, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &-2832721883174641762
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1174674681, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocalizationManager
-  m_EditorClassIdentifier: 
-  OnLanguageChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: Articy.Unity.OnLanguageChangedEvent, ArticyRuntime, Version=2.0.3.0,
-      Culture=neutral, PublicKeyToken=null
-  mUseLocalization: 0
-  mLanguage: en
-  mThrowOnMissingText: 0
-  mClearOnLanguageSwitch: 1
-  mExportLanguage: en
---- !u!114 &-1822526424006405180
+    _VariableStorage: {fileID: 5384881862969566072}
+--- !u!114 &6183260194107210643
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,38 +184,3 @@ MonoBehaviour:
   m_Name: HierarchyManager
   m_EditorClassIdentifier: 
   serializedNodes: []
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyDatabase
-  m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -1822526424006405180}
-  mLocalization: {fileID: -2832721883174641762}
-  mInternalProject:
-    mName: side effects
-    mDetailName: 
-    mId: 971af6bc-f27e-4441-8577-5067285a4fdf
-    mTechnicalName: Side_Effects
-  mImportedAssets:
-  - "Assets/Bilder/em\xEDliaprofile2"
-  - "Assets/Bilder/em\xEDliaprofile1"
-  - Assets/Bilder/unknown
-  - Assets/Bilder/RaphaelIconDefault
-  - "Assets/Bilder/em\xEDliaIconBLUR"
-  - "Assets/Bilder/em\xEDliaIconDefault"
-  - Assets/Bilder/GlennIconDefault
-  - Assets/Bilder/EvenIconDefaultBLUR
-  - Assets/Bilder/EvenIconDefault
-  mDefaultGlobalVariables: {fileID: -8780012721632590327}
-  mScriptFragments: {fileID: -6161365987160399322}
-  mPackages:
-  - PackageName: Alle Objekte
-    PackagePath: Alle Objekte
-    mIsDefaultPackage: 1

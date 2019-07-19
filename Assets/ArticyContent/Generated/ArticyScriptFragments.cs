@@ -20,7 +20,7 @@ namespace Articy.Side_Effects.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(636988050562171414)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(636991757567548595)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -843,7 +843,7 @@ namespace Articy.Side_Effects.GlobalVariables
         /// </summary>
         public void Script_0x1000000000021C7Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+            aGlobalVariablesState.GlobalVariables.EvenJob = true;
         }
         
         /// <summary>
@@ -852,7 +852,7 @@ namespace Articy.Side_Effects.GlobalVariables
         /// </summary>
         public void Script_0x1000000000021CEText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+            aGlobalVariablesState.GlobalVariables.EvenJob = true;
         }
         
         /// <summary>
@@ -861,7 +861,7 @@ namespace Articy.Side_Effects.GlobalVariables
         /// </summary>
         public void Script_0x100000000002205Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            aGlobalVariablesState.GlobalVariables.EvenFiancee = true;
+            aGlobalVariablesState.GlobalVariables.EvenJob = true;
         }
         
         /// <summary>

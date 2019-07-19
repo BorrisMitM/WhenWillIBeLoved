@@ -113,7 +113,7 @@ public class LevelEnd : MonoBehaviour
         int index = 0;
         for (int i = 1; i < variableNames.Length; i++)
         {
-            int newValue = GetGlobalVariable.Int(variableNames[i]);
+            int newValue = GetGlobalVariable.Int("GlobalVariables." + variableNames[i]);
             if(newValue > maxValue) {
                 maxValue = newValue;
                 index = i;
