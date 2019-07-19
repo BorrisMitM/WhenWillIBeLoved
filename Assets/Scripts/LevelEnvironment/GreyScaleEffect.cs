@@ -20,7 +20,16 @@ public class GreyScaleEffect : MonoBehaviour
             colorGrading.saturation.value = (-100f);
         }
     }
-
+    [ContextMenu("33")]
+    public void FadeIn33()
+    {
+        StartCoroutine(FadeInColor(-33));
+    }
+    [ContextMenu("66")]
+    public void FadeIn66()
+    {
+        StartCoroutine(FadeInColor(-66));
+    }
     IEnumerator FadeInColor(float finalSaturation){
         float startTime = Time.time;
         //float finalSaturation = (colorGrading.saturation.value + (saturation + 100f) / 3f);
